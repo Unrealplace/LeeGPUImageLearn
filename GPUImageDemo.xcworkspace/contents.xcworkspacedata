@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/liyang/LeeGPUImageLearn/GPUImageDemo/CustomShader.fsh">
+   </FileRef>
+   <FileRef
       location = "group:GPUImageDemo.xcodeproj">
    </FileRef>
    <FileRef

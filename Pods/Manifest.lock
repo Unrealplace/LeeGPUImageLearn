@@ -1,12 +1,21 @@
 PODS:
   - GPUImage (0.1.7)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
 
 DEPENDENCIES:
   - GPUImage (~> 0.1.7)
+  - ReactiveCocoa (~> 2.5)
 
 SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
-PODFILE CHECKSUM: ab296cdb4d79a7417cc5a3e274562e7acef9da94
+PODFILE CHECKSUM: 2ea62aa29e7ed945dbcf1a1bfa3cb5a4c0e953cb
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0.beta.2
