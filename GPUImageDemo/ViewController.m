@@ -29,6 +29,10 @@
                                                  @"Capturingfilteringstillphoto",
                                                  @"ProcessingstillimageVC",
                                                  @"WritingcustomfilterVC",
+                                                 @"LiveVideoVC",
+                                                 @"TakePhotoVC",
+                                                 @"ManulFilterVC",
+                                                 @"GroupFilterVC",
                                                  ]];
 
     

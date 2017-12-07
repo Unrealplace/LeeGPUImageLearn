@@ -9,11 +9,19 @@
 #import "Capturingfilteringstillphoto.h"
 #import <GPUImage.h>
 
-@interface Capturingfilteringstillphoto ()
+@interface Capturingfilteringstillphoto (){
+    GPUImageView * filterView;
+    
+}
 
 @end
 
 @implementation Capturingfilteringstillphoto
+
+- (void)loadView{
+    filterView = [[GPUImageView alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
+    self.view = filterView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,11 +29,10 @@
     GPUImageStillCamera*    stillCamera = [[GPUImageStillCamera alloc] init];
     stillCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
     
-   GPUImageGammaFilter*  filter = [[GPUImageGammaFilter alloc] init];
+    GPUImageGammaFilter*  filter = [[GPUImageGammaFilter alloc] init];
     [stillCamera addTarget:filter];
-    GPUImageView *filterView = (GPUImageView *)self.view;
+    
     [filter addTarget:filterView];
-    [filter useNextFrameForImageCapture];
 
     [stillCamera startCameraCapture];
     

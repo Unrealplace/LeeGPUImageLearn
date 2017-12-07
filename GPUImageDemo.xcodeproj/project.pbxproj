@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3156081FD526320014AD7D /* LiveVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3156071FD526320014AD7D /* LiveVideoVC.m */; };
+		2B31560B1FD52B450014AD7D /* TakePhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B31560A1FD52B450014AD7D /* TakePhotoVC.m */; };
+		2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B31560D1FD52E6F0014AD7D /* ManulFilterVC.m */; };
+		2B3156111FD532430014AD7D /* GroupFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3156101FD532430014AD7D /* GroupFilterVC.m */; };
 		2B6F39471FD02EFD0088F395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F39461FD02EFD0088F395 /* AppDelegate.m */; };
 		2B6F394A1FD02EFD0088F395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F39491FD02EFD0088F395 /* ViewController.m */; };
 		2B6F394D1FD02EFD0088F395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6F394B1FD02EFD0088F395 /* Main.storyboard */; };
@@ -18,12 +22,19 @@
 		B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0CE1FD3F7410062DFAD /* Capturingfilteringstillphoto.m */; };
 		B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0D11FD3FB780062DFAD /* ProcessingstillimageVC.m */; };
 		B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0D41FD402780062DFAD /* WritingcustomfilterVC.m */; };
-		B638B0D91FD402C90062DFAD /* CustomShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B638B0D81FD402C90062DFAD /* CustomShader.fsh */; };
 		BBA06A74838A344F73B0F9D8 /* libPods-GPUImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD139D4CF4927D290159F50 /* libPods-GPUImageDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2AD139D4CF4927D290159F50 /* libPods-GPUImageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GPUImageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3156061FD526320014AD7D /* LiveVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveVideoVC.h; sourceTree = "<group>"; };
+		2B3156071FD526320014AD7D /* LiveVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveVideoVC.m; sourceTree = "<group>"; };
+		2B3156091FD52B450014AD7D /* TakePhotoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakePhotoVC.h; sourceTree = "<group>"; };
+		2B31560A1FD52B450014AD7D /* TakePhotoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakePhotoVC.m; sourceTree = "<group>"; };
+		2B31560C1FD52E6F0014AD7D /* ManulFilterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManulFilterVC.h; sourceTree = "<group>"; };
+		2B31560D1FD52E6F0014AD7D /* ManulFilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManulFilterVC.m; sourceTree = "<group>"; };
+		2B31560F1FD532430014AD7D /* GroupFilterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupFilterVC.h; sourceTree = "<group>"; };
+		2B3156101FD532430014AD7D /* GroupFilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupFilterVC.m; sourceTree = "<group>"; };
 		2B6F39421FD02EFD0088F395 /* GPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6F39451FD02EFD0088F395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B6F39461FD02EFD0088F395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,7 +56,6 @@
 		B638B0D11FD3FB780062DFAD /* ProcessingstillimageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcessingstillimageVC.m; sourceTree = "<group>"; };
 		B638B0D31FD402780062DFAD /* WritingcustomfilterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritingcustomfilterVC.h; sourceTree = "<group>"; };
 		B638B0D41FD402780062DFAD /* WritingcustomfilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritingcustomfilterVC.m; sourceTree = "<group>"; };
-		B638B0D81FD402C90062DFAD /* CustomShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = CustomShader.fsh; path = /Users/liyang/LeeGPUImageLearn/GPUImageDemo/CustomShader.fsh; sourceTree = "<absolute>"; };
 		FBDD0CB2865227898F07A18B /* Pods-GPUImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImageDemo/Pods-GPUImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,9 +113,16 @@
 				B638B0D11FD3FB780062DFAD /* ProcessingstillimageVC.m */,
 				B638B0D31FD402780062DFAD /* WritingcustomfilterVC.h */,
 				B638B0D41FD402780062DFAD /* WritingcustomfilterVC.m */,
-				B638B0D81FD402C90062DFAD /* CustomShader.fsh */,
 				B638B0BE1FD3A1340062DFAD /* FilterDemoVC.h */,
 				B638B0BF1FD3A1340062DFAD /* FilterDemoVC.m */,
+				2B3156061FD526320014AD7D /* LiveVideoVC.h */,
+				2B3156071FD526320014AD7D /* LiveVideoVC.m */,
+				2B3156091FD52B450014AD7D /* TakePhotoVC.h */,
+				2B31560A1FD52B450014AD7D /* TakePhotoVC.m */,
+				2B31560C1FD52E6F0014AD7D /* ManulFilterVC.h */,
+				2B31560D1FD52E6F0014AD7D /* ManulFilterVC.m */,
+				2B31560F1FD532430014AD7D /* GroupFilterVC.h */,
+				2B3156101FD532430014AD7D /* GroupFilterVC.m */,
 				2B6F394B1FD02EFD0088F395 /* Main.storyboard */,
 				2B6F394E1FD02EFD0088F395 /* Assets.xcassets */,
 				2B6F39501FD02EFD0088F395 /* LaunchScreen.storyboard */,
@@ -185,7 +202,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B6F39521FD02EFD0088F395 /* LaunchScreen.storyboard in Resources */,
-				B638B0D91FD402C90062DFAD /* CustomShader.fsh in Resources */,
 				2B6F394F1FD02EFD0088F395 /* Assets.xcassets in Resources */,
 				2B6F394D1FD02EFD0088F395 /* Main.storyboard in Resources */,
 			);
@@ -256,14 +272,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3156081FD526320014AD7D /* LiveVideoVC.m in Sources */,
 				B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */,
 				B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */,
 				2B6F394A1FD02EFD0088F395 /* ViewController.m in Sources */,
 				B638B0C91FD3F2B20062DFAD /* FilteringlivevideoVC.m in Sources */,
 				B638B0C01FD3A1340062DFAD /* FilterDemoVC.m in Sources */,
+				2B3156111FD532430014AD7D /* GroupFilterVC.m in Sources */,
+				2B31560B1FD52B450014AD7D /* TakePhotoVC.m in Sources */,
 				2B6F39551FD02EFD0088F395 /* main.m in Sources */,
 				2B6F39471FD02EFD0088F395 /* AppDelegate.m in Sources */,
 				B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */,
+				2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9BQNL96S8U;
+				DEVELOPMENT_TEAM = CD678479PM;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
@@ -415,7 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9BQNL96S8U;
+				DEVELOPMENT_TEAM = CD678479PM;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
