@@ -29,6 +29,7 @@
                                                  @"Capturingfilteringstillphoto",
                                                  @"ProcessingstillimageVC",
                                                  @"WritingcustomfilterVC",
+                                                 @"MutipleFilterVC",
                                                  ]];
 
     
