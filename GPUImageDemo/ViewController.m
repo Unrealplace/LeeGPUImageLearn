@@ -33,6 +33,7 @@
                                                  @"TakePhotoVC",
                                                  @"ManulFilterVC",
                                                  @"GroupFilterVC",
+                                                 @"MutipleFilterVC",
                                                  ]];
 
     
