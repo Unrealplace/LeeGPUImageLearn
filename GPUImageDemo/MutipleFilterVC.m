@@ -10,13 +10,16 @@
 #import "MutipleFilterVC.h"
 #import  <GPUImage.h>
 
-@interface MutipleFilterVC ()
+@interface MutipleFilterVC ()<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) GPUImagePicture    *pic1;
 @property (nonatomic, strong) GPUImagePicture    *pic2;
 @property (nonatomic, strong) GPUImagePicture    *pic3;
 
 @property (nonatomic, strong)GPUImageView      *imageView;
+
+@property (nonatomic, strong)UIView            * showView;
+
 
 @end
 
@@ -27,11 +30,23 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.imageView = [[GPUImageView alloc] initWithFrame:CGRectMake(30, 100, 300, 350)];
     [self.view addSubview:self.imageView];
+    
+    self.showView = [UIView new];
+    [self.view addSubview:self.showView];
+    self.showView.frame = CGRectMake(100, 100, 100, 100);
+    self.showView.backgroundColor = [UIColor redColor];
+    
+    //rotation
+    UIRotationGestureRecognizer * rotation = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(rotation:)];
+    rotation.cancelsTouchesInView = NO;
+    rotation.delegate = self;
+    self.showView.userInteractionEnabled = YES;
+    [self.showView addGestureRecognizer:rotation];
 
 
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self generatePic];
+//    [self generatePic];
     
 }
 - (void)generatePic {
@@ -71,7 +86,39 @@
     
 }
 
+// 旋转手势事件
+- (void)rotation:(UIRotationGestureRecognizer *)sender {
+    
+    // 注意：手势传递的旋转角度都是相对于最开始的位置
+    
+    CGFloat rotation = sender.rotation;
+    
+    self.showView.transform = CGAffineTransformRotate(self.showView.transform, rotation);
+    
+    // 复位
+    sender.rotation = 0;
+    
+    NSLog(@"%s", __func__);
+}
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return YES;
+}
 
-
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    if ([gestureRecognizer isKindOfClass:[UIPinchGestureRecognizer class]] && [otherGestureRecognizer isKindOfClass:[UIRotationGestureRecognizer class]]) {
+        return YES;
+    }
+    else if ([gestureRecognizer isKindOfClass:[UIRotationGestureRecognizer class]] && [otherGestureRecognizer isKindOfClass:[UIPinchGestureRecognizer class]])
+    {
+        return YES;
+        
+    }
+    else
+    {
+        return NO;
+    }
+    
+}
 @end
