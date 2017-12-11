@@ -12,7 +12,7 @@ extern NSString *const kGPUImageYUVFullRangeConversionForLAFragmentShaderString;
 extern NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString;
 
 
-//Delegate Protocal for Face Detection.
+//Delegate Protocal for Face Detection. 人脸检测的协议
 @protocol GPUImageVideoCameraDelegate <NSObject>
 
 @optional
@@ -21,7 +21,8 @@ extern NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString
 
 
 /**
- A GPUImageOutput that provides frames from either camera
+ GPUImageVideoCamera继承自GPUImageOutput，实现了 AVCaptureVideoDataOutputSampleBufferDelegate 和 AVCaptureAudioDataOutputSampleBufferDelegate 协议。GPUImageVideoCamera可以调用相机进行视频拍摄，拍摄之后会生成帧缓存对象，我们可以使用GPUImageView显示，也可以使用GPUImageMovieWriter保存为视频文件。同时也提供了GPUImageVideoCameraDelegate 代理，方便我们自己处理CMSampleBuffer。在处理视频的时候会涉及到以下概念：
+ 
 */
 @interface GPUImageVideoCamera : GPUImageOutput <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 {
