@@ -82,6 +82,7 @@
     [_pic2 processImage];
     [_pic1 processImage];
     
+ 
     
     
 }

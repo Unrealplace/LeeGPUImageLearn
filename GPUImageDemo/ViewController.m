@@ -34,6 +34,7 @@
                                                  @"ManulFilterVC",
                                                  @"GroupFilterVC",
                                                  @"MutipleFilterVC",
+                                                 @"TwoPicEditVC",
                                                  ]];
 
     
