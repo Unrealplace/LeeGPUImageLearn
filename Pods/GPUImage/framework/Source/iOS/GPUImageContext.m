@@ -87,7 +87,7 @@ static void *openGLESContextQueueKey;
     GPUImageContext *sharedContext = [GPUImageContext sharedImageProcessingContext];
     [sharedContext setContextShaderProgram:shaderProgram];
 }
-
+//设置当前的上下文对象，以及当前的着色器程序。
 - (void)setContextShaderProgram:(GLProgram *)shaderProgram;
 {
     EAGLContext *imageProcessingContext = [self context];
@@ -99,10 +99,10 @@ static void *openGLESContextQueueKey;
     if (self.currentShaderProgram != shaderProgram)
     {
         self.currentShaderProgram = shaderProgram;
-        [shaderProgram use];
+        [shaderProgram use]; //启用着色器程序
     }
 }
-
+//获取OpenGLES支持的最大纹理尺寸。
 + (GLint)maximumTextureSizeForThisDevice;
 {
     static dispatch_once_t pred;
@@ -184,6 +184,8 @@ static void *openGLESContextQueueKey;
     return supportsFramebufferReads;
 }
 
+//调整纹理大小，保证纹理不超过OpenGLES支持最大的尺寸：
+
 + (CGSize)sizeThatFitsWithinATextureForSize:(CGSize)inputSize;
 {
     GLint maxTextureSize = [self maximumTextureSizeForThisDevice]; 
@@ -211,7 +213,7 @@ static void *openGLESContextQueueKey;
 {
     [self.context presentRenderbuffer:GL_RENDERBUFFER];
 }
-
+//创建GLProgram，首先在缓存中查找，如果没有则创建
 - (GLProgram *)programForVertexShaderString:(NSString *)vertexShaderString fragmentShaderString:(NSString *)fragmentShaderString;
 {
     NSString *lookupKeyForShaderProgram = [NSString stringWithFormat:@"V: %@ - F: %@", vertexShaderString, fragmentShaderString];
@@ -243,6 +245,7 @@ static void *openGLESContextQueueKey;
     _sharegroup = sharegroup;
 }
 
+//创建EAGLContext上下文对象，使用的是kEAGLRenderingAPIOpenGLES2的API也就是OpenGL ES 2.0。
 - (EAGLContext *)createContext;
 {
     EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2 sharegroup:_sharegroup];

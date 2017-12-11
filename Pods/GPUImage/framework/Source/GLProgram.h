@@ -15,11 +15,11 @@
 
 @interface GLProgram : NSObject 
 {
-    NSMutableArray  *attributes;
-    NSMutableArray  *uniforms;
-    GLuint          program,
+    NSMutableArray  *attributes; //属性变量数组
+    NSMutableArray  *uniforms; //uniform 变量数组
+    GLuint          program,//着色器程序的容器标识
 	vertShader, 
-	fragShader;	
+	fragShader;	 //顶点，片元着色器的标识。
 }
 
 @property(readwrite, nonatomic) BOOL initialized;
@@ -27,7 +27,11 @@
 @property(readwrite, copy, nonatomic) NSString *fragmentShaderLog;
 @property(readwrite, copy, nonatomic) NSString *programLog;
 
-- (id)initWithVertexShaderString:(NSString *)vShaderString 
+
+/**
+ 初始化program 用顶点和片元着色器
+ */
+- (id)initWithVertexShaderString:(NSString *)vShaderString
             fragmentShaderString:(NSString *)fShaderString;
 - (id)initWithVertexShaderString:(NSString *)vShaderString 
           fragmentShaderFilename:(NSString *)fShaderFilename;
@@ -36,6 +40,10 @@
 - (void)addAttribute:(NSString *)attributeName;
 - (GLuint)attributeIndex:(NSString *)attributeName;
 - (GLuint)uniformIndex:(NSString *)uniformName;
+
+/**
+ 编译完后，链接使用
+ */
 - (BOOL)link;
 - (void)use;
 - (void)validate;

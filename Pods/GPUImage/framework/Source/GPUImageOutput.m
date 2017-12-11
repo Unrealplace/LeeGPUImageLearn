@@ -161,17 +161,19 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
 
 #pragma mark -
 #pragma mark Managing targets
-
+// 设置输入的帧缓冲对象以及纹理索引
 - (void)setInputFramebufferForTarget:(id<GPUImageInput>)target atIndex:(NSInteger)inputTextureIndex;
 {
+    // 设置输入的帧缓冲对象以及纹理索引
     [target setInputFramebuffer:[self framebufferForOutput] atIndex:inputTextureIndex];
 }
 
+// 获取帧缓存
 - (GPUImageFramebuffer *)framebufferForOutput;
 {
     return outputFramebuffer;
 }
-
+// 移除帧缓存
 - (void)removeOutputFramebuffer;
 {
     outputFramebuffer = nil;
@@ -187,12 +189,13 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
         [self setInputFramebufferForTarget:currentTarget atIndex:textureIndex];
     }
 }
-
+//所以的targets
 - (NSArray*)targets;
 {
 	return [NSArray arrayWithArray:targets];
 }
 
+// 添加一个新的 target 对象
 - (void)addTarget:(id<GPUImageInput>)newTarget;
 {
     NSInteger nextAvailableTextureIndex = [newTarget nextAvailableTextureIndex];
@@ -204,6 +207,7 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
     }
 }
 
+// 添加一个新的 target 在某个纹理位置
 - (void)addTarget:(id<GPUImageInput>)newTarget atTextureLocation:(NSInteger)textureLocation;
 {
     if([targets containsObject:newTarget])
@@ -247,7 +251,7 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
         [targetToRemove endProcessing];
     });
 }
-
+// 移除所有的targets
 - (void)removeAllTargets;
 {
     cachedMaximumOutputSize = CGSizeZero;
@@ -291,6 +295,8 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
 {
     return nil;
 }
+
+//提取图像。包含了提取得到 CGImage 和 UIImage 。
 
 - (CGImageRef)newCGImageByFilteringCGImage:(CGImageRef)imageToFilter;
 {

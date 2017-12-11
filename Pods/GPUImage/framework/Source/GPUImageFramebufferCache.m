@@ -9,13 +9,20 @@
 
 @interface GPUImageFramebufferCache()
 {
-//    NSCache *framebufferCache;
+
+    //    NSCache *framebufferCache;
+    //  缓存字典
     NSMutableDictionary *framebufferCache;
+    // 缓存数量字典
     NSMutableDictionary *framebufferTypeCounts;
+    // 当前正在使用的GPUImageFramebuffer数组
     NSMutableArray *activeImageCaptureList; // Where framebuffers that may be lost by a filter, but which are still needed for a UIImage, etc., are stored
     id memoryWarningObserver;
-
+    
+    // 缓存队列
     dispatch_queue_t framebufferCacheQueue;
+    
+    
 }
 
 - (NSString *)hashForSize:(CGSize)size textureOptions:(GPUTextureOptions)textureOptions onlyTexture:(BOOL)onlyTexture;
@@ -34,7 +41,7 @@
     {
 		return nil;
     }
-    
+//    内存警告观察着
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
     memoryWarningObserver = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidReceiveMemoryWarningNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
         
@@ -43,6 +50,7 @@
 #else
 #endif
 
+//    初始化各种缓存池
 //    framebufferCache = [[NSCache alloc] init];
     framebufferCache = [[NSMutableDictionary alloc] init];
     framebufferTypeCounts = [[NSMutableDictionary alloc] init];
@@ -66,16 +74,18 @@
         return [NSString stringWithFormat:@"%.1fx%.1f-%d:%d:%d:%d:%d:%d:%d", size.width, size.height, textureOptions.minFilter, textureOptions.magFilter, textureOptions.wrapS, textureOptions.wrapT, textureOptions.internalFormat, textureOptions.format, textureOptions.type];
     }
 }
-
 - (GPUImageFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize textureOptions:(GPUTextureOptions)textureOptions onlyTexture:(BOOL)onlyTexture;
 {
     __block GPUImageFramebuffer *framebufferFromCache = nil;
-//    dispatch_sync(framebufferCacheQueue, ^{
+    //    dispatch_sync(framebufferCacheQueue, ^{
     runSynchronouslyOnVideoProcessingQueue(^{
+        // 创建查找字符串
         NSString *lookupHash = [self hashForSize:framebufferSize textureOptions:textureOptions onlyTexture:onlyTexture];
+        // 获取GPUImageFramebuffer在缓存中的数量
         NSNumber *numberOfMatchingTexturesInCache = [framebufferTypeCounts objectForKey:lookupHash];
         NSInteger numberOfMatchingTextures = [numberOfMatchingTexturesInCache integerValue];
         
+        // 缓存中如果没有，则创建
         if ([numberOfMatchingTexturesInCache integerValue] < 1)
         {
             // Nothing in the cache, create a new framebuffer to use
@@ -84,14 +94,19 @@
         else
         {
             // Something found, pull the old framebuffer and decrement the count
+            // 缓存中如果有，则取出最后一个，如果取出framebufferFromCache为空，则取倒数第二个，依次类推。
             NSInteger currentTextureID = (numberOfMatchingTextures - 1);
             while ((framebufferFromCache == nil) && (currentTextureID >= 0))
             {
+                // 根据数量构建带数量的textureHash字符串
                 NSString *textureHash = [NSString stringWithFormat:@"%@-%ld", lookupHash, (long)currentTextureID];
+                
+                // 查找以textureHash为key的GPUImageFramebuffer是否存在
                 framebufferFromCache = [framebufferCache objectForKey:textureHash];
                 // Test the values in the cache first, to see if they got invalidated behind our back
                 if (framebufferFromCache != nil)
                 {
+                    // 存在，则从缓存中删除
                     // Withdraw this from the cache while it's in use
                     [framebufferCache removeObjectForKey:textureHash];
                 }
@@ -100,18 +115,22 @@
             
             currentTextureID++;
             
+            // 更新framebufferTypeCounts中相同类型GPUImageFramebuffer的数量
             [framebufferTypeCounts setObject:[NSNumber numberWithInteger:currentTextureID] forKey:lookupHash];
             
+            // 还是没有则创建
             if (framebufferFromCache == nil)
             {
                 framebufferFromCache = [[GPUImageFramebuffer alloc] initWithSize:framebufferSize textureOptions:textureOptions onlyTexture:onlyTexture];
             }
         }
     });
-
+    
+    // 引用计数加1，返回
     [framebufferFromCache lock];
     return framebufferFromCache;
 }
+
 
 - (GPUImageFramebuffer *)fetchFramebufferForSize:(CGSize)framebufferSize onlyTexture:(BOOL)onlyTexture;
 {
@@ -129,23 +148,30 @@
 
 - (void)returnFramebufferToCache:(GPUImageFramebuffer *)framebuffer;
 {
+    // 清除引用计数
     [framebuffer clearAllLocks];
     
-//    dispatch_async(framebufferCacheQueue, ^{
+    //    dispatch_async(framebufferCacheQueue, ^{
     runAsynchronouslyOnVideoProcessingQueue(^{
         CGSize framebufferSize = framebuffer.size;
         GPUTextureOptions framebufferTextureOptions = framebuffer.textureOptions;
+        // 常见查找hash字符串
         NSString *lookupHash = [self hashForSize:framebufferSize textureOptions:framebufferTextureOptions onlyTexture:framebuffer.missingFramebuffer];
+        // 获取当前同类型缓存的数量
         NSNumber *numberOfMatchingTexturesInCache = [framebufferTypeCounts objectForKey:lookupHash];
         NSInteger numberOfMatchingTextures = [numberOfMatchingTexturesInCache integerValue];
         
+        // 对相同类型的GPUImageFramebuffer,存放在framebufferCache中时，key值由lookupHash加上数量避免覆盖相同的GPUImageFramebuffer。
         NSString *textureHash = [NSString stringWithFormat:@"%@-%ld", lookupHash, (long)numberOfMatchingTextures];
         
-//        [framebufferCache setObject:framebuffer forKey:textureHash cost:round(framebufferSize.width * framebufferSize.height * 4.0)];
+        //        [framebufferCache setObject:framebuffer forKey:textureHash cost:round(framebufferSize.width * framebufferSize.height * 4.0)];
         [framebufferCache setObject:framebuffer forKey:textureHash];
+        
+        // framebufferTypeCounts中的key没有加数量
         [framebufferTypeCounts setObject:[NSNumber numberWithInteger:(numberOfMatchingTextures + 1)] forKey:lookupHash];
     });
 }
+
 
 - (void)purgeAllUnassignedFramebuffers;
 {

@@ -78,6 +78,7 @@
     
     BOOL shouldRedrawUsingCoreGraphics = NO;
     
+    // 限制 图片的最大尺寸
     // For now, deal with images larger than the maximum texture size by resizing to be within that limit
     CGSize scaledImageSizeToFitOnGPU = [GPUImageContext sizeThatFitsWithinATextureForSize:pixelSizeOfImage];
     if (!CGSizeEqualToSize(scaledImageSizeToFitOnGPU, pixelSizeOfImage))
@@ -243,18 +244,21 @@
     [self processImageWithCompletionHandler:nil];
 }
 
+// 处理图片，可以传入处理完回调的block
 - (BOOL)processImageWithCompletionHandler:(void (^)(void))completion;
 {
     hasProcessedImage = YES;
     
     //    dispatch_semaphore_wait(imageUpdateSemaphore, DISPATCH_TIME_FOREVER);
     
+    // 如果计数器小于1便立即返回。计数器大于等于1的时候，使计数器减1，并且往下执行
     if (dispatch_semaphore_wait(imageUpdateSemaphore, DISPATCH_TIME_NOW) != 0)
     {
         return NO;
     }
     
-    runAsynchronouslyOnVideoProcessingQueue(^{        
+    // 传递Framebuffer给所有targets处理
+    runAsynchronouslyOnVideoProcessingQueue(^{
         for (id<GPUImageInput> currentTarget in targets)
         {
             NSInteger indexOfObject = [targets indexOfObject:currentTarget];
@@ -266,8 +270,10 @@
             [currentTarget newFrameReadyAtTime:kCMTimeIndefinite atIndex:textureIndexOfTarget];
         }
         
+        // 执行完，计数器加1
         dispatch_semaphore_signal(imageUpdateSemaphore);
         
+        // 有block，执行block
         if (completion != nil) {
             completion();
         }
@@ -275,7 +281,7 @@
     
     return YES;
 }
-
+// 由响应链的final filter生成UIImage图像
 - (void)processImageUpToFilter:(GPUImageOutput<GPUImageInput> *)finalFilterInChain withCompletionHandler:(void (^)(UIImage *processedImage))block;
 {
     [finalFilterInChain useNextFrameForImageCapture];
@@ -284,7 +290,7 @@
         block(imageFromFilter);
     }];
 }
-
+// 返回输出的图片尺寸
 - (CGSize)outputImageSize;
 {
     return pixelSizeOfImage;

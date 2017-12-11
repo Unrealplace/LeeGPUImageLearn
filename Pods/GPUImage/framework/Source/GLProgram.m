@@ -33,9 +33,14 @@ typedef void (*GLLogFunction) (GLuint program, GLsizei bufsize, GLsizei* length,
     {
         _initialized = NO;
         
+//         初始化属性数组
         attributes = [[NSMutableArray alloc] init];
+//         初始化uniform属性数组
         uniforms = [[NSMutableArray alloc] init];
+//        创建一个着色器程序
         program = glCreateProgram();
+        
+//        编译顶点和片元着色器
         
         if (![self compileShader:&vertShader 
                             type:GL_VERTEX_SHADER 
@@ -44,14 +49,13 @@ typedef void (*GLLogFunction) (GLuint program, GLsizei bufsize, GLsizei* length,
             NSLog(@"Failed to compile vertex shader");
         }
         
-        // Create and compile fragment shader
-        if (![self compileShader:&fragShader 
+        if (![self compileShader:&fragShader
                             type:GL_FRAGMENT_SHADER 
                           string:fShaderString])
         {
             NSLog(@"Failed to compile fragment shader");
         }
-        
+//        绑定顶点和片元着色器到着色器程序
         glAttachShader(program, vertShader);
         glAttachShader(program, fragShader);
     }
@@ -143,13 +147,16 @@ typedef void (*GLLogFunction) (GLuint program, GLsizei bufsize, GLsizei* length,
 // START:addattribute
 - (void)addAttribute:(NSString *)attributeName
 {
+    // 先判断当前的属性是否已存在
     if (![attributes containsObject:attributeName])
     {
+        // 如果不存在先加入属性数组，然后绑定该属性的位置为在属性数组中的位置
         [attributes addObject:attributeName];
-        glBindAttribLocation(program, 
+        glBindAttribLocation(program,
                              (GLuint)[attributes indexOfObject:attributeName],
                              [attributeName UTF8String]);
     }
+    
 }
 // END:addattribute
 // START:indexmethods
@@ -159,6 +166,7 @@ typedef void (*GLLogFunction) (GLuint program, GLsizei bufsize, GLsizei* length,
 }
 - (GLuint)uniformIndex:(NSString *)uniformName
 {
+    // 获取Uniform变量的位置
     return glGetUniformLocation(program, [uniformName UTF8String]);
 }
 // END:indexmethods
@@ -166,16 +174,20 @@ typedef void (*GLLogFunction) (GLuint program, GLsizei bufsize, GLsizei* length,
 // START:link
 - (BOOL)link
 {
-//    CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
-
+    //    CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+    
     GLint status;
     
+    // 链接着色器程序
     glLinkProgram(program);
     
+    // 获取链接状态
     glGetProgramiv(program, GL_LINK_STATUS, &status);
+    // 链接失败则返回
     if (status == GL_FALSE)
         return NO;
     
+    // 链接成功，就可以删掉相关的shader,释放资源
     if (vertShader)
     {
         glDeleteShader(vertShader);
@@ -187,12 +199,14 @@ typedef void (*GLLogFunction) (GLuint program, GLsizei bufsize, GLsizei* length,
         fragShader = 0;
     }
     
+    // 设置初始化成功标识
     self.initialized = YES;
-
-//    CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
-//    NSLog(@"Linked in %f ms", linkTime * 1000.0);
-
+    
+    //    CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+    //    NSLog(@"Linked in %f ms", linkTime * 1000.0);
+    
     return YES;
+    
 }
 // END:link
 // START:use
