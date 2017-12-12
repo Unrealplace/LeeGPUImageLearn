@@ -11,6 +11,11 @@ extern NSString *const kGPUImageColorSwizzlingFragmentShaderString;
 - (void)movieRecordingFailedWithError:(NSError*)error;
 
 @end
+//GPUImageMovieWriter主要的功能是编码音视频并保存为音视频文件，它实现了GPUImageInput协议。
+//因此，可以接受帧缓存的输入。GPUImageMovieWriter 在进行音视频录制的时候，
+//主要用到这几个类 AVAssetWriter 、AVAssetWriterInput 、
+//AVAssetWriterInputPixelBufferAdaptor。
+//AVAssetWriter支持的音视频格式比较多
 
 @interface GPUImageMovieWriter : NSObject <GPUImageInput>
 {

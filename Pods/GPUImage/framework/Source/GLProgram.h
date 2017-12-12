@@ -22,7 +22,7 @@
 	fragShader;	 //顶点，片元着色器的标识。
 }
 
-@property(readwrite, nonatomic) BOOL initialized;
+@property(readwrite, nonatomic) BOOL initialized; // 是否已经初始化了
 @property(readwrite, copy, nonatomic) NSString *vertexShaderLog;
 @property(readwrite, copy, nonatomic) NSString *fragmentShaderLog;
 @property(readwrite, copy, nonatomic) NSString *programLog;

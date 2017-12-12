@@ -114,7 +114,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
 }
 
 - (void)updateOrientationSendToTargets;
-- (void)convertYUVToRGBOutput;
+- (void)convertYUVToRGBOutput; // YUV 格式转化成RGB 的输出
 
 @end
 
@@ -142,19 +142,25 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
     return self;
 }
 
-- (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition; 
+/**
+ 初始化相关配置参数信息
+ */
+- (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition;
 {
-	if (!(self = [super init]))
+    if (!(self = [super init]))
     {
-		return nil;
+        return nil;
     }
     
+    // 创建音视频处理队列
     cameraProcessingQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0);
-	audioProcessingQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW,0);
-
+    audioProcessingQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW,0);
+    
+    // 创建信号量
     frameRenderingSemaphore = dispatch_semaphore_create(1);
-
-	_frameRate = 0; // This will not set frame rate unless this value gets set to 1 or above
+    
+    // 变量的初始化
+    _frameRate = 0; // This will not set frame rate unless this value gets set to 1 or above
     _runBenchmark = NO;
     capturePaused = NO;
     outputRotation = kGPUImageNoRotation;
@@ -162,39 +168,42 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
     captureAsYUV = YES;
     _preferredConversion = kColorConversion709;
     
-	// Grab the back-facing or front-facing camera
+    // 根据传入参数获取前后相机
     _inputCamera = nil;
-	NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-	for (AVCaptureDevice *device in devices) 
-	{
-		if ([device position] == cameraPosition)
-		{
-			_inputCamera = device;
-		}
-	}
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in devices)
+    {
+        if ([device position] == cameraPosition)
+        {
+            _inputCamera = device;
+        }
+    }
     
+    // 获取相机失败，立即返回
     if (!_inputCamera) {
         return nil;
     }
     
-	// Create the capture session
-	_captureSession = [[AVCaptureSession alloc] init];
-	
+    // 创建会话对象
+    _captureSession = [[AVCaptureSession alloc] init];
+    
+    // 开始配置
     [_captureSession beginConfiguration];
     
-	// Add the video input	
-	NSError *error = nil;
-	videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:_inputCamera error:&error];
-	if ([_captureSession canAddInput:videoInput]) 
-	{
-		[_captureSession addInput:videoInput];
-	}
-	
-	// Add the video frame output	
-	videoOutput = [[AVCaptureVideoDataOutput alloc] init];
-	[videoOutput setAlwaysDiscardsLateVideoFrames:NO];
+    // 创建video输入对象
+    NSError *error = nil;
+    videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:_inputCamera error:&error];
+    if ([_captureSession canAddInput:videoInput])
+    {
+        [_captureSession addInput:videoInput];
+    }
     
-//    if (captureAsYUV && [GPUImageContext deviceSupportsRedTextures])
+    // 创建video输出对象
+    videoOutput = [[AVCaptureVideoDataOutput alloc] init];
+    [videoOutput setAlwaysDiscardsLateVideoFrames:NO];
+    
+    //    if (captureAsYUV && [GPUImageContext deviceSupportsRedTextures])
+    // 设置YUV的处理方式
     if (captureAsYUV && [GPUImageContext supportsFastTextureUpload])
     {
         BOOL supportsFullYUVRange = NO;
@@ -209,20 +218,24 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
         
         if (supportsFullYUVRange)
         {
+            // 设置kCVPixelFormatType_420YpCbCr8BiPlanarFullRange格式
             [videoOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
             isFullYUVRange = YES;
         }
         else
         {
+            // 设置kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange格式
             [videoOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
             isFullYUVRange = NO;
         }
     }
     else
     {
+        // 设置kCVPixelFormatType_32BGRA格式
         [videoOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
     }
     
+    // 创建GL程序、获取属性位置
     runSynchronouslyOnVideoProcessingQueue(^{
         
         if (captureAsYUV)
@@ -242,7 +255,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
             {
                 yuvConversionProgram = [[GPUImageContext sharedImageProcessingContext] programForVertexShaderString:kGPUImageVertexShaderString fragmentShaderString:kGPUImageYUVVideoRangeConversionForLAFragmentShaderString];
             }
-
+            
             //            }
             
             if (!yuvConversionProgram.initialized)
@@ -268,39 +281,44 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
             yuvConversionLuminanceTextureUniform = [yuvConversionProgram uniformIndex:@"luminanceTexture"];
             yuvConversionChrominanceTextureUniform = [yuvConversionProgram uniformIndex:@"chrominanceTexture"];
             yuvConversionMatrixUniform = [yuvConversionProgram uniformIndex:@"colorConversionMatrix"];
-            
+            // 激活程序
             [GPUImageContext setActiveShaderProgram:yuvConversionProgram];
-            
+            // 激活顶点缓存
             glEnableVertexAttribArray(yuvConversionPositionAttribute);
             glEnableVertexAttribArray(yuvConversionTextureCoordinateAttribute);
         }
     });
     
+    // 设置AVCaptureVideoDataOutputSampleBufferDelegate代理
     [videoOutput setSampleBufferDelegate:self queue:cameraProcessingQueue];
-	if ([_captureSession canAddOutput:videoOutput])
-	{
-		[_captureSession addOutput:videoOutput];
-	}
-	else
-	{
-		NSLog(@"Couldn't add video output");
+    // 添加输出
+    if ([_captureSession canAddOutput:videoOutput])
+    {
+        [_captureSession addOutput:videoOutput];
+    }
+    else
+    {
+        NSLog(@"Couldn't add video output");
         return nil;
-	}
+    }
     
-	_captureSessionPreset = sessionPreset;
+    // 设置视频质量
+    _captureSessionPreset = sessionPreset;
     [_captureSession setSessionPreset:_captureSessionPreset];
-
-// This will let you get 60 FPS video from the 720p preset on an iPhone 4S, but only that device and that preset
-//    AVCaptureConnection *conn = [videoOutput connectionWithMediaType:AVMediaTypeVideo];
-//    
-//    if (conn.supportsVideoMinFrameDuration)
-//        conn.videoMinFrameDuration = CMTimeMake(1,60);
-//    if (conn.supportsVideoMaxFrameDuration)
-//        conn.videoMaxFrameDuration = CMTimeMake(1,60);
     
+    // This will let you get 60 FPS video from the 720p preset on an iPhone 4S, but only that device and that preset
+    //    AVCaptureConnection *conn = [videoOutput connectionWithMediaType:AVMediaTypeVideo];
+    //
+    //    if (conn.supportsVideoMinFrameDuration)
+    //        conn.videoMinFrameDuration = CMTimeMake(1,60);
+    //    if (conn.supportsVideoMaxFrameDuration)
+    //        conn.videoMaxFrameDuration = CMTimeMake(1,60);
+    
+    // 提交配置
     [_captureSession commitConfiguration];
     
-	return self;
+    return self;
+    
 }
 
 - (GPUImageFramebuffer *)framebufferForOutput;
@@ -673,19 +691,29 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
     }
 }
 
+
+/**
+ 视频 缓存数据处理
+
+ @param sampleBuffer 采样数据
+ */
 - (void)processVideoSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 {
+    // 暂停不处理
     if (capturePaused)
     {
         return;
     }
-    
+    // 获取当前绝对时间
     CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+    // 从采样视频帧中提取相机图片帧
     CVImageBufferRef cameraFrame = CMSampleBufferGetImageBuffer(sampleBuffer);
+    // 图片帧宽高获取
     int bufferWidth = (int) CVPixelBufferGetWidth(cameraFrame);
     int bufferHeight = (int) CVPixelBufferGetHeight(cameraFrame);
+    // 获取颜色信息
     CFTypeRef colorAttachments = CVBufferGetAttachment(cameraFrame, kCVImageBufferYCbCrMatrixKey, NULL);
-    if (colorAttachments != NULL)
+    if (colorAttachments != NULL) // 若果有颜色信息
     {
         if(CFStringCompare(colorAttachments, kCVImageBufferYCbCrMatrix_ITU_R_601_4, 0) == kCFCompareEqualTo)
         {
@@ -713,10 +741,12 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
         {
             _preferredConversion = kColorConversion601;
         }
-    }
+    } // 理解成上面实在配置一些东西
 
+    // 获取样本帧中的时间戳信息
 	CMTime currentTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
 
+    // 设置使用当前上下文
     [GPUImageContext useImageProcessingContext];
 
     if ([GPUImageContext supportsFastTextureUpload] && captureAsYUV)
@@ -727,7 +757,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
 //        if (captureAsYUV && [GPUImageContext deviceSupportsRedTextures])
         if (CVPixelBufferGetPlaneCount(cameraFrame) > 0) // Check for YUV planar inputs to do RGB conversion
         {
-            CVPixelBufferLockBaseAddress(cameraFrame, 0);
+            CVPixelBufferLockBaseAddress(cameraFrame, 0); // 锁住基地子
             
             if ( (imageBufferWidth != bufferWidth) && (imageBufferHeight != bufferHeight) )
             {
@@ -736,7 +766,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
             }
             
             CVReturn err;
-            // Y-plane
+            // Y 分量信息
             glActiveTexture(GL_TEXTURE4);
             if ([GPUImageContext deviceSupportsRedTextures])
             {
@@ -773,6 +803,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
                 NSLog(@"Error at CVOpenGLESTextureCacheCreateTextureFromImage %d", err);
             }
             
+            // 绑定纹理相关
             chrominanceTexture = CVOpenGLESTextureGetName(chrominanceTextureRef);
             glBindTexture(GL_TEXTURE_2D, chrominanceTexture);
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -791,6 +822,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
                 rotatedImageBufferHeight = bufferWidth;
             }
             
+            // 更新 target 的帧缓存数据供显示用
             [self updateTargetsForVideoCameraUsingCacheTextureAtWidth:rotatedImageBufferWidth height:rotatedImageBufferHeight time:currentTime];
             
             CVPixelBufferUnlockBaseAddress(cameraFrame, 0);
@@ -872,11 +904,20 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
     }  
 }
 
+// 数量音频 缓存
+//注意
+//由于 processAudioSampleBuffer 直接交给audioEncodingTarget处理AudioBuffer。
+//因此，录制视频的时候如果需要加入声音需要设置audioEncodingTarget。
+//否则，录制出的视频就没有声音。
 - (void)processAudioSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 {
     [self.audioEncodingTarget processAudioBuffer:sampleBuffer]; 
 }
 
+
+/**
+ 开始转化YUV 到 RGB 输出
+ */
 - (void)convertYUVToRGBOutput;
 {
     [GPUImageContext setActiveShaderProgram:yuvConversionProgram];
@@ -889,6 +930,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
         rotatedImageBufferHeight = imageBufferWidth;
     }
 
+    // 开始进行Opegl 绘制
     outputFramebuffer = [[GPUImageContext sharedFramebufferCache] fetchFramebufferForSize:CGSizeMake(rotatedImageBufferWidth, rotatedImageBufferHeight) textureOptions:self.outputTextureOptions onlyTexture:NO];
     [outputFramebuffer activateFramebuffer];
 
@@ -946,7 +988,7 @@ NSString *const kGPUImageYUVVideoRangeConversionForLAFragmentShaderString = SHAD
         [self processAudioSampleBuffer:sampleBuffer];
     }
     else
-    {
+    { // 数量视频缓存数据
         if (dispatch_semaphore_wait(frameRenderingSemaphore, DISPATCH_TIME_NOW) != 0)
         {
             return;
