@@ -13,12 +13,14 @@
 @synthesize filters = _filters, input = _input, output = _output;
 
 #pragma mark Config file init
+// 根据filter配置字典、GPUImageOutput、GPUImageInput构建GPUImageFilterPipeline
 
 - (id)initWithConfiguration:(NSDictionary *)configuration input:(GPUImageOutput *)input output:(id <GPUImageInput>)output {
     self = [super init];
     if (self) {
         self.input = input;
         self.output = output;
+        // 解析配置字典文件
         if (![self _parseConfiguration:configuration]) {
             NSLog(@"Sorry, a parsing error occurred.");
             abort();
@@ -27,11 +29,12 @@
     }
     return self;
 }
+// 根据filter配置文件的URL、GPUImageOutput、GPUImageInput构建GPUImageFilterPipeline
 
 - (id)initWithConfigurationFile:(NSURL *)configuration input:(GPUImageOutput *)input output:(id <GPUImageInput>)output {
     return [self initWithConfiguration:[NSDictionary dictionaryWithContentsOfURL:configuration] input:input output:output];
 }
-
+// 解析配置文件
 - (BOOL)_parseConfiguration:(NSDictionary *)configuration {
     NSArray *filters = [configuration objectForKey:@"Filters"];
     if (!filters) {
@@ -136,6 +139,7 @@
 }
 
 #pragma mark Regular init
+// 根据输入的filter数组、GPUImageOutput、GPUImageInput构建GPUImageFilterPipeline
 
 - (id)initWithOrderedFilters:(NSArray *)filters input:(GPUImageOutput *)input output:(id <GPUImageInput>)output {
     self = [super init];
@@ -184,33 +188,39 @@
     [self _refreshFilters];
 }
 
+// 更新响应链
 - (void)_refreshFilters {
-    
+    // 将input作为响应链源
     id prevFilter = self.input;
     GPUImageOutput<GPUImageInput> *theFilter = nil;
     
+    // 循环添加 ，像节点一样顺序移动添加
     for (int i = 0; i < [self.filters count]; i++) {
         theFilter = [self.filters objectAtIndex:i];
         [prevFilter removeAllTargets];
         [prevFilter addTarget:theFilter];
         prevFilter = theFilter;
     }
-    
+    // 加到最后一个时候 要调用一下 移除，防止上次遗留
     [prevFilter removeAllTargets];
     
+    // 最后将output加入响应链
     if (self.output != nil) {
         [prevFilter addTarget:self.output];
     }
 }
 
+// 由final filter生成图像
 - (UIImage *)currentFilteredFrame {
     return [(GPUImageOutput<GPUImageInput> *)[_filters lastObject] imageFromCurrentFramebuffer];
 }
 
+// 根据imageOrientation生成图像
 - (UIImage *)currentFilteredFrameWithOrientation:(UIImageOrientation)imageOrientation {
-  return [(GPUImageOutput<GPUImageInput> *)[_filters lastObject] imageFromCurrentFramebufferWithOrientation:imageOrientation];
+    return [(GPUImageOutput<GPUImageInput> *)[_filters lastObject] imageFromCurrentFramebufferWithOrientation:imageOrientation];
 }
 
+// 由final filter生成图像
 - (CGImageRef)newCGImageFromCurrentFilteredFrame {
     return [(GPUImageOutput<GPUImageInput> *)[_filters lastObject] newCGImageFromCurrentlyProcessedOutput];
 }

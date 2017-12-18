@@ -1,9 +1,23 @@
 #import "GPUImageTwoInputFilter.h"
 
+//GPUImageLookupFilter 是GPUImage中的颜色查找滤镜，在一般的相机应用中使用得最广泛，它的作用是通过颜色变换从而产生出新风格的图片。
+//接下来就看一下颜色超招标如何在GPUImage实现的。以下是源码内容：
+
 @interface GPUImageLookupFilter : GPUImageTwoInputFilter
 {
     GLint intensityUniform;
 }
+
+//LUT （Lookup Tables）即查找表 。
+//LUT是个非常简单的数值转换表，不同的色彩输入数值“映射”到一套输出数值，用来改变图像的色彩。
+//例如：红色在LUT中可能被映射成蓝色，于是，应用LUT的图像中每个红的地方将由蓝色取代。
+//不过，LUT的实际应用要比这种情况更微妙一些。LUT通常用来矫正域外色的问题。
+//例如，一个以RGB色彩空间存储的图像要打印到纸上时，必须首先将文件转换为CMYK色彩空间。
+//这可以用一个LUT将每个RGB色彩转换为等效的CMYK色彩，或者与域外色最接近的色彩（LUT还能够用缩放的方法在一定程度改变所有的色彩，因此可使图像在视觉上与原来相同）。
+//另外需要注意的一个问题是，尽管查找表经常效率很高，但是如果所替换的计算相当简单的话就会得不偿失，这不仅仅因为从内存中提取结果需要更多的时间，而且因为它增大了所需的内存并且破坏了高速缓存。
+//如果查找表太大，那么几乎每次访问查找表都会导致高速缓存缺失，这在处理器速度超过内存速度的时候愈发成为一个问题。
+
+
 
 // How To Use:
 // 1) Use your favourite photo editing application to apply a filter to lookup.png from GPUImage/framework/Resources.

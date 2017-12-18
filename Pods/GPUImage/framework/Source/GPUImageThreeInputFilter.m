@@ -95,26 +95,29 @@ NSString *const kGPUImageThreeInputTextureVertexShaderString = SHADER_STRING
     {
         [outputFramebuffer lock];
     }
-
+    
     [self setUniformsForProgramAtIndex:0];
     
     glClearColor(backgroundColorRed, backgroundColorGreen, backgroundColorBlue, backgroundColorAlpha);
     glClear(GL_COLOR_BUFFER_BIT);
     
-	glActiveTexture(GL_TEXTURE2);
-	glBindTexture(GL_TEXTURE_2D, [firstInputFramebuffer texture]);
-	glUniform1i(filterInputTextureUniform, 2);
+    // 激活第一个纹理
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_2D, [firstInputFramebuffer texture]);
+    glUniform1i(filterInputTextureUniform, 2);
     
+    // 激活第二个纹理
     glActiveTexture(GL_TEXTURE3);
     glBindTexture(GL_TEXTURE_2D, [secondInputFramebuffer texture]);
     glUniform1i(filterInputTextureUniform2, 3);
-
+    
+    // 激活第三个纹理
     glActiveTexture(GL_TEXTURE4);
     glBindTexture(GL_TEXTURE_2D, [thirdInputFramebuffer texture]);
     glUniform1i(filterInputTextureUniform3, 4);
-
+    
     glVertexAttribPointer(filterPositionAttribute, 2, GL_FLOAT, 0, 0, vertices);
-	glVertexAttribPointer(filterTextureCoordinateAttribute, 2, GL_FLOAT, 0, 0, textureCoordinates);
+    glVertexAttribPointer(filterTextureCoordinateAttribute, 2, GL_FLOAT, 0, 0, textureCoordinates);
     glVertexAttribPointer(filterSecondTextureCoordinateAttribute, 2, GL_FLOAT, 0, 0, [[self class] textureCoordinatesForRotation:inputRotation2]);
     glVertexAttribPointer(filterThirdTextureCoordinateAttribute, 2, GL_FLOAT, 0, 0, [[self class] textureCoordinatesForRotation:inputRotation3]);
     
@@ -245,10 +248,12 @@ NSString *const kGPUImageThreeInputTextureVertexShaderString = SHADER_STRING
     {
         hasReceivedFirstFrame = YES;
         firstFrameTime = frameTime;
+        // 如果不检查第二个纹理输入，则直接默认已经接收了第二个纹理
         if (secondFrameCheckDisabled)
         {
             hasReceivedSecondFrame = YES;
         }
+        // 如果不检查第三个纹理输入，则直接默认已经接收了第三个纹理
         if (thirdFrameCheckDisabled)
         {
             hasReceivedThirdFrame = YES;
@@ -266,15 +271,17 @@ NSString *const kGPUImageThreeInputTextureVertexShaderString = SHADER_STRING
     {
         hasReceivedSecondFrame = YES;
         secondFrameTime = frameTime;
+        // 如果不检查第一个纹理输入，则直接默认已经接收了第一个纹理
         if (firstFrameCheckDisabled)
         {
             hasReceivedFirstFrame = YES;
         }
+        // 如果不检查第三个纹理输入，则直接默认已经接收了第三个纹理
         if (thirdFrameCheckDisabled)
         {
             hasReceivedThirdFrame = YES;
         }
-
+        
         if (!CMTIME_IS_INDEFINITE(frameTime))
         {
             if CMTIME_IS_INDEFINITE(firstFrameTime)
@@ -287,10 +294,12 @@ NSString *const kGPUImageThreeInputTextureVertexShaderString = SHADER_STRING
     {
         hasReceivedThirdFrame = YES;
         thirdFrameTime = frameTime;
+        // 如果不检查第一个纹理输入，则直接默认已经接收了第一个纹理
         if (firstFrameCheckDisabled)
         {
             hasReceivedFirstFrame = YES;
         }
+        // 如果不检查第二个纹理输入，则直接默认已经接收了第二个纹理
         if (secondFrameCheckDisabled)
         {
             hasReceivedSecondFrame = YES;
@@ -304,8 +313,8 @@ NSString *const kGPUImageThreeInputTextureVertexShaderString = SHADER_STRING
             }
         }
     }
-    
     // || (hasReceivedFirstFrame && secondFrameCheckDisabled) || (hasReceivedSecondFrame && firstFrameCheckDisabled)
+    // 如果已经接收了三个纹理输入或者是有效帧，则渲染
     if ((hasReceivedFirstFrame && hasReceivedSecondFrame && hasReceivedThirdFrame) || updatedMovieFrameOppositeStillImage)
     {
         static const GLfloat imageVertices[] = {
@@ -318,7 +327,7 @@ NSString *const kGPUImageThreeInputTextureVertexShaderString = SHADER_STRING
         [self renderToTextureWithVertices:imageVertices textureCoordinates:[[self class] textureCoordinatesForRotation:inputRotation]];
         
         [self informTargetsAboutNewFrameAtTime:frameTime];
-
+        
         hasReceivedFirstFrame = NO;
         hasReceivedSecondFrame = NO;
         hasReceivedThirdFrame = NO;

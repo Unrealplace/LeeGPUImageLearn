@@ -24,6 +24,7 @@
 
 - (void)addFilter:(GPUImageOutput<GPUImageInput> *)newFilter;
 {
+
     [filters addObject:newFilter];
 }
 
@@ -38,8 +39,9 @@
 }
 
 #pragma mark -
-#pragma mark Still image processing
+#pragma mark Still image processing   // 静态图片处理过程
 
+// 从帧缓存中获取图片
 - (void)useNextFrameForImageCapture;
 {
     [self.terminalFilter useNextFrameForImageCapture];
@@ -52,6 +54,8 @@
 
 #pragma mark -
 #pragma mark GPUImageOutput overrides
+
+// 从写 GPUImageOutput 的方法
 
 - (void)setTargetToIgnoreForUpdates:(id<GPUImageInput>)targetToIgnoreForUpdates;
 {
@@ -90,7 +94,7 @@
 
 #pragma mark -
 #pragma mark GPUImageInput protocol
-
+// 实现 GPUImageInput 的协议 方法
 - (void)newFrameReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex;
 {
     for (GPUImageOutput<GPUImageInput> *currentFilter in _initialFilters)
@@ -101,7 +105,7 @@
         }
     }
 }
-
+// 设置帧缓存对象
 - (void)setInputFramebuffer:(GPUImageFramebuffer *)newInputFramebuffer atIndex:(NSInteger)textureIndex;
 {
     for (GPUImageOutput<GPUImageInput> *currentFilter in _initialFilters)
@@ -172,7 +176,7 @@
     return cachedMaximumOutputSize;
      */
 }
-
+// 结束 处理图片
 - (void)endProcessing;
 {
     if (!isEndProcessing)

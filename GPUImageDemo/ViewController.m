@@ -35,6 +35,11 @@
                                                  @"GroupFilterVC",
                                                  @"MutipleFilterVC",
                                                  @"TwoPicEditVC",
+                                                 @"GPUBlurViewVC",
+                                                 @"RawDataAndRawTextureVC",
+                                                 @"PinpleAndGroupVC",
+                                                 @"MutipleInputVC",
+                                                 @"Diy1VC",
                                                  ]];
 
     

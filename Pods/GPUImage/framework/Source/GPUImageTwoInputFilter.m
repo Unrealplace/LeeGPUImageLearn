@@ -23,6 +23,7 @@ NSString *const kGPUImageTwoInputTextureVertexShaderString = SHADER_STRING
 #pragma mark -
 #pragma mark Initialization and teardown
 
+// 已默认顶点着色器 和 传入的片元着色器 初始化
 - (id)initWithFragmentShaderFromString:(NSString *)fragmentShaderString;
 {
     if (!(self = [self initWithVertexShaderFromString:kGPUImageTwoInputTextureVertexShaderString fragmentShaderFromString:fragmentShaderString]))
@@ -102,7 +103,8 @@ NSString *const kGPUImageTwoInputTextureVertexShaderString = SHADER_STRING
     }
 
     [self setUniformsForProgramAtIndex:0];
-        
+    
+    // 这段代码融合了俩个帧缓存 进行新的渲染得到 新的结果
     glClearColor(backgroundColorRed, backgroundColorGreen, backgroundColorBlue, backgroundColorAlpha);
     glClear(GL_COLOR_BUFFER_BIT);
     
@@ -130,7 +132,7 @@ NSString *const kGPUImageTwoInputTextureVertexShaderString = SHADER_STRING
 
 #pragma mark -
 #pragma mark GPUImageInput
-
+// 实现  GPUImageInput 协议相关方法 
 - (NSInteger)nextAvailableTextureIndex;
 {
     if (hasSetFirstTexture)
