@@ -40,6 +40,7 @@
                                                  @"PinpleAndGroupVC",
                                                  @"MutipleInputVC",
                                                  @"Diy1VC",
+                                                 @"lookupVC",
                                                  ]];
 
     

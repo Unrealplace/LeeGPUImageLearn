@@ -36,6 +36,7 @@
 		B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0CE1FD3F7410062DFAD /* Capturingfilteringstillphoto.m */; };
 		B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0D11FD3FB780062DFAD /* ProcessingstillimageVC.m */; };
 		B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0D41FD402780062DFAD /* WritingcustomfilterVC.m */; };
+		B675153D1FE807300095A2D5 /* lookupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B675153C1FE807300095A2D5 /* lookupVC.m */; };
 		BBA06A74838A344F73B0F9D8 /* libPods-GPUImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD139D4CF4927D290159F50 /* libPods-GPUImageDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,8 @@
 		B638B0D11FD3FB780062DFAD /* ProcessingstillimageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcessingstillimageVC.m; sourceTree = "<group>"; };
 		B638B0D31FD402780062DFAD /* WritingcustomfilterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritingcustomfilterVC.h; sourceTree = "<group>"; };
 		B638B0D41FD402780062DFAD /* WritingcustomfilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritingcustomfilterVC.m; sourceTree = "<group>"; };
+		B675153B1FE807300095A2D5 /* lookupVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookupVC.h; sourceTree = "<group>"; };
+		B675153C1FE807300095A2D5 /* lookupVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookupVC.m; sourceTree = "<group>"; };
 		FBDD0CB2865227898F07A18B /* Pods-GPUImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImageDemo/Pods-GPUImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +193,8 @@
 				2B8963171FE7D0FF0063BD19 /* DiyLightFilter.m */,
 				2B8963131FE7CB2A0063BD19 /* Diy1VC.h */,
 				2B8963141FE7CB2A0063BD19 /* Diy1VC.m */,
+				B675153B1FE807300095A2D5 /* lookupVC.h */,
+				B675153C1FE807300095A2D5 /* lookupVC.m */,
 				2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */,
 				2B6F394B1FD02EFD0088F395 /* Main.storyboard */,
 				2B6F394E1FD02EFD0088F395 /* Assets.xcassets */,
@@ -363,6 +368,7 @@
 				2B6F39471FD02EFD0088F395 /* AppDelegate.m in Sources */,
 				2B8963181FE7D0FF0063BD19 /* DiyLightFilter.m in Sources */,
 				B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */,
+				B675153D1FE807300095A2D5 /* lookupVC.m in Sources */,
 				2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */,
 				B61BA5811FD828D4004B2D01 /* MutipleFilterVC.m in Sources */,
 				2BFA47101FE0F9CA0049D7B6 /* ProsumerAsyncQueue.m in Sources */,
@@ -501,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD678479PM;
+				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
@@ -517,7 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD678479PM;
+				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;

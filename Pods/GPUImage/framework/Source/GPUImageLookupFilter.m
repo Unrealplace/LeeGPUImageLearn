@@ -1,4 +1,7 @@
 #import "GPUImageLookupFilter.h"
+//GPUImageLookupFilter 就是根据LUT获取相应的变换颜色，我们可以使用PS直接改变lookup颜色表，从而改变图片的风格。
+//常用的PS工具有「曲线」，「饱和度」、「色彩平衡」、「可选颜色」，但是GPUImageLookupFilter的局限在于只能进行颜色上的调整（曲线，色彩平衡等），其它效果调整也只限于利用图层间混合模式的更改，例如做暗角、漏光等效果。GPUImageLookupFilter继承自GPUImageTwoInputFilter，接受LUT纹理和待滤镜的图片输入。
+
 
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 NSString *const kGPUImageLookupFragmentShaderString = SHADER_STRING
@@ -17,6 +20,7 @@ NSString *const kGPUImageLookupFragmentShaderString = SHADER_STRING
      
      highp float blueColor = textureColor.b * 63.0;
      
+     // 根据B通道获取小正方形格子（64x64格子）
      highp vec2 quad1;
      quad1.y = floor(floor(blueColor) / 8.0);
      quad1.x = floor(blueColor) - (quad1.y * 8.0);
@@ -24,7 +28,7 @@ NSString *const kGPUImageLookupFragmentShaderString = SHADER_STRING
      highp vec2 quad2;
      quad2.y = floor(ceil(blueColor) / 8.0);
      quad2.x = ceil(blueColor) - (quad2.y * 8.0);
-     
+     // 根据小正方形格子和RG通道，获取纹理坐标，每个大格子的大小:1/8=0.125，每个小格子的大小:1/512
      highp vec2 texPos1;
      texPos1.x = (quad1.x * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * textureColor.r);
      texPos1.y = (quad1.y * 0.125) + 0.5/512.0 + ((0.125 - 1.0/512.0) * textureColor.g);
