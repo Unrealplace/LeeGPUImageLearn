@@ -25,6 +25,40 @@
 		2B8963121FE7C9CA0063BD19 /* LEEDiyLightFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8963111FE7C9CA0063BD19 /* LEEDiyLightFilter.m */; };
 		2B8963151FE7CB2A0063BD19 /* Diy1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8963141FE7CB2A0063BD19 /* Diy1VC.m */; };
 		2B8963181FE7D0FF0063BD19 /* DiyLightFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8963171FE7D0FF0063BD19 /* DiyLightFilter.m */; };
+		2BF363062046434B00F6266A /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363052046434B00F6266A /* EditViewController.m */; };
+		2BF363092046435900F6266A /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363082046435900F6266A /* PanelViewController.m */; };
+		2BF3630C2046468500F6266A /* PanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3630B2046468500F6266A /* PanelView.m */; };
+		2BF3630F2046500900F6266A /* BottomBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3630E2046500900F6266A /* BottomBarViewController.m */; };
+		2BF3633D20465B2D00F6266A /* 22_脸部定位框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631120465B2C00F6266A /* 22_脸部定位框@2x.png */; };
+		2BF3633E20465B2D00F6266A /* 22_脸部定位框@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631220465B2C00F6266A /* 22_脸部定位框@3x.png */; };
+		2BF3633F20465B2D00F6266A /* 2_返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631320465B2C00F6266A /* 2_返回@2x.png */; };
+		2BF3634020465B2D00F6266A /* 2_返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631420465B2C00F6266A /* 2_返回@3x.png */; };
+		2BF3634120465B2D00F6266A /* 3_弹窗提示@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631520465B2C00F6266A /* 3_弹窗提示@2x.png */; };
+		2BF3634220465B2D00F6266A /* 3_弹窗提示@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631620465B2C00F6266A /* 3_弹窗提示@3x.png */; };
+		2BF3634320465B2D00F6266A /* 4_闪光灯-关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631720465B2C00F6266A /* 4_闪光灯-关闭@2x.png */; };
+		2BF3634420465B2D00F6266A /* 4_闪光灯-关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631820465B2C00F6266A /* 4_闪光灯-关闭@3x.png */; };
+		2BF3634520465B2D00F6266A /* 5_闪光灯-打开@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631920465B2C00F6266A /* 5_闪光灯-打开@2x.png */; };
+		2BF3634620465B2D00F6266A /* 5_闪光灯-打开@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631A20465B2C00F6266A /* 5_闪光灯-打开@3x.png */; };
+		2BF3634720465B2D00F6266A /* 6_镜头翻转@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631B20465B2C00F6266A /* 6_镜头翻转@2x.png */; };
+		2BF3634820465B2D00F6266A /* 6_镜头翻转@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3631C20465B2C00F6266A /* 6_镜头翻转@3x.png */; };
+		2BF3634920465B2D00F6266A /* ACAlbumBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3631E20465B2C00F6266A /* ACAlbumBtn.m */; };
+		2BF3634A20465B2D00F6266A /* ACPhotoAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632020465B2C00F6266A /* ACPhotoAlbumCell.m */; };
+		2BF3634B20465B2D00F6266A /* ACPhotoAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632220465B2C00F6266A /* ACPhotoAlbumController.m */; };
+		2BF3634C20465B2D00F6266A /* ACPhotoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632420465B2C00F6266A /* ACPhotoAsset.m */; };
+		2BF3634D20465B2D00F6266A /* ACPhotoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632620465B2C00F6266A /* ACPhotoDetailController.m */; };
+		2BF3634E20465B2D00F6266A /* ACPhotoPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632820465B2C00F6266A /* ACPhotoPickerCell.m */; };
+		2BF3634F20465B2D00F6266A /* ACPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632A20465B2C00F6266A /* ACPhotoPickerController.m */; };
+		2BF3635020465B2D00F6266A /* ALAsset+AC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632C20465B2C00F6266A /* ALAsset+AC.m */; };
+		2BF3635120465B2D00F6266A /* ALAssetsLibrary+AC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3632E20465B2C00F6266A /* ALAssetsLibrary+AC.m */; };
+		2BF3635220465B2D00F6266A /* NSIndexSet+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3633020465B2C00F6266A /* NSIndexSet+Convenience.m */; };
+		2BF3635320465B2D00F6266A /* NSString+ACFontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3633220465B2C00F6266A /* NSString+ACFontSize.m */; };
+		2BF3635420465B2D00F6266A /* PHAsset+AC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3633420465B2C00F6266A /* PHAsset+AC.m */; };
+		2BF3635520465B2D00F6266A /* UICollectionView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3633620465B2C00F6266A /* UICollectionView+Convenience.m */; };
+		2BF3635620465B2D00F6266A /* UIImage+ACCameraFixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3633820465B2C00F6266A /* UIImage+ACCameraFixOrientation.m */; };
+		2BF3635720465B2D00F6266A /* UIView+ACCameraFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3633A20465B2C00F6266A /* UIView+ACCameraFrame.m */; };
+		2BF3635820465B2D00F6266A /* 对焦框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3633B20465B2C00F6266A /* 对焦框@2x.png */; };
+		2BF3635920465B2D00F6266A /* 对焦框@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3633C20465B2C00F6266A /* 对焦框@3x.png */; };
+		2BF3635E2046798000F6266A /* TwoInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3635D2046798000F6266A /* TwoInputFilter.m */; };
 		2BFA46F91FDE1C150049D7B6 /* TwoPicEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA46F71FDE1C150049D7B6 /* TwoPicEditVC.m */; };
 		2BFA46FA1FDE1C150049D7B6 /* TwoPicEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */; };
 		2BFA470D1FE0F2900049D7B6 /* GPUBlurViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA470C1FE0F2900049D7B6 /* GPUBlurViewVC.m */; };
@@ -76,6 +110,61 @@
 		2B8963141FE7CB2A0063BD19 /* Diy1VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Diy1VC.m; sourceTree = "<group>"; };
 		2B8963161FE7D0FF0063BD19 /* DiyLightFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiyLightFilter.h; sourceTree = "<group>"; };
 		2B8963171FE7D0FF0063BD19 /* DiyLightFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiyLightFilter.m; sourceTree = "<group>"; };
+		2BF363042046434B00F6266A /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		2BF363052046434B00F6266A /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		2BF363072046435900F6266A /* PanelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
+		2BF363082046435900F6266A /* PanelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
+		2BF3630A2046468500F6266A /* PanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanelView.h; sourceTree = "<group>"; };
+		2BF3630B2046468500F6266A /* PanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanelView.m; sourceTree = "<group>"; };
+		2BF3630D2046500900F6266A /* BottomBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomBarViewController.h; sourceTree = "<group>"; };
+		2BF3630E2046500900F6266A /* BottomBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomBarViewController.m; sourceTree = "<group>"; };
+		2BF3631120465B2C00F6266A /* 22_脸部定位框@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22_脸部定位框@2x.png"; sourceTree = "<group>"; };
+		2BF3631220465B2C00F6266A /* 22_脸部定位框@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22_脸部定位框@3x.png"; sourceTree = "<group>"; };
+		2BF3631320465B2C00F6266A /* 2_返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2_返回@2x.png"; sourceTree = "<group>"; };
+		2BF3631420465B2C00F6266A /* 2_返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2_返回@3x.png"; sourceTree = "<group>"; };
+		2BF3631520465B2C00F6266A /* 3_弹窗提示@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3_弹窗提示@2x.png"; sourceTree = "<group>"; };
+		2BF3631620465B2C00F6266A /* 3_弹窗提示@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3_弹窗提示@3x.png"; sourceTree = "<group>"; };
+		2BF3631720465B2C00F6266A /* 4_闪光灯-关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4_闪光灯-关闭@2x.png"; sourceTree = "<group>"; };
+		2BF3631820465B2C00F6266A /* 4_闪光灯-关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4_闪光灯-关闭@3x.png"; sourceTree = "<group>"; };
+		2BF3631920465B2C00F6266A /* 5_闪光灯-打开@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5_闪光灯-打开@2x.png"; sourceTree = "<group>"; };
+		2BF3631A20465B2C00F6266A /* 5_闪光灯-打开@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5_闪光灯-打开@3x.png"; sourceTree = "<group>"; };
+		2BF3631B20465B2C00F6266A /* 6_镜头翻转@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6_镜头翻转@2x.png"; sourceTree = "<group>"; };
+		2BF3631C20465B2C00F6266A /* 6_镜头翻转@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6_镜头翻转@3x.png"; sourceTree = "<group>"; };
+		2BF3631D20465B2C00F6266A /* ACAlbumBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAlbumBtn.h; sourceTree = "<group>"; };
+		2BF3631E20465B2C00F6266A /* ACAlbumBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAlbumBtn.m; sourceTree = "<group>"; };
+		2BF3631F20465B2C00F6266A /* ACPhotoAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPhotoAlbumCell.h; sourceTree = "<group>"; };
+		2BF3632020465B2C00F6266A /* ACPhotoAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPhotoAlbumCell.m; sourceTree = "<group>"; };
+		2BF3632120465B2C00F6266A /* ACPhotoAlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPhotoAlbumController.h; sourceTree = "<group>"; };
+		2BF3632220465B2C00F6266A /* ACPhotoAlbumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPhotoAlbumController.m; sourceTree = "<group>"; };
+		2BF3632320465B2C00F6266A /* ACPhotoAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPhotoAsset.h; sourceTree = "<group>"; };
+		2BF3632420465B2C00F6266A /* ACPhotoAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPhotoAsset.m; sourceTree = "<group>"; };
+		2BF3632520465B2C00F6266A /* ACPhotoDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPhotoDetailController.h; sourceTree = "<group>"; };
+		2BF3632620465B2C00F6266A /* ACPhotoDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPhotoDetailController.m; sourceTree = "<group>"; };
+		2BF3632720465B2C00F6266A /* ACPhotoPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPhotoPickerCell.h; sourceTree = "<group>"; };
+		2BF3632820465B2C00F6266A /* ACPhotoPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPhotoPickerCell.m; sourceTree = "<group>"; };
+		2BF3632920465B2C00F6266A /* ACPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPhotoPickerController.h; sourceTree = "<group>"; };
+		2BF3632A20465B2C00F6266A /* ACPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPhotoPickerController.m; sourceTree = "<group>"; };
+		2BF3632B20465B2C00F6266A /* ALAsset+AC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AC.h"; sourceTree = "<group>"; };
+		2BF3632C20465B2C00F6266A /* ALAsset+AC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AC.m"; sourceTree = "<group>"; };
+		2BF3632D20465B2C00F6266A /* ALAssetsLibrary+AC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+AC.h"; sourceTree = "<group>"; };
+		2BF3632E20465B2C00F6266A /* ALAssetsLibrary+AC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+AC.m"; sourceTree = "<group>"; };
+		2BF3632F20465B2C00F6266A /* NSIndexSet+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+Convenience.h"; sourceTree = "<group>"; };
+		2BF3633020465B2C00F6266A /* NSIndexSet+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+Convenience.m"; sourceTree = "<group>"; };
+		2BF3633120465B2C00F6266A /* NSString+ACFontSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ACFontSize.h"; sourceTree = "<group>"; };
+		2BF3633220465B2C00F6266A /* NSString+ACFontSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ACFontSize.m"; sourceTree = "<group>"; };
+		2BF3633320465B2C00F6266A /* PHAsset+AC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+AC.h"; sourceTree = "<group>"; };
+		2BF3633420465B2C00F6266A /* PHAsset+AC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+AC.m"; sourceTree = "<group>"; };
+		2BF3633520465B2C00F6266A /* UICollectionView+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Convenience.h"; sourceTree = "<group>"; };
+		2BF3633620465B2C00F6266A /* UICollectionView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Convenience.m"; sourceTree = "<group>"; };
+		2BF3633720465B2C00F6266A /* UIImage+ACCameraFixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ACCameraFixOrientation.h"; sourceTree = "<group>"; };
+		2BF3633820465B2C00F6266A /* UIImage+ACCameraFixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ACCameraFixOrientation.m"; sourceTree = "<group>"; };
+		2BF3633920465B2C00F6266A /* UIView+ACCameraFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ACCameraFrame.h"; sourceTree = "<group>"; };
+		2BF3633A20465B2C00F6266A /* UIView+ACCameraFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACCameraFrame.m"; sourceTree = "<group>"; };
+		2BF3633B20465B2C00F6266A /* 对焦框@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对焦框@2x.png"; sourceTree = "<group>"; };
+		2BF3633C20465B2C00F6266A /* 对焦框@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对焦框@3x.png"; sourceTree = "<group>"; };
+		2BF3635A20465BEC00F6266A /* ACCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCommon.h; sourceTree = "<group>"; };
+		2BF3635C2046798000F6266A /* TwoInputFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoInputFilter.h; sourceTree = "<group>"; };
+		2BF3635D2046798000F6266A /* TwoInputFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoInputFilter.m; sourceTree = "<group>"; };
 		2BFA46F61FDE1C150049D7B6 /* TwoPicEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoPicEditVC.h; sourceTree = "<group>"; };
 		2BFA46F71FDE1C150049D7B6 /* TwoPicEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoPicEditVC.m; sourceTree = "<group>"; };
 		2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoPicEditVC.xib; sourceTree = "<group>"; };
@@ -145,6 +234,7 @@
 		2B6F39441FD02EFD0088F395 /* GPUImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2BF362FF204642C400F6266A /* EditViewController */,
 				2B6F39451FD02EFD0088F395 /* AppDelegate.h */,
 				2B6F39461FD02EFD0088F395 /* AppDelegate.m */,
 				2B6F39481FD02EFD0088F395 /* ViewController.h */,
@@ -203,6 +293,116 @@
 				2B6F39541FD02EFD0088F395 /* main.m */,
 			);
 			path = GPUImageDemo;
+			sourceTree = "<group>";
+		};
+		2BF362FF204642C400F6266A /* EditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2BF3635B204678FC00F6266A /* Filters */,
+				2BF3631020465B2C00F6266A /* ACPhoto */,
+				2BF363032046431F00F6266A /* Controllers */,
+				2BF36302204642F900F6266A /* ViewModel */,
+				2BF36301204642EE00F6266A /* View */,
+				2BF36300204642E100F6266A /* Model */,
+			);
+			path = EditViewController;
+			sourceTree = "<group>";
+		};
+		2BF36300204642E100F6266A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BF36301204642EE00F6266A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BF3630A2046468500F6266A /* PanelView.h */,
+				2BF3630B2046468500F6266A /* PanelView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BF36302204642F900F6266A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BF363032046431F00F6266A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BF363042046434B00F6266A /* EditViewController.h */,
+				2BF363052046434B00F6266A /* EditViewController.m */,
+				2BF363072046435900F6266A /* PanelViewController.h */,
+				2BF363082046435900F6266A /* PanelViewController.m */,
+				2BF3630D2046500900F6266A /* BottomBarViewController.h */,
+				2BF3630E2046500900F6266A /* BottomBarViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2BF3631020465B2C00F6266A /* ACPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				2BF3635A20465BEC00F6266A /* ACCommon.h */,
+				2BF3631120465B2C00F6266A /* 22_脸部定位框@2x.png */,
+				2BF3631220465B2C00F6266A /* 22_脸部定位框@3x.png */,
+				2BF3631320465B2C00F6266A /* 2_返回@2x.png */,
+				2BF3631420465B2C00F6266A /* 2_返回@3x.png */,
+				2BF3631520465B2C00F6266A /* 3_弹窗提示@2x.png */,
+				2BF3631620465B2C00F6266A /* 3_弹窗提示@3x.png */,
+				2BF3631720465B2C00F6266A /* 4_闪光灯-关闭@2x.png */,
+				2BF3631820465B2C00F6266A /* 4_闪光灯-关闭@3x.png */,
+				2BF3631920465B2C00F6266A /* 5_闪光灯-打开@2x.png */,
+				2BF3631A20465B2C00F6266A /* 5_闪光灯-打开@3x.png */,
+				2BF3631B20465B2C00F6266A /* 6_镜头翻转@2x.png */,
+				2BF3631C20465B2C00F6266A /* 6_镜头翻转@3x.png */,
+				2BF3631D20465B2C00F6266A /* ACAlbumBtn.h */,
+				2BF3631E20465B2C00F6266A /* ACAlbumBtn.m */,
+				2BF3631F20465B2C00F6266A /* ACPhotoAlbumCell.h */,
+				2BF3632020465B2C00F6266A /* ACPhotoAlbumCell.m */,
+				2BF3632120465B2C00F6266A /* ACPhotoAlbumController.h */,
+				2BF3632220465B2C00F6266A /* ACPhotoAlbumController.m */,
+				2BF3632320465B2C00F6266A /* ACPhotoAsset.h */,
+				2BF3632420465B2C00F6266A /* ACPhotoAsset.m */,
+				2BF3632520465B2C00F6266A /* ACPhotoDetailController.h */,
+				2BF3632620465B2C00F6266A /* ACPhotoDetailController.m */,
+				2BF3632720465B2C00F6266A /* ACPhotoPickerCell.h */,
+				2BF3632820465B2C00F6266A /* ACPhotoPickerCell.m */,
+				2BF3632920465B2C00F6266A /* ACPhotoPickerController.h */,
+				2BF3632A20465B2C00F6266A /* ACPhotoPickerController.m */,
+				2BF3632B20465B2C00F6266A /* ALAsset+AC.h */,
+				2BF3632C20465B2C00F6266A /* ALAsset+AC.m */,
+				2BF3632D20465B2C00F6266A /* ALAssetsLibrary+AC.h */,
+				2BF3632E20465B2C00F6266A /* ALAssetsLibrary+AC.m */,
+				2BF3632F20465B2C00F6266A /* NSIndexSet+Convenience.h */,
+				2BF3633020465B2C00F6266A /* NSIndexSet+Convenience.m */,
+				2BF3633120465B2C00F6266A /* NSString+ACFontSize.h */,
+				2BF3633220465B2C00F6266A /* NSString+ACFontSize.m */,
+				2BF3633320465B2C00F6266A /* PHAsset+AC.h */,
+				2BF3633420465B2C00F6266A /* PHAsset+AC.m */,
+				2BF3633520465B2C00F6266A /* UICollectionView+Convenience.h */,
+				2BF3633620465B2C00F6266A /* UICollectionView+Convenience.m */,
+				2BF3633720465B2C00F6266A /* UIImage+ACCameraFixOrientation.h */,
+				2BF3633820465B2C00F6266A /* UIImage+ACCameraFixOrientation.m */,
+				2BF3633920465B2C00F6266A /* UIView+ACCameraFrame.h */,
+				2BF3633A20465B2C00F6266A /* UIView+ACCameraFrame.m */,
+				2BF3633B20465B2C00F6266A /* 对焦框@2x.png */,
+				2BF3633C20465B2C00F6266A /* 对焦框@3x.png */,
+			);
+			path = ACPhoto;
+			sourceTree = "<group>";
+		};
+		2BF3635B204678FC00F6266A /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				2BF3635C2046798000F6266A /* TwoInputFilter.h */,
+				2BF3635D2046798000F6266A /* TwoInputFilter.m */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 		AD5C08A951C66B4B48C24358 /* Frameworks */ = {
@@ -274,10 +474,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF3633D20465B2D00F6266A /* 22_脸部定位框@2x.png in Resources */,
 				2B6F39521FD02EFD0088F395 /* LaunchScreen.storyboard in Resources */,
 				2B6F394F1FD02EFD0088F395 /* Assets.xcassets in Resources */,
+				2BF3634220465B2D00F6266A /* 3_弹窗提示@3x.png in Resources */,
+				2BF3634320465B2D00F6266A /* 4_闪光灯-关闭@2x.png in Resources */,
+				2BF3634620465B2D00F6266A /* 5_闪光灯-打开@3x.png in Resources */,
 				2BFA46FA1FDE1C150049D7B6 /* TwoPicEditVC.xib in Resources */,
+				2BF3634820465B2D00F6266A /* 6_镜头翻转@3x.png in Resources */,
+				2BF3634520465B2D00F6266A /* 5_闪光灯-打开@2x.png in Resources */,
+				2BF3634020465B2D00F6266A /* 2_返回@3x.png in Resources */,
 				2B6F394D1FD02EFD0088F395 /* Main.storyboard in Resources */,
+				2BF3634720465B2D00F6266A /* 6_镜头翻转@2x.png in Resources */,
+				2BF3633E20465B2D00F6266A /* 22_脸部定位框@3x.png in Resources */,
+				2BF3635920465B2D00F6266A /* 对焦框@3x.png in Resources */,
+				2BF3633F20465B2D00F6266A /* 2_返回@2x.png in Resources */,
+				2BF3635820465B2D00F6266A /* 对焦框@2x.png in Resources */,
+				2BF3634120465B2D00F6266A /* 3_弹窗提示@2x.png in Resources */,
+				2BF3634420465B2D00F6266A /* 4_闪光灯-关闭@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,20 +561,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BFA470D1FE0F2900049D7B6 /* GPUBlurViewVC.m in Sources */,
+				2BF3634D20465B2D00F6266A /* ACPhotoDetailController.m in Sources */,
+				2BF363062046434B00F6266A /* EditViewController.m in Sources */,
+				2BF3635E2046798000F6266A /* TwoInputFilter.m in Sources */,
 				2B89630C1FE79A4A0063BD19 /* LYImageFilterGroup.m in Sources */,
+				2BF3635120465B2D00F6266A /* ALAssetsLibrary+AC.m in Sources */,
 				2B8963061FE763440063BD19 /* LEEImageHelper.m in Sources */,
 				2B8963151FE7CB2A0063BD19 /* Diy1VC.m in Sources */,
+				2BF3635320465B2D00F6266A /* NSString+ACFontSize.m in Sources */,
 				2B3156081FD526320014AD7D /* LiveVideoVC.m in Sources */,
+				2BF3630C2046468500F6266A /* PanelView.m in Sources */,
+				2BF3635620465B2D00F6266A /* UIImage+ACCameraFixOrientation.m in Sources */,
 				B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */,
+				2BF363092046435900F6266A /* PanelViewController.m in Sources */,
+				2BF3634E20465B2D00F6266A /* ACPhotoPickerCell.m in Sources */,
 				2BFA46F91FDE1C150049D7B6 /* TwoPicEditVC.m in Sources */,
 				2B8963021FE761020063BD19 /* RawDataAndRawTextureVC.m in Sources */,
 				2B8963091FE797AA0063BD19 /* PinpleAndGroupVC.m in Sources */,
+				2BF3635420465B2D00F6266A /* PHAsset+AC.m in Sources */,
+				2BF3634A20465B2D00F6266A /* ACPhotoAlbumCell.m in Sources */,
+				2BF3634C20465B2D00F6266A /* ACPhotoAsset.m in Sources */,
+				2BF3635720465B2D00F6266A /* UIView+ACCameraFrame.m in Sources */,
 				B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */,
+				2BF3634F20465B2D00F6266A /* ACPhotoPickerController.m in Sources */,
 				2B6F394A1FD02EFD0088F395 /* ViewController.m in Sources */,
 				B638B0C91FD3F2B20062DFAD /* FilteringlivevideoVC.m in Sources */,
 				B638B0C01FD3A1340062DFAD /* FilterDemoVC.m in Sources */,
 				2B8963121FE7C9CA0063BD19 /* LEEDiyLightFilter.m in Sources */,
 				2B3156111FD532430014AD7D /* GroupFilterVC.m in Sources */,
+				2BF3635220465B2D00F6266A /* NSIndexSet+Convenience.m in Sources */,
 				2BFA47131FE1011E0049D7B6 /* ACBlurView.m in Sources */,
 				2B89630F1FE7A4EF0063BD19 /* MutipleInputVC.m in Sources */,
 				2B31560B1FD52B450014AD7D /* TakePhotoVC.m in Sources */,
@@ -369,8 +598,13 @@
 				2B8963181FE7D0FF0063BD19 /* DiyLightFilter.m in Sources */,
 				B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */,
 				B675153D1FE807300095A2D5 /* lookupVC.m in Sources */,
+				2BF3635020465B2D00F6266A /* ALAsset+AC.m in Sources */,
 				2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */,
+				2BF3630F2046500900F6266A /* BottomBarViewController.m in Sources */,
+				2BF3634B20465B2D00F6266A /* ACPhotoAlbumController.m in Sources */,
+				2BF3634920465B2D00F6266A /* ACAlbumBtn.m in Sources */,
 				B61BA5811FD828D4004B2D01 /* MutipleFilterVC.m in Sources */,
+				2BF3635520465B2D00F6266A /* UICollectionView+Convenience.m in Sources */,
 				2BFA47101FE0F9CA0049D7B6 /* ProsumerAsyncQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD678479PM;
+				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
@@ -523,7 +757,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD678479PM;
+				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
