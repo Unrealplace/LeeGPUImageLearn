@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>首页</key>
+	<string>P320_B01_M01_P01_L1</string>
+	<key>侧栏页</key>
+	<string>P320_B01_M01_P02_L1</string>
+	<key>商业</key>
+	<string>P320_B01_M01_P03_L1</string>
+	<key>样片展示</key>
+	<string>P320_B01_M01_P04_L1</string>
+	<key>编辑主页</key>
+	<string>P320_B01_M02_P01_L1</string>
+	<key>玩法选图页</key>
+	<string>P320_B01_M02_P01_L11</string>
+	<key>混合模式</key>
+	<string>P320_B01_M02_P01_L12</string>
+	<key>滤镜</key>
+	<string>P320_B01_M02_P01_L13</string>
+	<key>滤镜程度</key>
+	<string>P320_B01_M02_P01_L131</string>
+	<key>遮罩</key>
+	<string>P320_B01_M02_P01_L14</string>
+	<key>前景调整</key>
+	<string>P320_B01_M02_P01_L15</string>
+	<key>前景不透明度</key>
+	<string>P320_B01_M02_P01_L151</string>
+	<key>橡皮擦</key>
+	<string>P320_B01_M02_P01_L152</string>
+	<key>翻转</key>
+	<string>P320_B01_M02_P01_L153</string>
+	<key>玩法介绍</key>
+	<string>P320_B01_M02_P02_L1</string>
+	<key>保存</key>
+	<string>P320_B01_M02_P03_L1</string>
+	<key>保存预览</key>
+	<string>P320_B01_M02_P03_L12</string>
+</dict>
+</plist>

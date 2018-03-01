@@ -1,0 +1,1355 @@
+[{
+    "AreaEnName": "CHINA",
+    "AreaCode": "86",
+    "AreaChinaPin": "zhong_guo",
+    "AreaChinaFirstEn": "常用",
+    "AreaChinaName": "中国"
+  },
+  {
+    "AreaEnName": "HONGKONG",
+    "AreaCode": "852",
+    "AreaChinaPin": "xiang_gang",
+    "AreaChinaFirstEn": "常用",
+    "AreaChinaName": "香港"
+  },
+  {
+    "AreaEnName": "MACAU",
+    "AreaCode": "853",
+    "AreaChinaPin": "ao_men",
+    "AreaChinaFirstEn": "常用",
+    "AreaChinaName": "澳门"
+  },
+  {
+    "AreaEnName": "TAIWAN",
+    "AreaCode": "886",
+    "AreaChinaPin": "tai_wan",
+    "AreaChinaFirstEn": "常用",
+    "AreaChinaName": "台湾"
+  },
+  {
+	"AreaEnName": "ALBANIA",
+	"AreaCode": "355",
+	"AreaChinaPin": "a_er_ba_ni_ya",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿尔巴尼亚"
+}, {
+	"AreaEnName": "ALGERIA",
+	"AreaCode": "213",
+	"AreaChinaPin": "a_er_ji_li_ya",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿尔及利亚"
+}, {
+	"AreaEnName": "AFGHANISTAN",
+	"AreaCode": "93",
+	"AreaChinaPin": "a_fu_han",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿富汗"
+}, {
+	"AreaEnName": "ARGENTINA",
+	"AreaCode": "54",
+	"AreaChinaPin": "a_gen_ting",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿根廷"
+}, {
+	"AreaEnName": "UNITEDARABEMIRATES",
+	"AreaCode": "971",
+	"AreaChinaPin": "a_lian_qiu",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿联酋"
+}, {
+	"AreaEnName": "OMAN",
+	"AreaCode": "968",
+	"AreaChinaPin": "a_man",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿曼"
+}, {
+	"AreaEnName": "AZERBAIJAN",
+	"AreaCode": "994",
+	"AreaChinaPin": "a_sai_bai_jiang",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿塞拜疆"
+}, {
+	"AreaEnName": "ASCENSION",
+	"AreaCode": "247",
+	"AreaChinaPin": "a_sen_song",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "阿森松"
+}, {
+	"AreaEnName": "IRELAND",
+	"AreaCode": "353",
+	"AreaChinaPin": "ai_er_lan",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "爱尔兰"
+}, {
+	"AreaEnName": "EGYPT",
+	"AreaCode": "20",
+	"AreaChinaPin": "ai_ji",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "埃及"
+}, {
+	"AreaEnName": "ETHIOPIA",
+	"AreaCode": "251",
+	"AreaChinaPin": "ai_sai_e_bi_ya",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "埃塞俄比亚"
+}, {
+	"AreaEnName": "ESTIONIA",
+	"AreaCode": "372",
+	"AreaChinaPin": "ai_sha_ni_ya",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "爱沙尼亚"
+}, {
+	"AreaEnName": "ANDORRA",
+	"AreaCode": "376",
+	"AreaChinaPin": "an_dao_er",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "安道尔"
+}, {
+	"AreaEnName": "ANGOLA",
+	"AreaCode": "244",
+	"AreaChinaPin": "an_ge_la",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "安哥拉"
+}, {
+	"AreaEnName": "ANGULLIAIS",
+	"AreaCode": "1264",
+	"AreaChinaPin": "an_gui_la_dao",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "安圭拉岛"
+}, {
+	"AreaEnName": "ANTIGUAANDBARBUDA",
+	"AreaCode": "1268",
+	"AreaChinaPin": "an_ti_gua_dao_he_ba_bu_da",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "安提瓜岛和巴布达"
+}, {
+	"AreaEnName": "AUSTRALIA",
+	"AreaCode": "61",
+	"AreaChinaPin": "ao_da_li_ya",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "澳大利亚"
+}, {
+	"AreaEnName": "AUSTRIA",
+	"AreaCode": "43",
+	"AreaChinaPin": "ao_di_li",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "奥地利"
+}, {
+	"AreaEnName": "MACAU",
+	"AreaCode": "853",
+	"AreaChinaPin": "ao_men",
+	"AreaChinaFirstEn": "A",
+	"AreaChinaName": "澳门"
+}, {
+	"AreaEnName": "BARBADOS",
+	"AreaCode": "1246",
+	"AreaChinaPin": "ba_ba_duo_si",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴巴多斯"
+}, {
+	"AreaEnName": "PAPUANEWGUINEA",
+	"AreaCode": "675",
+	"AreaChinaPin": "ba_bu_ya_xin_ji_nei_ya",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴布亚新几内亚"
+}, {
+	"AreaEnName": "BAHAMAS",
+	"AreaCode": "1242",
+	"AreaChinaPin": "ba_ha_ma_qun_dao",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴哈马群岛"
+}, {
+	"AreaEnName": "PAKISTAN",
+	"AreaCode": "92",
+	"AreaChinaPin": "ba_ji_si_tan",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴基斯坦"
+}, {
+	"AreaEnName": "PARAGUAY",
+	"AreaCode": "595",
+	"AreaChinaPin": "ba_la_gui",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴拉圭"
+}, {
+	"AreaEnName": "BAHRANI",
+	"AreaCode": "973",
+	"AreaChinaPin": "ba_lin",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴林"
+}, {
+	"AreaEnName": "PANAMA",
+	"AreaCode": "507",
+	"AreaChinaPin": "ba_na_ma",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴拿马"
+}, {
+	"AreaEnName": "BRAZIL",
+	"AreaCode": "55",
+	"AreaChinaPin": "ba_xi",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "巴西"
+}, {
+	"AreaEnName": "BELARUS",
+	"AreaCode": "375",
+	"AreaChinaPin": "bai_e_luo_si",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "白俄罗斯"
+}, {
+	"AreaEnName": "BERMUDAIS",
+	"AreaCode": "1441",
+	"AreaChinaPin": "bai_mu_da_qun_dao",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "百慕大群岛"
+}, {
+	"AreaEnName": "BULGARIA",
+	"AreaCode": "359",
+	"AreaChinaPin": "bao_jia_li_ya",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "保加利亚"
+}, {
+	"AreaEnName": "BENIN",
+	"AreaCode": "229",
+	"AreaChinaPin": "bei_ning",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "贝宁"
+}, {
+	"AreaEnName": "BELGIUM",
+	"AreaCode": "32",
+	"AreaChinaPin": "bi_li_shi",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "比利时"
+}, {
+	"AreaEnName": "ICELAND",
+	"AreaCode": "354",
+	"AreaChinaPin": "bing_dao",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "冰岛"
+}, {
+	"AreaEnName": "BOTSWANA",
+	"AreaCode": "267",
+	"AreaChinaPin": "bo_ci_wa_na",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "博茨瓦纳"
+}, {
+	"AreaEnName": "PUERTORICO",
+	"AreaCode": "1787",
+	"AreaChinaPin": "bo_duo_li_ge",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "波多黎各"
+}, {
+	"AreaEnName": "BOSNIA&HERZEGOVINA",
+	"AreaCode": "387",
+	"AreaChinaPin": "bo_hei",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "波黑"
+}, {
+	"AreaEnName": "POLAND",
+	"AreaCode": "48",
+	"AreaChinaPin": "bo_lan",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "波兰"
+}, {
+	"AreaEnName": "BOLIVIA",
+	"AreaCode": "591",
+	"AreaChinaPin": "bo_li_wei_ya",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "玻利维亚"
+}, {
+	"AreaEnName": "BELIZE",
+	"AreaCode": "501",
+	"AreaChinaPin": "bo_li_zi",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "伯利兹"
+}, {
+	"AreaEnName": "BHUTAN",
+	"AreaCode": "975",
+	"AreaChinaPin": "bu_dan",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "不丹"
+}, {
+	"AreaEnName": "BURKINAFASO",
+	"AreaCode": "226",
+	"AreaChinaPin": "bu_ji_na_fa_suo",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "布基纳法索"
+}, {
+	"AreaEnName": "BURUNDI",
+	"AreaCode": "257",
+	"AreaChinaPin": "bu_long_di",
+	"AreaChinaFirstEn": "B",
+	"AreaChinaName": "布隆迪"
+}, {
+	"AreaEnName": "EQUATORIALGUINEA",
+	"AreaCode": "240",
+	"AreaChinaPin": "chi_dao_ji_nei_ya",
+	"AreaChinaFirstEn": "C",
+	"AreaChinaName": "赤道几内亚"
+}, {
+	"AreaEnName": "DENMARK",
+	"AreaCode": "45",
+	"AreaChinaPin": "dan_mai",
+	"AreaChinaFirstEn": "D",
+	"AreaChinaName": "丹麦"
+}, {
+	"AreaEnName": "GERMANY",
+	"AreaCode": "49",
+	"AreaChinaPin": "de_guo",
+	"AreaChinaFirstEn": "D",
+	"AreaChinaName": "德国"
+}, {
+	"AreaEnName": "DIEGOGARCIA",
+	"AreaCode": "246",
+	"AreaChinaPin": "di_ge_jia_xi_ya_dao",
+	"AreaChinaFirstEn": "D",
+	"AreaChinaName": "迪戈加西亚岛"
+}, {
+	"AreaEnName": "TOGO",
+	"AreaCode": "228",
+	"AreaChinaPin": "duo_ge",
+	"AreaChinaFirstEn": "D",
+	"AreaChinaName": "多哥"
+}, {
+	"AreaEnName": "DOMINICANREP",
+	"AreaCode": "1809",
+	"AreaChinaPin": "duo_mi_ni_jia",
+	"AreaChinaFirstEn": "D",
+	"AreaChinaName": "多米尼加"
+}, {
+	"AreaEnName": "DOMINICA(COMMOMWEALTHOF)",
+	"AreaCode": "1767",
+	"AreaChinaPin": "duo_mi_ni_ke",
+	"AreaChinaFirstEn": "D",
+	"AreaChinaName": "多米尼克"
+}, {
+	"AreaEnName": "ECUADOR",
+	"AreaCode": "593",
+	"AreaChinaPin": "e_gua_duo_er",
+	"AreaChinaFirstEn": "E",
+	"AreaChinaName": "厄瓜多尔"
+}, {
+	"AreaEnName": "ERITREA",
+	"AreaCode": "291",
+	"AreaChinaPin": "e_li_te_li_ya",
+	"AreaChinaFirstEn": "E",
+	"AreaChinaName": "厄立特里亚"
+}, {
+	"AreaEnName": "RUSSIA",
+	"AreaCode": "7",
+	"AreaChinaPin": "e_luo_si",
+	"AreaChinaFirstEn": "E",
+	"AreaChinaName": "俄罗斯"
+}, {
+	"AreaEnName": "FRANCE",
+	"AreaCode": "33",
+	"AreaChinaPin": "fa_guo",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "法国"
+}, {
+	"AreaEnName": "FAROEIS",
+	"AreaCode": "298",
+	"AreaChinaPin": "fa_luo_qun_dao",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "法罗群岛"
+}, {
+	"AreaEnName": "FRENCHPOLYNESIA",
+	"AreaCode": "689",
+	"AreaChinaPin": "fa_shu_bo_li_ni_xi_ya",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "法属波利尼西亚"
+}, {
+	"AreaEnName": "FRENCHGUIANA",
+	"AreaCode": "594",
+	"AreaChinaPin": "fa_shu_gui_ya_na",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "法属圭亚那"
+}, {
+	"AreaEnName": "PHILIPPINES",
+	"AreaCode": "63",
+	"AreaChinaPin": "fei_lv_bin",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "菲律宾"
+}, {
+	"AreaEnName": "CENTRALAFRICA",
+	"AreaCode": "236",
+	"AreaChinaPin": "fei_zhou_zhong_bu",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "非洲中部"
+}, {
+	"AreaEnName": "FINLAND",
+	"AreaCode": "358",
+	"AreaChinaPin": "fen_lan",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "芬兰"
+}, {
+	"AreaEnName": "CAPEVERDE",
+	"AreaCode": "238",
+	"AreaChinaPin": "fo_de_jiao",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "佛得角"
+}, {
+	"AreaEnName": "FALKLANDIS",
+	"AreaCode": "500",
+	"AreaChinaPin": "fu_ke_lan_qun_dao",
+	"AreaChinaFirstEn": "F",
+	"AreaChinaName": "福克兰群岛"
+}, {
+	"AreaEnName": "GAMBIA",
+	"AreaCode": "220",
+	"AreaChinaPin": "gang_bi_ya",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "冈比亚"
+}, {
+	"AreaEnName": "CONGO",
+	"AreaCode": "242",
+	"AreaChinaPin": "gang_guo",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "刚果"
+}, {
+	"AreaEnName": "Congo(DemRep)",
+	"AreaCode": "243",
+	"AreaChinaPin": "gang_guo_(_jin_)",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "刚果(金)"
+}, {
+	"AreaEnName": "GRENADA",
+	"AreaCode": "1473",
+	"AreaChinaPin": "ge_lin_na_da",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "格林纳达"
+}, {
+	"AreaEnName": "GREENLANDIS",
+	"AreaCode": "299",
+	"AreaChinaPin": "ge_ling_lan_dao",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "格陵兰岛"
+}, {
+	"AreaEnName": "COLOMBIA",
+	"AreaCode": "57",
+	"AreaChinaPin": "ge_lun_bi_ya",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "哥伦比亚"
+}, {
+	"AreaEnName": "COSTARICA",
+	"AreaCode": "506",
+	"AreaChinaPin": "ge_si_da_li_jia",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "哥斯达黎加"
+}, {
+	"AreaEnName": "CUBA",
+	"AreaCode": "53",
+	"AreaChinaPin": "gu_ba",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "古巴"
+}, {
+	"AreaEnName": "GUADELOUPEIS",
+	"AreaCode": "590",
+	"AreaChinaPin": "gua_de_luo_pu_dao",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "瓜德罗普岛"
+}, {
+	"AreaEnName": "GUAM",
+	"AreaCode": "1671",
+	"AreaChinaPin": "guan_dao",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "关岛"
+}, {
+	"AreaEnName": "GUYANY",
+	"AreaCode": "592",
+	"AreaChinaPin": "gui_ya_na",
+	"AreaChinaFirstEn": "G",
+	"AreaChinaName": "圭亚那"
+}, {
+	"AreaEnName": "HAITI",
+	"AreaCode": "509",
+	"AreaChinaPin": "hai_di",
+	"AreaChinaFirstEn": "H",
+	"AreaChinaName": "海地"
+}, {
+	"AreaEnName": "KOREA",
+	"AreaCode": "82",
+	"AreaChinaPin": "han_guo",
+	"AreaChinaFirstEn": "H",
+	"AreaChinaName": "韩国"
+}, {
+	"AreaEnName": "KOREA（DPR OF）",
+	"AreaCode": "850",
+	"AreaChinaPin": "chao_xian",
+	"AreaChinaFirstEn": "C",
+	"AreaChinaName": "朝鲜"
+}, {
+	"AreaEnName": "NETHERLANDS",
+	"AreaCode": "31",
+	"AreaChinaPin": "he_lan",
+	"AreaChinaFirstEn": "H",
+	"AreaChinaName": "荷兰"
+}, {
+	"AreaEnName": "HONDURAS",
+	"AreaCode": "504",
+	"AreaChinaPin": "hong_du_la_si",
+	"AreaChinaFirstEn": "H",
+	"AreaChinaName": "洪都拉斯"
+}, {
+	"AreaEnName": "DJIBOUTI",
+	"AreaCode": "253",
+	"AreaChinaPin": "ji_bu_ti",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "吉布提"
+}, {
+	"AreaEnName": "KYRGYZSTAN",
+	"AreaCode": "996",
+	"AreaChinaPin": "ji_er_ji_si_si_tan",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "吉尔吉斯斯坦"
+}, {
+	"AreaEnName": "KIRIBATI",
+	"AreaCode": "686",
+	"AreaChinaPin": "ji_li_ba_si",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "基里巴斯"
+}, {
+	"AreaEnName": "GUINEA",
+	"AreaCode": "224",
+	"AreaChinaPin": "ji_nei_ya",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "几内亚"
+}, {
+	"AreaEnName": "GUINEABISSAU",
+	"AreaCode": "245",
+	"AreaChinaPin": "ji_nei_ya_bi_shao",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "几内亚比绍"
+}, {
+	"AreaEnName": "GHANA",
+	"AreaCode": "233",
+	"AreaChinaPin": "jia_na",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "加纳"
+}, {
+	"AreaEnName": "CANADA",
+	"AreaCode": "1",
+	"AreaChinaPin": "jia_na_da",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "加拿大"
+}, {
+	"AreaEnName": "GABON",
+	"AreaCode": "241",
+	"AreaChinaPin": "jia_peng",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "加蓬"
+}, {
+	"AreaEnName": "CAMBODIA",
+	"AreaCode": "855",
+	"AreaChinaPin": "jian_pu_zhai",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "柬埔寨"
+}, {
+	"AreaEnName": "CZECH",
+	"AreaCode": "420",
+	"AreaChinaPin": "jie_ke",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "捷克"
+}, {
+	"AreaEnName": "ZIMBABWE",
+	"AreaCode": "263",
+	"AreaChinaPin": "jin_ba_bu_wei",
+	"AreaChinaFirstEn": "J",
+	"AreaChinaName": "津巴布韦"
+}, {
+	"AreaEnName": "CAMEROON",
+	"AreaCode": "237",
+	"AreaChinaPin": "ka_mai_long",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "喀麦隆"
+}, {
+	"AreaEnName": "QATAR",
+	"AreaCode": "974",
+	"AreaChinaPin": "ka_ta_er",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "卡塔尔"
+}, {
+	"AreaEnName": "CAYMANIS",
+	"AreaCode": "1345",
+	"AreaChinaPin": "kai_man_qun_dao",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "开曼群岛"
+}, {
+	"AreaEnName": "CROATIA",
+	"AreaCode": "385",
+	"AreaChinaPin": "ke_luo_di_ya",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "克罗地亚"
+}, {
+	"AreaEnName": "COMORO",
+	"AreaCode": "269",
+	"AreaChinaPin": "ke_mo_luo",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "科摩罗"
+}, {
+	"AreaEnName": "IVORYCOAST",
+	"AreaCode": "225",
+	"AreaChinaPin": "ke_te_di_wa",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "科特迪瓦"
+}, {
+	"AreaEnName": "KUWAIT",
+	"AreaCode": "965",
+	"AreaChinaPin": "ke_wei_te",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "科威特"
+}, {
+	"AreaEnName": "KENYA",
+	"AreaCode": "254",
+	"AreaChinaPin": "ken_ni_ya",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "肯尼亚"
+}, {
+	"AreaEnName": "COOKIS",
+	"AreaCode": "682",
+	"AreaChinaPin": "ku_ke_qun_dao",
+	"AreaChinaFirstEn": "K",
+	"AreaChinaName": "库克群岛"
+}, {
+	"AreaEnName": "LATVIA",
+	"AreaCode": "371",
+	"AreaChinaPin": "la_tuo_wei_ya",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "拉脱维亚"
+}, {
+	"AreaEnName": "LESOTHO",
+	"AreaCode": "266",
+	"AreaChinaPin": "lai_suo_tuo",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "莱索托"
+}, {
+	"AreaEnName": "LAOS",
+	"AreaCode": "856",
+	"AreaChinaPin": "lao_wo",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "老挝"
+}, {
+	"AreaEnName": "LEBANON",
+	"AreaCode": "961",
+	"AreaChinaPin": "li_ba_nen",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "黎巴嫩"
+}, {
+	"AreaEnName": "LIBERIA",
+	"AreaCode": "231",
+	"AreaChinaPin": "li_bi_li_ya",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "利比里亚"
+}, {
+	"AreaEnName": "LIBYA",
+	"AreaCode": "218",
+	"AreaChinaPin": "li_bi_ya",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "利比亚"
+}, {
+	"AreaEnName": "LITHUANIA",
+	"AreaCode": "370",
+	"AreaChinaPin": "li_tao_wan",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "立陶宛"
+}, {
+	"AreaEnName": "LIECHTENSTEIN",
+	"AreaCode": "4175",
+	"AreaChinaPin": "lie_zhi_dun_si_deng",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "列支敦斯登"
+}, {
+	"AreaEnName": "REUNIONIS",
+	"AreaCode": "262",
+	"AreaChinaPin": "liu_ni_wang_dao",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "留尼旺岛"
+}, {
+	"AreaEnName": "LUXEMBOURG",
+	"AreaCode": "352",
+	"AreaChinaPin": "lu_sen_bao",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "卢森堡"
+}, {
+	"AreaEnName": "RWANDA",
+	"AreaCode": "250",
+	"AreaChinaPin": "lu_wang_da",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "卢旺达"
+}, {
+	"AreaEnName": "RUMANIA",
+	"AreaCode": "40",
+	"AreaChinaPin": "luo_ma_ni_ya",
+	"AreaChinaFirstEn": "L",
+	"AreaChinaName": "罗马尼亚"
+}, {
+	"AreaEnName": "MADAGASCAR",
+	"AreaCode": "261",
+	"AreaChinaPin": "ma_da_jia_si_jia",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马达加斯加"
+}, {
+	"AreaEnName": "MALDIVE",
+	"AreaCode": "960",
+	"AreaChinaPin": "ma_er_dai_fu",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马尔代夫"
+}, {
+	"AreaEnName": "MALTA",
+	"AreaCode": "356",
+	"AreaChinaPin": "ma_er_ta",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马耳他"
+}, {
+	"AreaEnName": "MALAWI",
+	"AreaCode": "265",
+	"AreaChinaPin": "ma_la_wei",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马拉维"
+}, {
+	"AreaEnName": "MALAYSIA",
+	"AreaCode": "60",
+	"AreaChinaPin": "ma_lai_xi_ya",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马来西亚"
+}, {
+	"AreaEnName": "MALI",
+	"AreaCode": "223",
+	"AreaChinaPin": "ma_li",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马里"
+}, {
+	"AreaEnName": "MARIANAIS",
+	"AreaCode": "1670",
+	"AreaChinaPin": "ma_li_ya_na_qun_dao",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马里亚纳群岛"
+}, {
+	"AreaEnName": "MACEDONIJA",
+	"AreaCode": "389",
+	"AreaChinaPin": "ma_qi_dun",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马其顿"
+}, {
+	"AreaEnName": "MARTINIQUE",
+	"AreaCode": "596",
+	"AreaChinaPin": "ma_ti_ni_ke_dao",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马提尼克岛"
+}, {
+	"AreaEnName": "MARSHALLIS",
+	"AreaCode": "692",
+	"AreaChinaPin": "ma_xie_er_qun_dao",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "马歇尔群岛"
+}, {
+	"AreaEnName": "MAURITIUS",
+	"AreaCode": "230",
+	"AreaChinaPin": "mao_li_qiu_si",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "毛里求斯"
+}, {
+	"AreaEnName": "MAURITANIA",
+	"AreaCode": "222",
+	"AreaChinaPin": "mao_li_ta_ni_ya",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "毛利塔尼亚"
+}, {
+	"AreaEnName": "U.S.A",
+	"AreaCode": "1",
+	"AreaChinaPin": "mei_guo",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "美国"
+}, {
+	"AreaEnName": "MONGOLIA",
+	"AreaCode": "976",
+	"AreaChinaPin": "meng_gu",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "蒙古"
+}, {
+	"AreaEnName": "BANGLADESH",
+	"AreaCode": "880",
+	"AreaChinaPin": "meng_jia_la_guo",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "孟加拉国"
+}, {
+	"AreaEnName": "MONTSERRATIS",
+	"AreaCode": "1664",
+	"AreaChinaPin": "meng_te_sai_la_te_dao",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "蒙特塞拉特岛"
+}, {
+	"AreaEnName": "MICRONESIA",
+	"AreaCode": "691",
+	"AreaChinaPin": "mi_ke_luo_ni_xi_ya",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "密克罗尼西亚"
+}, {
+	"AreaEnName": "PERU",
+	"AreaCode": "51",
+	"AreaChinaPin": "mi_lu",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "秘鲁"
+}, {
+	"AreaEnName": "MYANMAR",
+	"AreaCode": "95",
+	"AreaChinaPin": "mian_dian",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "缅甸"
+}, {
+	"AreaEnName": "MILDOVA",
+	"AreaCode": "373",
+	"AreaChinaPin": "mo_er_duo_wa",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "摩尔多瓦"
+}, {
+	"AreaEnName": "MOROCCO",
+	"AreaCode": "212",
+	"AreaChinaPin": "mo_luo_ge",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "摩洛哥"
+}, {
+	"AreaEnName": "MONACO",
+	"AreaCode": "377",
+	"AreaChinaPin": "mo_na_ge",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "摩纳哥"
+}, {
+	"AreaEnName": "MOZAMBIQUE",
+	"AreaCode": "258",
+	"AreaChinaPin": "mo_sang_bi_ke",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "莫桑比克"
+}, {
+	"AreaEnName": "MEXICO",
+	"AreaCode": "52",
+	"AreaChinaPin": "mo_xi_ge",
+	"AreaChinaFirstEn": "M",
+	"AreaChinaName": "墨西哥"
+}, {
+	"AreaEnName": "NAMIBIA",
+	"AreaCode": "264",
+	"AreaChinaPin": "na_mi_bi_ya",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "纳米比亚"
+}, {
+	"AreaEnName": "SOUTHAFRICA",
+	"AreaCode": "27",
+	"AreaChinaPin": "nan_fei",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "南非"
+}, {
+	"AreaEnName": "YUGOSLAVIA",
+	"AreaCode": "381",
+	"AreaChinaPin": "nan_si_la_fu",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "南斯拉夫"
+}, {
+	"AreaEnName": "NEPAL",
+	"AreaCode": "977",
+	"AreaChinaPin": "ni_bo_er",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "尼泊尔"
+}, {
+	"AreaEnName": "NICARAGUA",
+	"AreaCode": "505",
+	"AreaChinaPin": "ni_jia_la_gua",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "尼加拉瓜"
+}, {
+	"AreaEnName": "NIGER",
+	"AreaCode": "227",
+	"AreaChinaPin": "ni_ri_er",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "尼日尔"
+}, {
+	"AreaEnName": "NIGERIA",
+	"AreaCode": "234",
+	"AreaChinaPin": "ni_ri_li_ya",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "尼日利亚"
+}, {
+	"AreaEnName": "NIUEIS",
+	"AreaCode": "683",
+	"AreaChinaPin": "niu_ai_dao",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "纽埃岛"
+}, {
+	"AreaEnName": "NORFOLKIS",
+	"AreaCode": "672",
+	"AreaChinaPin": "nuo_fu_ke_dao",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "诺福克岛"
+}, {
+	"AreaEnName": "NORWAY",
+	"AreaCode": "47",
+	"AreaChinaPin": "nuo_wei",
+	"AreaChinaFirstEn": "N",
+	"AreaChinaName": "挪威"
+}, {
+	"AreaEnName": "PALAU",
+	"AreaCode": "680",
+	"AreaChinaPin": "pa_lao",
+	"AreaChinaFirstEn": "P",
+	"AreaChinaName": "帕劳"
+}, {
+	"AreaEnName": "PORTUGAL",
+	"AreaCode": "351",
+	"AreaChinaPin": "pu_tao_ya",
+	"AreaChinaFirstEn": "P",
+	"AreaChinaName": "葡萄牙"
+}, {
+	"AreaEnName": "WALLSANDFUTUNA",
+	"AreaCode": "1681",
+	"AreaChinaPin": "qiang_bi_wa_li_si_qun_dao_he_fu_tu_na_qun_dao",
+	"AreaChinaFirstEn": "Q",
+	"AreaChinaName": "墙壁瓦利斯群岛和富图纳群岛"
+}, {
+	"AreaEnName": "GEORGIA",
+	"AreaCode": "995",
+	"AreaChinaPin": "qiao_zhi_ya_zhou",
+	"AreaChinaFirstEn": "Q",
+	"AreaChinaName": "乔治亚州"
+}, {
+	"AreaEnName": "JAPAN",
+	"AreaCode": "81",
+	"AreaChinaPin": "ri_ben",
+	"AreaChinaFirstEn": "R",
+	"AreaChinaName": "日本"
+}, {
+	"AreaEnName": "SWEDEN",
+	"AreaCode": "46",
+	"AreaChinaPin": "rui_dian",
+	"AreaChinaFirstEn": "R",
+	"AreaChinaName": "瑞典"
+}, {
+	"AreaEnName": "SWITZERLAND",
+	"AreaCode": "41",
+	"AreaChinaPin": "rui_shi",
+	"AreaChinaFirstEn": "R",
+	"AreaChinaName": "瑞士"
+}, {
+	"AreaEnName": "ELSALVADOR",
+	"AreaCode": "503",
+	"AreaChinaPin": "sa_er_wa_duo",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "萨尔瓦多"
+}, {
+	"AreaEnName": "SAMOA(EASTERN)",
+	"AreaCode": "684",
+	"AreaChinaPin": "sa_mo_ya_(_dong_bu_)",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "萨摩亚(东部)"
+}, {
+	"AreaEnName": "SAMOA(WESTERN)",
+	"AreaCode": "685",
+	"AreaChinaPin": "sa_mo_ya_(_xi_bu_)",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "萨摩亚(西部)"
+}, {
+	"AreaEnName": "SIERRALEONE",
+	"AreaCode": "232",
+	"AreaChinaPin": "sai_la_li_ang",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "塞拉利昂"
+}, {
+	"AreaEnName": "SENEGAL",
+	"AreaCode": "221",
+	"AreaChinaPin": "sai_nei_jia_er",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "塞内加尔"
+}, {
+	"AreaEnName": "CYPRUS",
+	"AreaCode": "357",
+	"AreaChinaPin": "sai_pu_lu_si",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "塞浦路斯"
+}, {
+	"AreaEnName": "SEYCHELLIES",
+	"AreaCode": "248",
+	"AreaChinaPin": "sai_she_er_gong_he_guo",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "塞舌尔共和国"
+}, {
+	"AreaEnName": "ZANZIBAR",
+	"AreaCode": "259",
+	"AreaChinaPin": "sang_gei_ba_er_dao",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "桑给巴尔岛"
+}, {
+	"AreaEnName": "SAUDIARABIA",
+	"AreaCode": "966",
+	"AreaChinaPin": "sha_te_a_la_bo",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "沙特阿拉伯"
+}, {
+	"AreaEnName": "SAOTOME&PRINCIPE",
+	"AreaCode": "239",
+	"AreaChinaPin": "sheng_duo_mei_he_pu_lin_xi_bi",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "圣多美和普林西比"
+}, {
+	"AreaEnName": "ST.HELENA",
+	"AreaCode": "290",
+	"AreaChinaPin": "sheng_he_le_na",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "圣赫勒拿"
+}, {
+	"AreaEnName": "ST.CHRISTOPHER&NEVISIS",
+	"AreaCode": "1869",
+	"AreaChinaPin": "sheng_ji_ci_he_ni_wei_si",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "圣基茨和尼维斯"
+}, {
+	"AreaEnName": "ST.LUCIA",
+	"AreaCode": "1784",
+	"AreaChinaPin": "sheng_lu_xi_ya",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "圣卢西亚"
+}, {
+	"AreaEnName": "SANMARINO",
+	"AreaCode": "378",
+	"AreaChinaPin": "sheng_ma_li_nuo",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "圣马力诺"
+}, {
+	"AreaEnName": "ST.PIERRE&MIQUELON",
+	"AreaCode": "508",
+	"AreaChinaPin": "sheng_pi_ai_er_he_mi_ke_long_qun_dao",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "圣皮埃尔和密克隆群岛"
+}, {
+	"AreaEnName": "SRILANKA",
+	"AreaCode": "94",
+	"AreaChinaPin": "si_li_lan_ka",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "斯里兰卡"
+}, {
+	"AreaEnName": "SLOVAK",
+	"AreaCode": "421",
+	"AreaChinaPin": "si_luo_fa_ke",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "斯洛伐克"
+}, {
+	"AreaEnName": "SLOVENIA",
+	"AreaCode": "386",
+	"AreaChinaPin": "si_luo_wen_ni_ya",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "斯洛文尼亚"
+}, {
+	"AreaEnName": "SWAZILAND",
+	"AreaCode": "268",
+	"AreaChinaPin": "si_wei_shi_lan",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "斯威士兰"
+}, {
+	"AreaEnName": "SUDAN",
+	"AreaCode": "249",
+	"AreaChinaPin": "su_dan",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "苏丹"
+}, {
+	"AreaEnName": "SURINAME",
+	"AreaCode": "597",
+	"AreaChinaPin": "su_li_nan",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "苏里南"
+}, {
+	"AreaEnName": "SOLOMONIS",
+	"AreaCode": "677",
+	"AreaChinaPin": "suo_luo_men_qun_dao",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "所罗门群岛"
+}, {
+	"AreaEnName": "SOMAIL",
+	"AreaCode": "252",
+	"AreaChinaPin": "suo_ma_li",
+	"AreaChinaFirstEn": "S",
+	"AreaChinaName": "索马里"
+}, {
+	"AreaEnName": "THAILAND",
+	"AreaCode": "66",
+	"AreaChinaPin": "tai_guo",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "泰国"
+}, {
+	"AreaEnName": "TAIWAN",
+	"AreaCode": "886",
+	"AreaChinaPin": "tai_wan",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "台湾"
+}, {
+	"AreaEnName": "TANZANIA",
+	"AreaCode": "255",
+	"AreaChinaPin": "tan_sang_ni_ya",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "坦桑尼亚"
+}, {
+	"AreaEnName": "TONGA",
+	"AreaCode": "676",
+	"AreaChinaPin": "tang_jia",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "汤加"
+}, {
+	"AreaEnName": "TURKS&CAICOSIS",
+	"AreaCode": "1649",
+	"AreaChinaPin": "te_ke_si_he_kai_ke_si_qun_dao",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "特克斯和凯科斯群岛"
+}, {
+	"AreaEnName": "TRINIDAD&TOBAGO",
+	"AreaCode": "1868",
+	"AreaChinaPin": "te_li_ni_da_he_duo_ba_ge",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "特立尼达和多巴哥"
+}, {
+	"AreaEnName": "TURKEY",
+	"AreaCode": "90",
+	"AreaChinaPin": "tu_er_qi",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "土耳其"
+}, {
+	"AreaEnName": "TURKMENISTAN",
+	"AreaCode": "993",
+	"AreaChinaPin": "tu_ku_man_si_tan",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "土库曼斯坦"
+}, {
+	"AreaEnName": "TUISIA",
+	"AreaCode": "216",
+	"AreaChinaPin": "tu_ni_si",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "突尼斯"
+}, {
+	"AreaEnName": "TUVALU",
+	"AreaCode": "688",
+	"AreaChinaPin": "tu_wa_lu",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "图瓦卢"
+}, {
+	"AreaEnName": "TOKELAUIS",
+	"AreaCode": "690",
+	"AreaChinaPin": "tuo_ke_lao_dao",
+	"AreaChinaFirstEn": "T",
+	"AreaChinaName": "托克劳岛"
+}, {
+	"AreaEnName": "VANUATU",
+	"AreaCode": "678",
+	"AreaChinaPin": "wa_nu_a_tu",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "瓦努阿图"
+}, {
+	"AreaEnName": "GUATEMAILA",
+	"AreaCode": "502",
+	"AreaChinaPin": "wei_di_ma_la",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "危地马拉"
+}, {
+	"AreaEnName": "WAKEIS",
+	"AreaCode": "1808",
+	"AreaChinaPin": "wei_ke_dao",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "威克岛"
+}, {
+	"AreaEnName": "VENEZUELA",
+	"AreaCode": "58",
+	"AreaChinaPin": "wei_nei_rui_la",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "委内瑞拉"
+}, {
+	"AreaEnName": "VIRGINIS.(U.S.A)",
+	"AreaCode": "1340",
+	"AreaChinaPin": "wei_zhen_qun_dao_(_mei_shu_)",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "维珍群岛(美属)"
+}, {
+	"AreaEnName": "VIRGINIS.(BRITISH)",
+	"AreaCode": "1284",
+	"AreaChinaPin": "wei_zhen_qun_dao_unknown_ying_shu_unknown",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "维珍群岛（英属）"
+}, {
+	"AreaEnName": "BRUNEI",
+	"AreaCode": "673",
+	"AreaChinaPin": "wen_lai",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "文莱"
+}, {
+	"AreaEnName": "UGANDA",
+	"AreaCode": "256",
+	"AreaChinaPin": "wu_gan_da",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "乌干达"
+}, {
+	"AreaEnName": "UKRAINE",
+	"AreaCode": "380",
+	"AreaChinaPin": "wu_ke_lan",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "乌克兰"
+}, {
+	"AreaEnName": "URUGUAY",
+	"AreaCode": "598",
+	"AreaChinaPin": "wu_la_gui",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "乌拉圭"
+}, {
+	"AreaEnName": "UZBEKISTAN",
+	"AreaCode": "998",
+	"AreaChinaPin": "wu_zi_bie_ke_si_tan",
+	"AreaChinaFirstEn": "W",
+	"AreaChinaName": "乌兹别克斯坦"
+}, {
+	"AreaEnName": "SPAIN",
+	"AreaCode": "34",
+	"AreaChinaPin": "xi_ban_ya",
+	"AreaChinaFirstEn": "X",
+	"AreaChinaName": "西班牙"
+}, {
+	"AreaEnName": "GREECE",
+	"AreaCode": "30",
+	"AreaChinaPin": "xi_la",
+	"AreaChinaFirstEn": "X",
+	"AreaChinaName": "希腊"
+}, {
+	"AreaEnName": "HONGKONG",
+	"AreaCode": "852",
+	"AreaChinaPin": "xiang_gang",
+	"AreaChinaFirstEn": "X",
+	"AreaChinaName": "香港"
+}, {
+	"AreaEnName": "SINGAPORE",
+	"AreaCode": "65",
+	"AreaChinaPin": "xin_jia_po",
+	"AreaChinaFirstEn": "X",
+	"AreaChinaName": "新加坡"
+}, {
+	"AreaEnName": "NEWZEALAND",
+	"AreaCode": "64",
+	"AreaChinaPin": "xin_xi_lan",
+	"AreaChinaFirstEn": "X",
+	"AreaChinaName": "新西兰"
+}, {
+	"AreaEnName": "HUNGARY",
+	"AreaCode": "36",
+	"AreaChinaPin": "xiong_ya_li",
+	"AreaChinaFirstEn": "X",
+	"AreaChinaName": "匈牙利"
+}, {
+	"AreaEnName": "SYRIA",
+	"AreaCode": "963",
+	"AreaChinaPin": "xu_li_ya",
+	"AreaChinaFirstEn": "X",
+	"AreaChinaName": "叙利亚"
+}, {
+	"AreaEnName": "JAMAICA",
+	"AreaCode": "1876",
+	"AreaChinaPin": "ya_mai_jia",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "牙买加"
+}, {
+	"AreaEnName": "ARMENIA",
+	"AreaCode": "374",
+	"AreaChinaPin": "ya_mei_ni_ya",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "亚美尼亚"
+}, {
+	"AreaEnName": "YEMEN",
+	"AreaCode": "967",
+	"AreaChinaPin": "ye_men",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "也门"
+}, {
+	"AreaEnName": "ITALY",
+	"AreaCode": "39",
+	"AreaChinaPin": "yi_da_li",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "意大利"
+}, {
+	"AreaEnName": "IRAQ",
+	"AreaCode": "964",
+	"AreaChinaPin": "yi_la_ke",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "伊拉克"
+}, {
+	"AreaEnName": "IRAN",
+	"AreaCode": "98",
+	"AreaChinaPin": "yi_lang",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "伊朗"
+}, {
+	"AreaEnName": "ISRAFI",
+	"AreaCode": "972",
+	"AreaChinaPin": "yi_se_lie",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "以色列"
+}, {
+	"AreaEnName": "INDIA",
+	"AreaCode": "91",
+	"AreaChinaPin": "yin_du",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "印度"
+}, {
+	"AreaEnName": "INDONESIA",
+	"AreaCode": "62",
+	"AreaChinaPin": "yin_ni",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "印尼"
+}, {
+	"AreaEnName": "U.K.",
+	"AreaCode": "44",
+	"AreaChinaPin": "ying_guo",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "英国"
+}, {
+	"AreaEnName": "JORDAN",
+	"AreaCode": "962",
+	"AreaChinaPin": "yue_dan",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "约旦"
+}, {
+	"AreaEnName": "VIETNAM",
+	"AreaCode": "84",
+	"AreaChinaPin": "yue_nan",
+	"AreaChinaFirstEn": "Y",
+	"AreaChinaName": "越南"
+}, {
+	"AreaEnName": "ZAMBIA",
+	"AreaCode": "260",
+	"AreaChinaPin": "zan_bi_ya",
+	"AreaChinaFirstEn": "Z",
+	"AreaChinaName": "赞比亚"
+}, {
+	"AreaEnName": "CHAD",
+	"AreaCode": "235",
+	"AreaChinaPin": "zha_de",
+	"AreaChinaFirstEn": "Z",
+	"AreaChinaName": "乍得"
+}, {
+	"AreaEnName": "GIBRALTAR",
+	"AreaCode": "350",
+	"AreaChinaPin": "zhi_bu_luo_tuo",
+	"AreaChinaFirstEn": "Z",
+	"AreaChinaName": "直布罗陀"
+}, {
+	"AreaEnName": "CHILE",
+	"AreaCode": "56",
+	"AreaChinaPin": "zhi_li",
+	"AreaChinaFirstEn": "Z",
+	"AreaChinaName": "智利"
+}, {
+	"AreaEnName": "CHINA",
+	"AreaCode": "86",
+	"AreaChinaPin": "zhong_guo",
+	"AreaChinaFirstEn": "Z",
+	"AreaChinaName": "中国"
+}, {
+	"AreaEnName": "FIJI",
+	"AreaCode": "679",
+	"AreaChinaPin": "zuo_ji",
+	"AreaChinaFirstEn": "Z",
+	"AreaChinaName": "斐济"
+}, {
+	"AreaEnName": "NAURU",
+	"AreaCode": "674",
+	"AreaChinaPin": "zuo_lu",
+	"AreaChinaFirstEn": "Z",
+	"AreaChinaName": "瑙鲁"
+}]

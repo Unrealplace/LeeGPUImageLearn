@@ -59,6 +59,40 @@
 		2BF3635820465B2D00F6266A /* 对焦框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3633B20465B2C00F6266A /* 对焦框@2x.png */; };
 		2BF3635920465B2D00F6266A /* 对焦框@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3633C20465B2C00F6266A /* 对焦框@3x.png */; };
 		2BF3635E2046798000F6266A /* TwoInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3635D2046798000F6266A /* TwoInputFilter.m */; };
+		2BF36361204792E500F6266A /* LookUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF36360204792E500F6266A /* LookUpViewController.m */; };
+		2BF363642047969700F6266A /* LookUpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363632047969700F6266A /* LookUpCell.m */; };
+		2BF364082047A08200F6266A /* b4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363662047A08100F6266A /* b4.png */; };
+		2BF364092047A08200F6266A /* 亮光.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363682047A08100F6266A /* 亮光.jpg */; };
+		2BF3640A2047A08200F6266A /* 变亮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363692047A08100F6266A /* 变亮.jpg */; };
+		2BF3640B2047A08200F6266A /* 变暗.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3636A2047A08100F6266A /* 变暗.jpg */; };
+		2BF3640C2047A08200F6266A /* 差值.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3636B2047A08100F6266A /* 差值.jpg */; };
+		2BF3640D2047A08200F6266A /* 强光.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3636C2047A08100F6266A /* 强光.jpg */; };
+		2BF3640E2047A08200F6266A /* 排除.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3636D2047A08100F6266A /* 排除.jpg */; };
+		2BF3640F2047A08200F6266A /* 柔光.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3636E2047A08100F6266A /* 柔光.jpg */; };
+		2BF364102047A08200F6266A /* 正常.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3636F2047A08100F6266A /* 正常.jpg */; };
+		2BF364112047A08200F6266A /* 正片叠底.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363702047A08100F6266A /* 正片叠底.jpg */; };
+		2BF364122047A08200F6266A /* 滤色.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363712047A08100F6266A /* 滤色.jpg */; };
+		2BF364132047A08200F6266A /* 线性光.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363722047A08100F6266A /* 线性光.jpg */; };
+		2BF364142047A08200F6266A /* 线性加深.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363732047A08100F6266A /* 线性加深.jpg */; };
+		2BF364152047A08200F6266A /* 颜色减淡.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363742047A08100F6266A /* 颜色减淡.jpg */; };
+		2BF364162047A08200F6266A /* 颜色加深.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363752047A08100F6266A /* 颜色加深.jpg */; };
+		2BF364172047A08200F6266A /* BaiduReportInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363772047A08100F6266A /* BaiduReportInfo.plist */; };
+		2BF364182047A08200F6266A /* BlendModes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363782047A08100F6266A /* BlendModes.plist */; };
+		2BF364192047A08200F6266A /* CLReportingInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363792047A08100F6266A /* CLReportingInfo.plist */; };
+		2BF3641A2047A08200F6266A /* DefaultLocation.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3637A2047A08100F6266A /* DefaultLocation.json */; };
+		2BF3641B2047A08200F6266A /* Filters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3637B2047A08100F6266A /* Filters.plist */; };
+		2BF3641C2047A08200F6266A /* LoginCountryAndAreaCode.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3637C2047A08100F6266A /* LoginCountryAndAreaCode.json */; };
+		2BF3641D2047A08200F6266A /* Masks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3637D2047A08100F6266A /* Masks.plist */; };
+		2BF3641E2047A08200F6266A /* SensorsAppClickInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3637E2047A08100F6266A /* SensorsAppClickInfo.plist */; };
+		2BF3641F2047A08200F6266A /* SensorsViewScreenInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3637F2047A08100F6266A /* SensorsViewScreenInfo.plist */; };
+		2BF3649A2047A08200F6266A /* Loading.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364052047A08200F6266A /* Loading.bundle */; };
+		2BF3649B2047A08200F6266A /* shareImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364062047A08200F6266A /* shareImage.jpg */; };
+		2BF3649C2047A08200F6266A /* shareUrlImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364072047A08200F6266A /* shareUrlImage.jpg */; };
+		2BF364A02047A90500F6266A /* Filters in Resources */ = {isa = PBXBuildFile; fileRef = 2BF3649F2047A90500F6266A /* Filters */; };
+		2BF364A32047AD9A00F6266A /* LookUpFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF364A22047AD9A00F6266A /* LookUpFilter.m */; };
+		2BF364A52047E34900F6266A /* Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364A42047E34900F6266A /* Normal.png */; };
+		2BF364A82047E9A600F6266A /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF364A72047E9A600F6266A /* MaskViewController.m */; };
+		2BF364AA2047F45000F6266A /* Masks in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364A92047F45000F6266A /* Masks */; };
 		2BFA46F91FDE1C150049D7B6 /* TwoPicEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA46F71FDE1C150049D7B6 /* TwoPicEditVC.m */; };
 		2BFA46FA1FDE1C150049D7B6 /* TwoPicEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */; };
 		2BFA470D1FE0F2900049D7B6 /* GPUBlurViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA470C1FE0F2900049D7B6 /* GPUBlurViewVC.m */; };
@@ -165,6 +199,44 @@
 		2BF3635A20465BEC00F6266A /* ACCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCommon.h; sourceTree = "<group>"; };
 		2BF3635C2046798000F6266A /* TwoInputFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoInputFilter.h; sourceTree = "<group>"; };
 		2BF3635D2046798000F6266A /* TwoInputFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoInputFilter.m; sourceTree = "<group>"; };
+		2BF3635F204792E500F6266A /* LookUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookUpViewController.h; sourceTree = "<group>"; };
+		2BF36360204792E500F6266A /* LookUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookUpViewController.m; sourceTree = "<group>"; };
+		2BF363622047969700F6266A /* LookUpCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookUpCell.h; sourceTree = "<group>"; };
+		2BF363632047969700F6266A /* LookUpCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookUpCell.m; sourceTree = "<group>"; };
+		2BF363662047A08100F6266A /* b4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b4.png; sourceTree = "<group>"; };
+		2BF363682047A08100F6266A /* 亮光.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "亮光.jpg"; sourceTree = "<group>"; };
+		2BF363692047A08100F6266A /* 变亮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "变亮.jpg"; sourceTree = "<group>"; };
+		2BF3636A2047A08100F6266A /* 变暗.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "变暗.jpg"; sourceTree = "<group>"; };
+		2BF3636B2047A08100F6266A /* 差值.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "差值.jpg"; sourceTree = "<group>"; };
+		2BF3636C2047A08100F6266A /* 强光.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "强光.jpg"; sourceTree = "<group>"; };
+		2BF3636D2047A08100F6266A /* 排除.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "排除.jpg"; sourceTree = "<group>"; };
+		2BF3636E2047A08100F6266A /* 柔光.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "柔光.jpg"; sourceTree = "<group>"; };
+		2BF3636F2047A08100F6266A /* 正常.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "正常.jpg"; sourceTree = "<group>"; };
+		2BF363702047A08100F6266A /* 正片叠底.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "正片叠底.jpg"; sourceTree = "<group>"; };
+		2BF363712047A08100F6266A /* 滤色.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "滤色.jpg"; sourceTree = "<group>"; };
+		2BF363722047A08100F6266A /* 线性光.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "线性光.jpg"; sourceTree = "<group>"; };
+		2BF363732047A08100F6266A /* 线性加深.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "线性加深.jpg"; sourceTree = "<group>"; };
+		2BF363742047A08100F6266A /* 颜色减淡.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "颜色减淡.jpg"; sourceTree = "<group>"; };
+		2BF363752047A08100F6266A /* 颜色加深.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "颜色加深.jpg"; sourceTree = "<group>"; };
+		2BF363772047A08100F6266A /* BaiduReportInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BaiduReportInfo.plist; sourceTree = "<group>"; };
+		2BF363782047A08100F6266A /* BlendModes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlendModes.plist; sourceTree = "<group>"; };
+		2BF363792047A08100F6266A /* CLReportingInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CLReportingInfo.plist; sourceTree = "<group>"; };
+		2BF3637A2047A08100F6266A /* DefaultLocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultLocation.json; sourceTree = "<group>"; };
+		2BF3637B2047A08100F6266A /* Filters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Filters.plist; sourceTree = "<group>"; };
+		2BF3637C2047A08100F6266A /* LoginCountryAndAreaCode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoginCountryAndAreaCode.json; sourceTree = "<group>"; };
+		2BF3637D2047A08100F6266A /* Masks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Masks.plist; sourceTree = "<group>"; };
+		2BF3637E2047A08100F6266A /* SensorsAppClickInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SensorsAppClickInfo.plist; sourceTree = "<group>"; };
+		2BF3637F2047A08100F6266A /* SensorsViewScreenInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SensorsViewScreenInfo.plist; sourceTree = "<group>"; };
+		2BF364052047A08200F6266A /* Loading.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Loading.bundle; sourceTree = "<group>"; };
+		2BF364062047A08200F6266A /* shareImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shareImage.jpg; sourceTree = "<group>"; };
+		2BF364072047A08200F6266A /* shareUrlImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shareUrlImage.jpg; sourceTree = "<group>"; };
+		2BF3649F2047A90500F6266A /* Filters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Filters; sourceTree = "<group>"; };
+		2BF364A12047AD9A00F6266A /* LookUpFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookUpFilter.h; sourceTree = "<group>"; };
+		2BF364A22047AD9A00F6266A /* LookUpFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookUpFilter.m; sourceTree = "<group>"; };
+		2BF364A42047E34900F6266A /* Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Normal.png; sourceTree = "<group>"; };
+		2BF364A62047E9A600F6266A /* MaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
+		2BF364A72047E9A600F6266A /* MaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
+		2BF364A92047F45000F6266A /* Masks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Masks; sourceTree = "<group>"; };
 		2BFA46F61FDE1C150049D7B6 /* TwoPicEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoPicEditVC.h; sourceTree = "<group>"; };
 		2BFA46F71FDE1C150049D7B6 /* TwoPicEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoPicEditVC.m; sourceTree = "<group>"; };
 		2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoPicEditVC.xib; sourceTree = "<group>"; };
@@ -234,6 +306,7 @@
 		2B6F39441FD02EFD0088F395 /* GPUImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2BF364A42047E34900F6266A /* Normal.png */,
 				2BF362FF204642C400F6266A /* EditViewController */,
 				2B6F39451FD02EFD0088F395 /* AppDelegate.h */,
 				2B6F39461FD02EFD0088F395 /* AppDelegate.m */,
@@ -298,6 +371,7 @@
 		2BF362FF204642C400F6266A /* EditViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2BF363652047A08100F6266A /* Resources */,
 				2BF3635B204678FC00F6266A /* Filters */,
 				2BF3631020465B2C00F6266A /* ACPhoto */,
 				2BF363032046431F00F6266A /* Controllers */,
@@ -320,6 +394,8 @@
 			children = (
 				2BF3630A2046468500F6266A /* PanelView.h */,
 				2BF3630B2046468500F6266A /* PanelView.m */,
+				2BF363622047969700F6266A /* LookUpCell.h */,
+				2BF363632047969700F6266A /* LookUpCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +416,10 @@
 				2BF363082046435900F6266A /* PanelViewController.m */,
 				2BF3630D2046500900F6266A /* BottomBarViewController.h */,
 				2BF3630E2046500900F6266A /* BottomBarViewController.m */,
+				2BF3635F204792E500F6266A /* LookUpViewController.h */,
+				2BF36360204792E500F6266A /* LookUpViewController.m */,
+				2BF364A62047E9A600F6266A /* MaskViewController.h */,
+				2BF364A72047E9A600F6266A /* MaskViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -401,8 +481,70 @@
 			children = (
 				2BF3635C2046798000F6266A /* TwoInputFilter.h */,
 				2BF3635D2046798000F6266A /* TwoInputFilter.m */,
+				2BF364A12047AD9A00F6266A /* LookUpFilter.h */,
+				2BF364A22047AD9A00F6266A /* LookUpFilter.m */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		2BF363652047A08100F6266A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BF363662047A08100F6266A /* b4.png */,
+				2BF364A92047F45000F6266A /* Masks */,
+				2BF3649F2047A90500F6266A /* Filters */,
+				2BF363672047A08100F6266A /* BlendModes */,
+				2BF363762047A08100F6266A /* DataFile */,
+				2BF364042047A08200F6266A /* StaticImages */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BF363672047A08100F6266A /* BlendModes */ = {
+			isa = PBXGroup;
+			children = (
+				2BF363682047A08100F6266A /* 亮光.jpg */,
+				2BF363692047A08100F6266A /* 变亮.jpg */,
+				2BF3636A2047A08100F6266A /* 变暗.jpg */,
+				2BF3636B2047A08100F6266A /* 差值.jpg */,
+				2BF3636C2047A08100F6266A /* 强光.jpg */,
+				2BF3636D2047A08100F6266A /* 排除.jpg */,
+				2BF3636E2047A08100F6266A /* 柔光.jpg */,
+				2BF3636F2047A08100F6266A /* 正常.jpg */,
+				2BF363702047A08100F6266A /* 正片叠底.jpg */,
+				2BF363712047A08100F6266A /* 滤色.jpg */,
+				2BF363722047A08100F6266A /* 线性光.jpg */,
+				2BF363732047A08100F6266A /* 线性加深.jpg */,
+				2BF363742047A08100F6266A /* 颜色减淡.jpg */,
+				2BF363752047A08100F6266A /* 颜色加深.jpg */,
+			);
+			path = BlendModes;
+			sourceTree = "<group>";
+		};
+		2BF363762047A08100F6266A /* DataFile */ = {
+			isa = PBXGroup;
+			children = (
+				2BF363772047A08100F6266A /* BaiduReportInfo.plist */,
+				2BF363782047A08100F6266A /* BlendModes.plist */,
+				2BF363792047A08100F6266A /* CLReportingInfo.plist */,
+				2BF3637A2047A08100F6266A /* DefaultLocation.json */,
+				2BF3637B2047A08100F6266A /* Filters.plist */,
+				2BF3637C2047A08100F6266A /* LoginCountryAndAreaCode.json */,
+				2BF3637D2047A08100F6266A /* Masks.plist */,
+				2BF3637E2047A08100F6266A /* SensorsAppClickInfo.plist */,
+				2BF3637F2047A08100F6266A /* SensorsViewScreenInfo.plist */,
+			);
+			path = DataFile;
+			sourceTree = "<group>";
+		};
+		2BF364042047A08200F6266A /* StaticImages */ = {
+			isa = PBXGroup;
+			children = (
+				2BF364052047A08200F6266A /* Loading.bundle */,
+				2BF364062047A08200F6266A /* shareImage.jpg */,
+				2BF364072047A08200F6266A /* shareUrlImage.jpg */,
+			);
+			path = StaticImages;
 			sourceTree = "<group>";
 		};
 		AD5C08A951C66B4B48C24358 /* Frameworks */ = {
@@ -474,23 +616,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF364A52047E34900F6266A /* Normal.png in Resources */,
+				2BF364172047A08200F6266A /* BaiduReportInfo.plist in Resources */,
+				2BF3640F2047A08200F6266A /* 柔光.jpg in Resources */,
+				2BF3641E2047A08200F6266A /* SensorsAppClickInfo.plist in Resources */,
+				2BF364092047A08200F6266A /* 亮光.jpg in Resources */,
+				2BF3649A2047A08200F6266A /* Loading.bundle in Resources */,
 				2BF3633D20465B2D00F6266A /* 22_脸部定位框@2x.png in Resources */,
+				2BF364132047A08200F6266A /* 线性光.jpg in Resources */,
 				2B6F39521FD02EFD0088F395 /* LaunchScreen.storyboard in Resources */,
+				2BF3641F2047A08200F6266A /* SensorsViewScreenInfo.plist in Resources */,
 				2B6F394F1FD02EFD0088F395 /* Assets.xcassets in Resources */,
+				2BF3640C2047A08200F6266A /* 差值.jpg in Resources */,
 				2BF3634220465B2D00F6266A /* 3_弹窗提示@3x.png in Resources */,
+				2BF3649C2047A08200F6266A /* shareUrlImage.jpg in Resources */,
 				2BF3634320465B2D00F6266A /* 4_闪光灯-关闭@2x.png in Resources */,
 				2BF3634620465B2D00F6266A /* 5_闪光灯-打开@3x.png in Resources */,
+				2BF3640D2047A08200F6266A /* 强光.jpg in Resources */,
+				2BF3641A2047A08200F6266A /* DefaultLocation.json in Resources */,
+				2BF364112047A08200F6266A /* 正片叠底.jpg in Resources */,
 				2BFA46FA1FDE1C150049D7B6 /* TwoPicEditVC.xib in Resources */,
+				2BF3640E2047A08200F6266A /* 排除.jpg in Resources */,
+				2BF364122047A08200F6266A /* 滤色.jpg in Resources */,
+				2BF3640A2047A08200F6266A /* 变亮.jpg in Resources */,
+				2BF364182047A08200F6266A /* BlendModes.plist in Resources */,
 				2BF3634820465B2D00F6266A /* 6_镜头翻转@3x.png in Resources */,
 				2BF3634520465B2D00F6266A /* 5_闪光灯-打开@2x.png in Resources */,
+				2BF3641C2047A08200F6266A /* LoginCountryAndAreaCode.json in Resources */,
+				2BF364192047A08200F6266A /* CLReportingInfo.plist in Resources */,
 				2BF3634020465B2D00F6266A /* 2_返回@3x.png in Resources */,
 				2B6F394D1FD02EFD0088F395 /* Main.storyboard in Resources */,
+				2BF3641B2047A08200F6266A /* Filters.plist in Resources */,
 				2BF3634720465B2D00F6266A /* 6_镜头翻转@2x.png in Resources */,
+				2BF364152047A08200F6266A /* 颜色减淡.jpg in Resources */,
 				2BF3633E20465B2D00F6266A /* 22_脸部定位框@3x.png in Resources */,
 				2BF3635920465B2D00F6266A /* 对焦框@3x.png in Resources */,
+				2BF364A02047A90500F6266A /* Filters in Resources */,
+				2BF364AA2047F45000F6266A /* Masks in Resources */,
+				2BF364102047A08200F6266A /* 正常.jpg in Resources */,
 				2BF3633F20465B2D00F6266A /* 2_返回@2x.png in Resources */,
+				2BF364162047A08200F6266A /* 颜色加深.jpg in Resources */,
+				2BF364142047A08200F6266A /* 线性加深.jpg in Resources */,
 				2BF3635820465B2D00F6266A /* 对焦框@2x.png in Resources */,
+				2BF3640B2047A08200F6266A /* 变暗.jpg in Resources */,
+				2BF3641D2047A08200F6266A /* Masks.plist in Resources */,
 				2BF3634120465B2D00F6266A /* 3_弹窗提示@2x.png in Resources */,
+				2BF3649B2047A08200F6266A /* shareImage.jpg in Resources */,
+				2BF364082047A08200F6266A /* b4.png in Resources */,
 				2BF3634420465B2D00F6266A /* 4_闪光灯-关闭@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,11 +732,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF364A32047AD9A00F6266A /* LookUpFilter.m in Sources */,
 				2BFA470D1FE0F2900049D7B6 /* GPUBlurViewVC.m in Sources */,
 				2BF3634D20465B2D00F6266A /* ACPhotoDetailController.m in Sources */,
 				2BF363062046434B00F6266A /* EditViewController.m in Sources */,
 				2BF3635E2046798000F6266A /* TwoInputFilter.m in Sources */,
 				2B89630C1FE79A4A0063BD19 /* LYImageFilterGroup.m in Sources */,
+				2BF36361204792E500F6266A /* LookUpViewController.m in Sources */,
 				2BF3635120465B2D00F6266A /* ALAssetsLibrary+AC.m in Sources */,
 				2B8963061FE763440063BD19 /* LEEImageHelper.m in Sources */,
 				2B8963151FE7CB2A0063BD19 /* Diy1VC.m in Sources */,
@@ -576,6 +750,7 @@
 				2BF363092046435900F6266A /* PanelViewController.m in Sources */,
 				2BF3634E20465B2D00F6266A /* ACPhotoPickerCell.m in Sources */,
 				2BFA46F91FDE1C150049D7B6 /* TwoPicEditVC.m in Sources */,
+				2BF363642047969700F6266A /* LookUpCell.m in Sources */,
 				2B8963021FE761020063BD19 /* RawDataAndRawTextureVC.m in Sources */,
 				2B8963091FE797AA0063BD19 /* PinpleAndGroupVC.m in Sources */,
 				2BF3635420465B2D00F6266A /* PHAsset+AC.m in Sources */,
@@ -597,6 +772,7 @@
 				2B6F39471FD02EFD0088F395 /* AppDelegate.m in Sources */,
 				2B8963181FE7D0FF0063BD19 /* DiyLightFilter.m in Sources */,
 				B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */,
+				2BF364A82047E9A600F6266A /* MaskViewController.m in Sources */,
 				B675153D1FE807300095A2D5 /* lookupVC.m in Sources */,
 				2BF3635020465B2D00F6266A /* ALAsset+AC.m in Sources */,
 				2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */,

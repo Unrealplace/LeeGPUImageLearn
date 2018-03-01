@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>320</key>
+	<dict>
+		<key>B01</key>
+		<dict>
+			<key>M01</key>
+			<dict>
+				<key>P01</key>
+				<dict>
+					<key>L1</key>
+					<dict>
+						<key>打开玩法</key>
+						<string>F01</string>
+					</dict>
+				</dict>
+				<key>P02</key>
+				<dict/>
+				<key>P03</key>
+				<dict/>
+				<key>P04</key>
+				<dict/>
+			</dict>
+			<key>M02</key>
+			<dict/>
+		</dict>
+	</dict>
+</dict>
+</plist>
