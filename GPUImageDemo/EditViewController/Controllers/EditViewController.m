@@ -17,7 +17,7 @@
 @property (nonatomic,strong)UIButton * changeTypeBtn;
 @property (nonatomic,strong) LookUpViewController * lookUpView;
 @property (nonatomic,strong) MaskViewController * maskView;
-
+@property (nonatomic,strong) PanelViewController * panelView;
 @end
 
 @implementation EditViewController
@@ -32,13 +32,13 @@
 
 - (void)setui {
     
-    PanelViewController * panelView = [[PanelViewController alloc] init];
-    panelView.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.width);
-    [self.view addSubview:panelView.view];
-    [self addChildViewController:panelView];
+    _panelView = [[PanelViewController alloc] init];
+    _panelView.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.width);
+    [self.view addSubview:_panelView.view];
+    [self addChildViewController:_panelView];
     
     BottomBarViewController * bottomBarView = [[BottomBarViewController alloc] init];
-    bottomBarView.view.frame = CGRectMake(0, CGRectGetMaxY(panelView.view.frame), self.view.bounds.size.width, 100);
+    bottomBarView.view.frame = CGRectMake(0, CGRectGetMaxY(_panelView.view.frame), self.view.bounds.size.width, 100);
     [self.view addSubview:bottomBarView.view];
     [self addChildViewController:bottomBarView];
     
@@ -60,16 +60,17 @@
     [self.view addSubview:self.changeTypeBtn];
     [self.changeTypeBtn addTarget:self action:@selector(changeTypeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 
-    
+    __weak typeof(self) weakself = self;
+//    self.panelView.changeImgBlock(nil, nil);
     bottomBarView.selectImgBlock = ^(UIImage *front, UIImage *back) {
-        panelView.changeImgBlock(front, back);
+        weakself.panelView.changeImgBlock(front, back);
     };
     _lookUpView.lookUpClickBlock = ^(UIImage *lookUpImg) {
-        panelView.changeLkpBlock(lookUpImg);
+       weakself.panelView.changeLkpBlock(lookUpImg);
 
     };
     _maskView.maskClickBlock = ^(UIImage *maskImg) {
-        panelView.changeMaskBlock(maskImg);
+        weakself.panelView.changeMaskBlock(maskImg);
     };
     
 }
@@ -79,7 +80,9 @@
     _lookUpView.view.hidden = !_lookUpView.view.hidden;
     if (_maskView.view.hidden) {
         [self.changeTypeBtn setTitle:@"色彩滤镜" forState:UIControlStateNormal];
+        _panelView.frontAndMaskBlock(YES, NO);
     }else {
+        _panelView.frontAndMaskBlock(NO, YES);
         [self.changeTypeBtn setTitle:@"遮罩滤镜" forState:UIControlStateNormal];
     }
 }

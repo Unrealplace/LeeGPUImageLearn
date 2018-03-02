@@ -93,6 +93,7 @@
 		2BF364A52047E34900F6266A /* Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364A42047E34900F6266A /* Normal.png */; };
 		2BF364A82047E9A600F6266A /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF364A72047E9A600F6266A /* MaskViewController.m */; };
 		2BF364AA2047F45000F6266A /* Masks in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364A92047F45000F6266A /* Masks */; };
+		2BF364AC2049255D00F6266A /* mask0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BF364AB2049255C00F6266A /* mask0.jpg */; };
 		2BFA46F91FDE1C150049D7B6 /* TwoPicEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA46F71FDE1C150049D7B6 /* TwoPicEditVC.m */; };
 		2BFA46FA1FDE1C150049D7B6 /* TwoPicEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */; };
 		2BFA470D1FE0F2900049D7B6 /* GPUBlurViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA470C1FE0F2900049D7B6 /* GPUBlurViewVC.m */; };
@@ -237,6 +238,7 @@
 		2BF364A62047E9A600F6266A /* MaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
 		2BF364A72047E9A600F6266A /* MaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
 		2BF364A92047F45000F6266A /* Masks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Masks; sourceTree = "<group>"; };
+		2BF364AB2049255C00F6266A /* mask0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mask0.jpg; sourceTree = "<group>"; };
 		2BFA46F61FDE1C150049D7B6 /* TwoPicEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoPicEditVC.h; sourceTree = "<group>"; };
 		2BFA46F71FDE1C150049D7B6 /* TwoPicEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoPicEditVC.m; sourceTree = "<group>"; };
 		2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoPicEditVC.xib; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				2BF364A42047E34900F6266A /* Normal.png */,
+				2BF364AB2049255C00F6266A /* mask0.jpg */,
 				2BF362FF204642C400F6266A /* EditViewController */,
 				2B6F39451FD02EFD0088F395 /* AppDelegate.h */,
 				2B6F39461FD02EFD0088F395 /* AppDelegate.m */,
@@ -652,6 +655,7 @@
 				2BF3633E20465B2D00F6266A /* 22_脸部定位框@3x.png in Resources */,
 				2BF3635920465B2D00F6266A /* 对焦框@3x.png in Resources */,
 				2BF364A02047A90500F6266A /* Filters in Resources */,
+				2BF364AC2049255D00F6266A /* mask0.jpg in Resources */,
 				2BF364AA2047F45000F6266A /* Masks in Resources */,
 				2BF364102047A08200F6266A /* 正常.jpg in Resources */,
 				2BF3633F20465B2D00F6266A /* 2_返回@2x.png in Resources */,
