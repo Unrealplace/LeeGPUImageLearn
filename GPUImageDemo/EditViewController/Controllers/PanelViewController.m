@@ -83,6 +83,14 @@
         [weakself processImg];
     };
     
+    self.gerateImgBlock = ^UIImage *{
+        [weakself.lookUpFilter forceProcessingAtSizeRespectingAspectRatio:CGSizeMake(weakself.view.bounds.size.width, weakself.view.bounds.size.width)];
+        [weakself processImg];
+        [weakself.lookUpFilter useNextFrameForImageCapture];
+        UIImage * img = [weakself.lookUpFilter imageFromCurrentFramebuffer];
+        return img;
+    };
+    
 }
 
 - (void)loadView {

@@ -18,6 +18,8 @@ typedef void(^PanelMaskChangeBlock)(UIImage * maskImg);
 
 typedef void(^PanelFrontAndMaskTranformBlock)(BOOL front,BOOL mask);
 
+typedef UIImage*(^PanelGetImgBlock)();
+
 @interface PanelViewController : UIViewController
 
 @property (nonatomic,copy)PanelChangeImgBlock changeImgBlock;
@@ -25,5 +27,6 @@ typedef void(^PanelFrontAndMaskTranformBlock)(BOOL front,BOOL mask);
 @property (nonatomic,copy)PanelLookUpChangeBlock changeLkpBlock;
 @property (nonatomic,copy)PanelMaskChangeBlock changeMaskBlock;
 @property (nonatomic,copy)PanelFrontAndMaskTranformBlock frontAndMaskBlock;
+@property (nonatomic,copy)PanelGetImgBlock gerateImgBlock;
 
 @end

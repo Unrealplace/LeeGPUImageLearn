@@ -293,6 +293,8 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
 
 - (CGImageRef)newCGImageFromCurrentlyProcessedOutput;
 {
+    
+    
     return nil;
 }
 

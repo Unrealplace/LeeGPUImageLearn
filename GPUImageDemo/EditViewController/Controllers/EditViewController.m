@@ -11,6 +11,7 @@
 #import "BottomBarViewController.h"
 #import "LookUpViewController.h"
 #import "MaskViewController.h"
+#import "GPUImage.h"
 
 @interface EditViewController ()
 
@@ -26,6 +27,7 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor whiteColor];
+    
     [self setui];
     
 }
@@ -60,6 +62,14 @@
     [self.view addSubview:self.changeTypeBtn];
     [self.changeTypeBtn addTarget:self action:@selector(changeTypeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
 
+    
+    UIButton * rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [rightBtn setTitle:@"save" forState:UIControlStateNormal];
+    rightBtn.backgroundColor = [UIColor redColor];
+    [rightBtn addTarget:self action:@selector(rightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    
     __weak typeof(self) weakself = self;
 //    self.panelView.changeImgBlock(nil, nil);
     bottomBarView.selectImgBlock = ^(UIImage *front, UIImage *back) {
@@ -85,6 +95,24 @@
         _panelView.frontAndMaskBlock(NO, YES);
         [self.changeTypeBtn setTitle:@"遮罩滤镜" forState:UIControlStateNormal];
     }
+}
+
+- (void)rightBtnClick:(UIButton*)sender {
+    
+    UIImage * img =  _panelView.gerateImgBlock();
+    
+    UIImageView * showImgView = [[UIImageView alloc] initWithImage:img];
+    showImgView.frame = CGRectMake(0, 0, 150, 150);
+    [self.view addSubview:showImgView];
+    showImgView.center = self.view.center;
+    
+    [UIView animateWithDuration:4 animations:^{
+        showImgView.alpha = 0;
+        
+    } completion:^(BOOL finished) {
+        [showImgView removeFromSuperview];
+    }];
+    
 }
 
 
