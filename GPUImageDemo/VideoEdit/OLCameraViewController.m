@@ -120,5 +120,26 @@
     
 }
 
+- (void)bottomToolViewClickRecordBtn:(OLRecordButton *)recordBtn recordType:(OLRecordType)recordTye bottomView:(OLBottomToolView *)bottomToolView{
+    switch (recordTye) {
+            case OLRecordTypeVideoCapture:
+        {
+            [self.cameraManager startRecordVideo];
+            
+        }
+            break;
+            case OLRecordTypeEmojiCapture:
+            break;
+            case OLRecordTypeSingleCapture:
+            break;
+            case OLRecordTypeMutipleCapture:
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
 
 @end

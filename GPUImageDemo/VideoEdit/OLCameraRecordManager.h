@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <GPUImage.h>
 @interface OLCameraRecordManager : NSObject
 
+
+
+- (void)addTargetToRecordManager:(id<GPUImageInput>)target;
 
 - (void)startRecord;
 

@@ -116,6 +116,7 @@
 		B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0D11FD3FB780062DFAD /* ProcessingstillimageVC.m */; };
 		B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B638B0D41FD402780062DFAD /* WritingcustomfilterVC.m */; };
 		B675153D1FE807300095A2D5 /* lookupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B675153C1FE807300095A2D5 /* lookupVC.m */; };
+		B69B6891206BC4F3000651FB /* OLImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B6890206BC4F3000651FB /* OLImageBeautyFilter.m */; };
 		BBA06A74838A344F73B0F9D8 /* libPods-GPUImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD139D4CF4927D290159F50 /* libPods-GPUImageDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -293,6 +294,8 @@
 		B638B0D41FD402780062DFAD /* WritingcustomfilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritingcustomfilterVC.m; sourceTree = "<group>"; };
 		B675153B1FE807300095A2D5 /* lookupVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookupVC.h; sourceTree = "<group>"; };
 		B675153C1FE807300095A2D5 /* lookupVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookupVC.m; sourceTree = "<group>"; };
+		B69B688F206BC4F3000651FB /* OLImageBeautyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLImageBeautyFilter.h; sourceTree = "<group>"; };
+		B69B6890206BC4F3000651FB /* OLImageBeautyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLImageBeautyFilter.m; sourceTree = "<group>"; };
 		FBDD0CB2865227898F07A18B /* Pods-GPUImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImageDemo/Pods-GPUImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -425,6 +428,8 @@
 				2B8D3EAA206B709B00405656 /* OLBottomToolView.m */,
 				2B8D3EB2206B7A9D00405656 /* OLRecordButton.h */,
 				2B8D3EB3206B7A9D00405656 /* OLRecordButton.m */,
+				B69B688F206BC4F3000651FB /* OLImageBeautyFilter.h */,
+				B69B6890206BC4F3000651FB /* OLImageBeautyFilter.m */,
 			);
 			path = VideoEdit;
 			sourceTree = "<group>";
@@ -811,6 +816,7 @@
 				2BEDA159206BA43D0071906D /* OLCameraSaveManager.m in Sources */,
 				2BF3635620465B2D00F6266A /* UIImage+ACCameraFixOrientation.m in Sources */,
 				2B8D3EAB206B709B00405656 /* OLBottomToolView.m in Sources */,
+				B69B6891206BC4F3000651FB /* OLImageBeautyFilter.m in Sources */,
 				B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */,
 				2BF363092046435900F6266A /* PanelViewController.m in Sources */,
 				2BF3634E20465B2D00F6266A /* ACPhotoPickerCell.m in Sources */,

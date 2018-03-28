@@ -14,4 +14,8 @@
 
 - (void)showVideoViewWith:(CGRect)frame superView:(UIView*)superView;
 
+- (void)startRecordVideo;
+
+- (void)stopRecordVideo;
+
 @end

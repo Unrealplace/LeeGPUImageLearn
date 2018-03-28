@@ -21,7 +21,10 @@
  */
 + (NSURL*)pathURLToWriter {
     
-    return nil;
+    NSURL * pathUrl = [NSURL fileURLWithPath:[OL_SAVE_PATH stringByAppendingPathComponent:@"video.mp4"]];
+    NSLog(@"writer--->%@",pathUrl);
+    return pathUrl;
+//    return [NSURL fileURLWithPath:[OL_SAVE_PATH stringByAppendingPathComponent:@"video.mp4"]];
 }
 
 /**

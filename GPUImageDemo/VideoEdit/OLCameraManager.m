@@ -8,6 +8,8 @@
 
 #import "OLCameraManager.h"
 #import <GPUImage.h>
+#import "OLImageBeautyFilter.h"
+#import "OLCameraRecordManager.h"
 
 @interface OLCameraManager ()<GPUImageVideoCameraDelegate>
 
@@ -17,6 +19,10 @@
 
 @property (nonatomic,strong)GPUImageView *videoShowImageView;
 
+@property (nonatomic,strong)OLImageBeautyFilter *beautyFilter;
+
+@property (nonatomic,strong)OLCameraRecordManager *recordManager;
+
 @end
 
 @implementation OLCameraManager
@@ -24,10 +30,21 @@
 - (void)dealloc {
     [self.videoCamera stopCameraCapture];
 }
+
+- (instancetype)init {
+    if (self = [super init]) {
+        
+        [self.recordManager addTargetToRecordManager:self.beautyFilter];
+        
+    }
+    return self;
+}
+
 - (void)showVideoViewWith:(CGRect)frame superView:(UIView *)superView {
     
     _frame = frame;
-    [self.videoCamera addTarget:self.videoShowImageView];
+    [self.videoCamera addTarget:self.beautyFilter];
+    [self.beautyFilter addTarget:self.videoShowImageView];
     [superView addSubview:self.videoShowImageView];
     [self.videoCamera stopCameraCapture];
     [self.videoCamera startCameraCapture];
@@ -36,7 +53,8 @@
 - (GPUImageVideoCamera*)videoCamera {
 
     if (!_videoCamera) {
-        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480 cameraPosition:AVCaptureDevicePositionBack];
+        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480
+                                                           cameraPosition:AVCaptureDevicePositionFront];
         _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
         _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
         _videoCamera.delegate = self;
@@ -52,6 +70,32 @@
         _videoShowImageView.fillMode = kGPUImageFillModePreserveAspectRatioAndFill;
     }
     return _videoShowImageView;
+}
+
+- (OLImageBeautyFilter*)beautyFilter {
+    if (!_beautyFilter) {
+        _beautyFilter = [[OLImageBeautyFilter alloc] init];
+    }
+    return _beautyFilter;
+}
+
+- (OLCameraRecordManager*)recordManager {
+    if (!_recordManager) {
+        _recordManager = [[OLCameraRecordManager alloc] init];
+    }
+    return _recordManager;
+}
+
+- (void)startRecordVideo {
+    
+    [self.recordManager startRecord];
+    
+}
+
+- (void)stopRecordVideo {
+    
+    [self.recordManager stopRecord];
+    
 }
 
 #pragma mark videoCamera 代理方法

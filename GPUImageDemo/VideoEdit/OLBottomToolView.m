@@ -30,6 +30,13 @@
  镜头模式数组
  */
 @property (nonatomic,strong)NSArray  *sourceArray;
+
+
+/**
+ 当前记录的类型
+ */
+@property (nonatomic,assign)OLRecordType currentRecordType;
+
 @end
 @implementation OLBottomToolView
 
@@ -44,6 +51,8 @@
 
 - (void)setup {
     self.sourceArray = @[@"连拍",@" GIF ",@"拍照",@"视频"];
+    self.currentRecordType = OLRecordTypeVideoCapture;
+    
     [self addSubview:self.centerRecordBtn];
     [self addSubview:self.filterBtn];
     [self addSubview:self.dynamicPasterBtn];
@@ -54,6 +63,7 @@
         _centerRecordBtn = [[OLRecordButton alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
         _centerRecordBtn.backgroundColor = [UIColor redColor];
         _centerRecordBtn.center = CGPointMake(self.bounds.size.width/2.0f, 14);
+        [_centerRecordBtn addTarget:self action:@selector(centerRecordBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _centerRecordBtn;
 }
@@ -92,6 +102,13 @@
 - (void)dynamicPasterBtnClick:(UIButton*)btn {
     if (self.delegate && [self.delegate respondsToSelector:@selector(bottomTooleViewSelectDynamicPaster:)]) {
         [self.delegate bottomTooleViewSelectDynamicPaster:self];
+    }
+}
+
+- (void)centerRecordBtnClick:(OLRecordButton*)btn {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(bottomToolViewClickRecordBtn:recordType:bottomView:)]) {
+     
+        [self.delegate bottomToolViewClickRecordBtn:self.centerRecordBtn recordType:self.currentRecordType bottomView:self];
     }
 }
 

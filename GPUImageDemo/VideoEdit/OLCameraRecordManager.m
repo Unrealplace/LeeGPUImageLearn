@@ -21,19 +21,29 @@
 
 - (GPUImageMovieWriter*)movieWriter {
     if (!_movieWriter) {
-        _movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[OLCameraSaveManager pathURLToWriter] size:CGSizeMake(320, 480)];
+        _movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[OLCameraSaveManager pathURLToWriter] size:CGSizeMake(480, 640)];
         _movieWriter.encodingLiveVideo = YES;
         _movieWriter.shouldPassthroughAudio = YES;
+        
     }
     return _movieWriter;
 }
 
+- (void)addTargetToRecordManager:(id<GPUImageInput>)target {
+    if (target) {
+        [(GPUImageFilter*)target addTarget:self.movieWriter];
+    }
+}
 
 - (void)startRecord {
-    
+    [self.movieWriter startRecording];
 }
 
 - (void)stopRecord {
+    
+    [self.movieWriter finishRecordingWithCompletionHandler:^{
+        
+    }];
     
 }
 
