@@ -24,6 +24,7 @@
     [self.view addSubview:self.showTableView];
     
     dataArray = [NSMutableArray arrayWithArray:@[
+                                                 @"OLCameraViewController",
                                                  @"EditViewController",
                                                  @"FilterDemoVC",
                                                  @"FilteringlivevideoVC",
