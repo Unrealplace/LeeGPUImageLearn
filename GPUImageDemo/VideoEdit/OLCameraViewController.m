@@ -10,9 +10,9 @@
 #import "OLTopToolView.h"
 #import "OLBottomToolView.h"
 #import "OLCameraManager.h"
+#import "OLPhotoEditorViewController.h"
 
-
-@interface OLCameraViewController ()<OLTopToolViewDelegate,OLBottomToolViewDelegate>
+@interface OLCameraViewController ()<OLTopToolViewDelegate,OLBottomToolViewDelegate,OLCameraManagerDelegate>
 
 /**
  顶部操作工具栏
@@ -34,9 +34,7 @@
 
 @implementation OLCameraViewController
 
-- (void)dealloc {
-    NSLog(@"%s",__func__);
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,7 +70,9 @@
 - (void)initCameraAndToolBar {
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.cameraManager showVideoViewWith:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) superView:self.view];
+    [self.cameraManager showVideoViewWith:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)
+                                   target:self
+                                superView:self.view];
     [self.view addSubview:self.topToolView];
     [self.view addSubview:self.bottomToolView];
     
@@ -124,13 +124,22 @@
     switch (recordTye) {
             case OLRecordTypeVideoCapture:
         {
-            [self.cameraManager startRecordVideo];
+            UIButton * btn = (UIButton*)recordBtn;
+            btn.selected = !btn.selected;
+            if (!btn.selected) {
+                [self.cameraManager stopRecordVideo];
+            }else {
+                [self.cameraManager startRecordVideo];
+            }
             
         }
             break;
             case OLRecordTypeEmojiCapture:
             break;
             case OLRecordTypeSingleCapture:
+        {
+            [self.cameraManager captureSinglePhoto];
+        }
             break;
             case OLRecordTypeMutipleCapture:
             break;
@@ -138,6 +147,16 @@
         default:
             break;
     }
+    
+}
+
+#pragma mark 镜头代理方法
+
+- (void)cameraCapturePhoto:(UIImage *)img {
+    NSLog(@"%@",img);
+    OLPhotoEditorViewController * photoVC = [OLPhotoEditorViewController new];
+    photoVC.editorImg = img;
+    [self.navigationController pushViewController:photoVC animated:YES];
     
 }
 

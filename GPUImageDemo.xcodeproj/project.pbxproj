@@ -33,8 +33,14 @@
 		2B8D3EB1206B76E600405656 /* OLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D3EB0206B76E600405656 /* OLBaseViewController.m */; };
 		2B8D3EB4206B7A9D00405656 /* OLRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D3EB3206B7A9D00405656 /* OLRecordButton.m */; };
 		2BEDA153206B9F2A0071906D /* OLCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA152206B9F2A0071906D /* OLCameraManager.m */; };
-		2BEDA156206B9F4D0071906D /* OLCameraRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA155206B9F4D0071906D /* OLCameraRecordManager.m */; };
 		2BEDA159206BA43D0071906D /* OLCameraSaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA158206BA43D0071906D /* OLCameraSaveManager.m */; };
+		2BEDA15C206C877E0071906D /* OLCamearSettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA15B206C877E0071906D /* OLCamearSettingManager.m */; };
+		2BEDA15F206CB9D20071906D /* OLCameraRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA15E206CB9D20071906D /* OLCameraRecordManager.m */; };
+		2BEDA162206CC68B0071906D /* OLPhotoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA161206CC68B0071906D /* OLPhotoEditorViewController.m */; };
+		2BEDA165206CC8150071906D /* OLPhotoEditorToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA164206CC8150071906D /* OLPhotoEditorToolView.m */; };
+		2BEDA168206CE0680071906D /* OLTestMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA167206CE0680071906D /* OLTestMVVMViewController.m */; };
+		2BEDA16B206CE0980071906D /* OLViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA16A206CE0980071906D /* OLViewModel.m */; };
+		2BEDA16E206CE0DC0071906D /* OLTestButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA16D206CE0DC0071906D /* OLTestButton.m */; };
 		2BF363062046434B00F6266A /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363052046434B00F6266A /* EditViewController.m */; };
 		2BF363092046435900F6266A /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363082046435900F6266A /* PanelViewController.m */; };
 		2BF3630C2046468500F6266A /* PanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3630B2046468500F6266A /* PanelView.m */; };
@@ -172,10 +178,22 @@
 		2B8D3EB3206B7A9D00405656 /* OLRecordButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLRecordButton.m; sourceTree = "<group>"; };
 		2BEDA151206B9F2A0071906D /* OLCameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCameraManager.h; sourceTree = "<group>"; };
 		2BEDA152206B9F2A0071906D /* OLCameraManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCameraManager.m; sourceTree = "<group>"; };
-		2BEDA154206B9F4D0071906D /* OLCameraRecordManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCameraRecordManager.h; sourceTree = "<group>"; };
-		2BEDA155206B9F4D0071906D /* OLCameraRecordManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCameraRecordManager.m; sourceTree = "<group>"; };
 		2BEDA157206BA43D0071906D /* OLCameraSaveManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCameraSaveManager.h; sourceTree = "<group>"; };
 		2BEDA158206BA43D0071906D /* OLCameraSaveManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCameraSaveManager.m; sourceTree = "<group>"; };
+		2BEDA15A206C877E0071906D /* OLCamearSettingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCamearSettingManager.h; sourceTree = "<group>"; };
+		2BEDA15B206C877E0071906D /* OLCamearSettingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCamearSettingManager.m; sourceTree = "<group>"; };
+		2BEDA15D206CB9D20071906D /* OLCameraRecordManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCameraRecordManager.h; sourceTree = "<group>"; };
+		2BEDA15E206CB9D20071906D /* OLCameraRecordManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCameraRecordManager.m; sourceTree = "<group>"; };
+		2BEDA160206CC68B0071906D /* OLPhotoEditorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLPhotoEditorViewController.h; sourceTree = "<group>"; };
+		2BEDA161206CC68B0071906D /* OLPhotoEditorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLPhotoEditorViewController.m; sourceTree = "<group>"; };
+		2BEDA163206CC8150071906D /* OLPhotoEditorToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLPhotoEditorToolView.h; sourceTree = "<group>"; };
+		2BEDA164206CC8150071906D /* OLPhotoEditorToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLPhotoEditorToolView.m; sourceTree = "<group>"; };
+		2BEDA166206CE0680071906D /* OLTestMVVMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLTestMVVMViewController.h; sourceTree = "<group>"; };
+		2BEDA167206CE0680071906D /* OLTestMVVMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLTestMVVMViewController.m; sourceTree = "<group>"; };
+		2BEDA169206CE0980071906D /* OLViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLViewModel.h; sourceTree = "<group>"; };
+		2BEDA16A206CE0980071906D /* OLViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLViewModel.m; sourceTree = "<group>"; };
+		2BEDA16C206CE0DC0071906D /* OLTestButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLTestButton.h; sourceTree = "<group>"; };
+		2BEDA16D206CE0DC0071906D /* OLTestButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLTestButton.m; sourceTree = "<group>"; };
 		2BF363042046434B00F6266A /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		2BF363052046434B00F6266A /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		2BF363072046435900F6266A /* PanelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
@@ -341,6 +359,12 @@
 		2B6F39441FD02EFD0088F395 /* GPUImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2BEDA166206CE0680071906D /* OLTestMVVMViewController.h */,
+				2BEDA167206CE0680071906D /* OLTestMVVMViewController.m */,
+				2BEDA16C206CE0DC0071906D /* OLTestButton.h */,
+				2BEDA16D206CE0DC0071906D /* OLTestButton.m */,
+				2BEDA169206CE0980071906D /* OLViewModel.h */,
+				2BEDA16A206CE0980071906D /* OLViewModel.m */,
 				2BF364A42047E34900F6266A /* Normal.png */,
 				2BF364AB2049255C00F6266A /* mask0.jpg */,
 				2BF362FF204642C400F6266A /* EditViewController */,
@@ -414,12 +438,18 @@
 				2B8D3EB0206B76E600405656 /* OLBaseViewController.m */,
 				2B8D3EAC206B73C200405656 /* OLCameraViewController.h */,
 				2B8D3EAD206B73C200405656 /* OLCameraViewController.m */,
+				2BEDA160206CC68B0071906D /* OLPhotoEditorViewController.h */,
+				2BEDA161206CC68B0071906D /* OLPhotoEditorViewController.m */,
+				2BEDA163206CC8150071906D /* OLPhotoEditorToolView.h */,
+				2BEDA164206CC8150071906D /* OLPhotoEditorToolView.m */,
 				2BEDA151206B9F2A0071906D /* OLCameraManager.h */,
 				2BEDA152206B9F2A0071906D /* OLCameraManager.m */,
-				2BEDA154206B9F4D0071906D /* OLCameraRecordManager.h */,
-				2BEDA155206B9F4D0071906D /* OLCameraRecordManager.m */,
+				2BEDA15D206CB9D20071906D /* OLCameraRecordManager.h */,
+				2BEDA15E206CB9D20071906D /* OLCameraRecordManager.m */,
 				2BEDA157206BA43D0071906D /* OLCameraSaveManager.h */,
 				2BEDA158206BA43D0071906D /* OLCameraSaveManager.m */,
+				2BEDA15A206C877E0071906D /* OLCamearSettingManager.h */,
+				2BEDA15B206C877E0071906D /* OLCamearSettingManager.m */,
 				2B8D3EA3206B65E600405656 /* OLCameraView.h */,
 				2B8D3EA4206B65E600405656 /* OLCameraView.m */,
 				2B8D3EA6206B708600405656 /* OLTopToolView.h */,
@@ -807,10 +837,12 @@
 				2B8D3EAE206B73C200405656 /* OLCameraViewController.m in Sources */,
 				2B89630C1FE79A4A0063BD19 /* LYImageFilterGroup.m in Sources */,
 				2BF36361204792E500F6266A /* LookUpViewController.m in Sources */,
+				2BEDA168206CE0680071906D /* OLTestMVVMViewController.m in Sources */,
 				2BF3635120465B2D00F6266A /* ALAssetsLibrary+AC.m in Sources */,
 				2B8963061FE763440063BD19 /* LEEImageHelper.m in Sources */,
 				2B8963151FE7CB2A0063BD19 /* Diy1VC.m in Sources */,
 				2BF3635320465B2D00F6266A /* NSString+ACFontSize.m in Sources */,
+				2BEDA15C206C877E0071906D /* OLCamearSettingManager.m in Sources */,
 				2B3156081FD526320014AD7D /* LiveVideoVC.m in Sources */,
 				2BF3630C2046468500F6266A /* PanelView.m in Sources */,
 				2BEDA159206BA43D0071906D /* OLCameraSaveManager.m in Sources */,
@@ -825,10 +857,10 @@
 				2B8D3EA8206B708600405656 /* OLTopToolView.m in Sources */,
 				2B8963021FE761020063BD19 /* RawDataAndRawTextureVC.m in Sources */,
 				2B8963091FE797AA0063BD19 /* PinpleAndGroupVC.m in Sources */,
-				2BEDA156206B9F4D0071906D /* OLCameraRecordManager.m in Sources */,
 				2BF3635420465B2D00F6266A /* PHAsset+AC.m in Sources */,
 				2BF3634A20465B2D00F6266A /* ACPhotoAlbumCell.m in Sources */,
 				2BF3634C20465B2D00F6266A /* ACPhotoAsset.m in Sources */,
+				2BEDA16B206CE0980071906D /* OLViewModel.m in Sources */,
 				2BF3635720465B2D00F6266A /* UIView+ACCameraFrame.m in Sources */,
 				B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */,
 				2B8D3E9B206B4A5200405656 /* VideoEditViewController.m in Sources */,
@@ -842,6 +874,8 @@
 				2B3156111FD532430014AD7D /* GroupFilterVC.m in Sources */,
 				2BF3635220465B2D00F6266A /* NSIndexSet+Convenience.m in Sources */,
 				2BFA47131FE1011E0049D7B6 /* ACBlurView.m in Sources */,
+				2BEDA16E206CE0DC0071906D /* OLTestButton.m in Sources */,
+				2BEDA162206CC68B0071906D /* OLPhotoEditorViewController.m in Sources */,
 				2B8D3EA5206B65E600405656 /* OLCameraView.m in Sources */,
 				2B89630F1FE7A4EF0063BD19 /* MutipleInputVC.m in Sources */,
 				2B31560B1FD52B450014AD7D /* TakePhotoVC.m in Sources */,
@@ -853,12 +887,14 @@
 				2BF364A82047E9A600F6266A /* MaskViewController.m in Sources */,
 				B675153D1FE807300095A2D5 /* lookupVC.m in Sources */,
 				2BF3635020465B2D00F6266A /* ALAsset+AC.m in Sources */,
+				2BEDA165206CC8150071906D /* OLPhotoEditorToolView.m in Sources */,
 				2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */,
 				2BF3630F2046500900F6266A /* BottomBarViewController.m in Sources */,
 				2BF3634B20465B2D00F6266A /* ACPhotoAlbumController.m in Sources */,
 				2BF3634920465B2D00F6266A /* ACAlbumBtn.m in Sources */,
 				B61BA5811FD828D4004B2D01 /* MutipleFilterVC.m in Sources */,
 				2BF3635520465B2D00F6266A /* UICollectionView+Convenience.m in Sources */,
+				2BEDA15F206CB9D20071906D /* OLCameraRecordManager.m in Sources */,
 				2BFA47101FE0F9CA0049D7B6 /* ProsumerAsyncQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

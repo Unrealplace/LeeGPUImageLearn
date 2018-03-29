@@ -51,7 +51,7 @@
 
 - (void)setup {
     self.sourceArray = @[@"连拍",@" GIF ",@"拍照",@"视频"];
-    self.currentRecordType = OLRecordTypeVideoCapture;
+    self.currentRecordType = OLRecordTypeSingleCapture;
     
     [self addSubview:self.centerRecordBtn];
     [self addSubview:self.filterBtn];

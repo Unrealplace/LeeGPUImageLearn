@@ -14,6 +14,10 @@
 
 @implementation OLBaseViewController
 
+- (void)dealloc {
+    NSLog(@"%s",__func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
  

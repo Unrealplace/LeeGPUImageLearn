@@ -7,21 +7,37 @@
 //
 
 #import "OLCameraManager.h"
-#import <GPUImage.h>
 #import "OLImageBeautyFilter.h"
-#import "OLCameraRecordManager.h"
+#import "OLCameraSaveManager.h"
+#import "OLCamearSettingManager.h"
 
-@interface OLCameraManager ()<GPUImageVideoCameraDelegate>
+#import <GPUImage.h>
+
+@interface OLCameraManager ()<GPUImageVideoCameraDelegate,GPUImageMovieWriterDelegate>
 
 @property (nonatomic,assign)CGRect frame;
 
-@property (nonatomic,strong)GPUImageVideoCamera *videoCamera;
+/**
+ 捕获镜头
+ */
+@property (nonatomic,strong)GPUImageStillCamera *videoCamera;
 
+/**
+ 输出显示层
+ */
 @property (nonatomic,strong)GPUImageView *videoShowImageView;
+
+/**
+ 录制滤镜
+ */
+@property (nonatomic,strong)GPUImageMovieWriter *movieWriter;
 
 @property (nonatomic,strong)OLImageBeautyFilter *beautyFilter;
 
-@property (nonatomic,strong)OLCameraRecordManager *recordManager;
+/**
+ 镜头的代理对象
+ */
+@property (nonatomic,weak)id <OLCameraManagerDelegate> delegate;
 
 @end
 
@@ -29,31 +45,42 @@
 
 - (void)dealloc {
     [self.videoCamera stopCameraCapture];
+    self.movieWriter.delegate = nil;
+    self.videoCamera.delegate = nil;
 }
 
 - (instancetype)init {
     if (self = [super init]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(backToGround) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(comeToFront) name:UIApplicationWillEnterForegroundNotification object:nil];
         
-        [self.recordManager addTargetToRecordManager:self.beautyFilter];
-        
-    }
-    return self;
+    }return self;
 }
 
-- (void)showVideoViewWith:(CGRect)frame superView:(UIView *)superView {
-    
+- (void)backToGround {
+    [self.videoCamera pauseCameraCapture];
+}
+
+- (void)comeToFront {
+    [self.videoCamera resumeCameraCapture];
+}
+
+- (void)showVideoViewWith:(CGRect)frame target:(id<OLCameraManagerDelegate>)delegate superView:(UIView *)superView {
     _frame = frame;
+    _delegate = delegate;
     [self.videoCamera addTarget:self.beautyFilter];
     [self.beautyFilter addTarget:self.videoShowImageView];
     [superView addSubview:self.videoShowImageView];
     [self.videoCamera stopCameraCapture];
     [self.videoCamera startCameraCapture];
+    
+    
 }
 
 - (GPUImageVideoCamera*)videoCamera {
 
     if (!_videoCamera) {
-        _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480
+        _videoCamera = [[GPUImageStillCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480
                                                            cameraPosition:AVCaptureDevicePositionFront];
         _videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
         _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
@@ -79,25 +106,47 @@
     return _beautyFilter;
 }
 
-- (OLCameraRecordManager*)recordManager {
-    if (!_recordManager) {
-        _recordManager = [[OLCameraRecordManager alloc] init];
-    }
-    return _recordManager;
-}
 
 - (void)startRecordVideo {
     
-    [self.recordManager startRecord];
+        _movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:[OLCameraSaveManager pathURLToWriter]
+                                                                size:[OLCamearSettingManager shareInstance].getMovieRecordSize];
+        _movieWriter.encodingLiveVideo = YES;
+        [_beautyFilter addTarget:_movieWriter];
+        _videoCamera.audioEncodingTarget = _movieWriter;
+        [_movieWriter startRecording];
     
 }
 
 - (void)stopRecordVideo {
     
-    [self.recordManager stopRecord];
+    [_movieWriter finishRecordingWithCompletionHandler:^{
+        
+        NSLog(@"finish");
+    }];
     
 }
 
+- (void)captureSinglePhoto {
+    
+    [self.videoCamera capturePhotoAsJPEGProcessedUpToFilter:self.beautyFilter withCompletionHandler:^(NSData *processedJPEG, NSError *error) {
+        UIImage * image = [UIImage imageWithData:processedJPEG];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(cameraCapturePhoto:)]) {
+            [self.delegate cameraCapturePhoto:image];
+        }
+    }];
+    
+}
+
+
+#pragma mark movieWriter 代理方法
+- (void)movieRecordingCompleted {
+    
+}
+
+- (void)movieRecordingFailedWithError:(NSError*)error {
+    
+}
 #pragma mark videoCamera 代理方法
 - (void)willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer {
     
