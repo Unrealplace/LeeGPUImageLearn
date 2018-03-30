@@ -15,6 +15,8 @@
 @optional
 - (void)cameraCapturePhoto:(UIImage *)img;
 
+//- (void)camera
+
 @end
 
 @interface OLCameraManager : NSObject

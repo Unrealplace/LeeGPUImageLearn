@@ -41,6 +41,9 @@
 		2BEDA168206CE0680071906D /* OLTestMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA167206CE0680071906D /* OLTestMVVMViewController.m */; };
 		2BEDA16B206CE0980071906D /* OLViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA16A206CE0980071906D /* OLViewModel.m */; };
 		2BEDA16E206CE0DC0071906D /* OLTestButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA16D206CE0DC0071906D /* OLTestButton.m */; };
+		2BEDA193206DD4030071906D /* OLPasterElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA192206DD4030071906D /* OLPasterElementView.m */; };
+		2BEDA196206DD8660071906D /* OLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA195206DD8660071906D /* OLRouter.m */; };
+		2BEDA199206E1C0F0071906D /* OLLightProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDA198206E1C0F0071906D /* OLLightProgressView.m */; };
 		2BF363062046434B00F6266A /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363052046434B00F6266A /* EditViewController.m */; };
 		2BF363092046435900F6266A /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363082046435900F6266A /* PanelViewController.m */; };
 		2BF3630C2046468500F6266A /* PanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3630B2046468500F6266A /* PanelView.m */; };
@@ -194,6 +197,12 @@
 		2BEDA16A206CE0980071906D /* OLViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLViewModel.m; sourceTree = "<group>"; };
 		2BEDA16C206CE0DC0071906D /* OLTestButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLTestButton.h; sourceTree = "<group>"; };
 		2BEDA16D206CE0DC0071906D /* OLTestButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLTestButton.m; sourceTree = "<group>"; };
+		2BEDA191206DD4030071906D /* OLPasterElementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLPasterElementView.h; sourceTree = "<group>"; };
+		2BEDA192206DD4030071906D /* OLPasterElementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLPasterElementView.m; sourceTree = "<group>"; };
+		2BEDA194206DD8660071906D /* OLRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLRouter.h; sourceTree = "<group>"; };
+		2BEDA195206DD8660071906D /* OLRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLRouter.m; sourceTree = "<group>"; };
+		2BEDA197206E1C0F0071906D /* OLLightProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLLightProgressView.h; sourceTree = "<group>"; };
+		2BEDA198206E1C0F0071906D /* OLLightProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLLightProgressView.m; sourceTree = "<group>"; };
 		2BF363042046434B00F6266A /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		2BF363052046434B00F6266A /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		2BF363072046435900F6266A /* PanelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
@@ -458,8 +467,14 @@
 				2B8D3EAA206B709B00405656 /* OLBottomToolView.m */,
 				2B8D3EB2206B7A9D00405656 /* OLRecordButton.h */,
 				2B8D3EB3206B7A9D00405656 /* OLRecordButton.m */,
+				2BEDA197206E1C0F0071906D /* OLLightProgressView.h */,
+				2BEDA198206E1C0F0071906D /* OLLightProgressView.m */,
+				2BEDA191206DD4030071906D /* OLPasterElementView.h */,
+				2BEDA192206DD4030071906D /* OLPasterElementView.m */,
 				B69B688F206BC4F3000651FB /* OLImageBeautyFilter.h */,
 				B69B6890206BC4F3000651FB /* OLImageBeautyFilter.m */,
+				2BEDA194206DD8660071906D /* OLRouter.h */,
+				2BEDA195206DD8660071906D /* OLRouter.m */,
 			);
 			path = VideoEdit;
 			sourceTree = "<group>";
@@ -848,6 +863,7 @@
 				2BEDA159206BA43D0071906D /* OLCameraSaveManager.m in Sources */,
 				2BF3635620465B2D00F6266A /* UIImage+ACCameraFixOrientation.m in Sources */,
 				2B8D3EAB206B709B00405656 /* OLBottomToolView.m in Sources */,
+				2BEDA193206DD4030071906D /* OLPasterElementView.m in Sources */,
 				B69B6891206BC4F3000651FB /* OLImageBeautyFilter.m in Sources */,
 				B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */,
 				2BF363092046435900F6266A /* PanelViewController.m in Sources */,
@@ -856,6 +872,7 @@
 				2BF363642047969700F6266A /* LookUpCell.m in Sources */,
 				2B8D3EA8206B708600405656 /* OLTopToolView.m in Sources */,
 				2B8963021FE761020063BD19 /* RawDataAndRawTextureVC.m in Sources */,
+				2BEDA196206DD8660071906D /* OLRouter.m in Sources */,
 				2B8963091FE797AA0063BD19 /* PinpleAndGroupVC.m in Sources */,
 				2BF3635420465B2D00F6266A /* PHAsset+AC.m in Sources */,
 				2BF3634A20465B2D00F6266A /* ACPhotoAlbumCell.m in Sources */,
@@ -874,6 +891,7 @@
 				2B3156111FD532430014AD7D /* GroupFilterVC.m in Sources */,
 				2BF3635220465B2D00F6266A /* NSIndexSet+Convenience.m in Sources */,
 				2BFA47131FE1011E0049D7B6 /* ACBlurView.m in Sources */,
+				2BEDA199206E1C0F0071906D /* OLLightProgressView.m in Sources */,
 				2BEDA16E206CE0DC0071906D /* OLTestButton.m in Sources */,
 				2BEDA162206CC68B0071906D /* OLPhotoEditorViewController.m in Sources */,
 				2B8D3EA5206B65E600405656 /* OLCameraView.m in Sources */,

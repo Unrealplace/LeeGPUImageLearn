@@ -153,7 +153,7 @@
 #pragma mark 镜头代理方法
 
 - (void)cameraCapturePhoto:(UIImage *)img {
-    NSLog(@"%@",img);
+    
     OLPhotoEditorViewController * photoVC = [OLPhotoEditorViewController new];
     photoVC.editorImg = img;
     [self.navigationController pushViewController:photoVC animated:YES];

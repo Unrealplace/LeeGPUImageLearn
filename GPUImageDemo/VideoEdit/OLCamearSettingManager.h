@@ -12,6 +12,10 @@
 @interface OLCamearSettingManager : NSObject
 
 + (instancetype)shareInstance;
+
+
 - (CGSize)getMovieRecordSize;
+
+
 
 @end
