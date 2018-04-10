@@ -14,6 +14,10 @@
 		2B5AC4E9207B012500198E80 /* OLArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC4E8207B012500198E80 /* OLArcView.m */; };
 		2B5AC4EC207B35AE00198E80 /* OLGlassesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC4EB207B35AE00198E80 /* OLGlassesView.m */; };
 		2B5AC4EF207B4D1C00198E80 /* OLCupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC4EE207B4D1C00198E80 /* OLCupView.m */; };
+		2B5AC511207C850800198E80 /* OLRACBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC510207C850800198E80 /* OLRACBaseViewController.m */; };
+		2B5AC518207C879800198E80 /* OLRACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC516207C879800198E80 /* OLRACMainViewController.m */; };
+		2B5AC519207C879800198E80 /* OLRACMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5AC517207C879800198E80 /* OLRACMainViewController.xib */; };
+		2B5AC51C207C98A700198E80 /* OLLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC51B207C98A700198E80 /* OLLoginViewModel.m */; };
 		2B6F39471FD02EFD0088F395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F39461FD02EFD0088F395 /* AppDelegate.m */; };
 		2B6F394A1FD02EFD0088F395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F39491FD02EFD0088F395 /* ViewController.m */; };
 		2B6F394D1FD02EFD0088F395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6F394B1FD02EFD0088F395 /* Main.storyboard */; };
@@ -148,6 +152,13 @@
 		2B5AC4EB207B35AE00198E80 /* OLGlassesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLGlassesView.m; sourceTree = "<group>"; };
 		2B5AC4ED207B4D1C00198E80 /* OLCupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCupView.h; sourceTree = "<group>"; };
 		2B5AC4EE207B4D1C00198E80 /* OLCupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCupView.m; sourceTree = "<group>"; };
+		2B5AC50F207C850800198E80 /* OLRACBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLRACBaseViewController.h; sourceTree = "<group>"; };
+		2B5AC510207C850800198E80 /* OLRACBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLRACBaseViewController.m; sourceTree = "<group>"; };
+		2B5AC515207C879800198E80 /* OLRACMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLRACMainViewController.h; sourceTree = "<group>"; };
+		2B5AC516207C879800198E80 /* OLRACMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLRACMainViewController.m; sourceTree = "<group>"; };
+		2B5AC517207C879800198E80 /* OLRACMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OLRACMainViewController.xib; sourceTree = "<group>"; };
+		2B5AC51A207C98A700198E80 /* OLLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLLoginViewModel.h; sourceTree = "<group>"; };
+		2B5AC51B207C98A700198E80 /* OLLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLLoginViewModel.m; sourceTree = "<group>"; };
 		2B6F39421FD02EFD0088F395 /* GPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6F39451FD02EFD0088F395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B6F39461FD02EFD0088F395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -356,6 +367,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2B5AC50E207C84C300198E80 /* RACProject */ = {
+			isa = PBXGroup;
+			children = (
+				2B5AC50F207C850800198E80 /* OLRACBaseViewController.h */,
+				2B5AC510207C850800198E80 /* OLRACBaseViewController.m */,
+				2B5AC515207C879800198E80 /* OLRACMainViewController.h */,
+				2B5AC516207C879800198E80 /* OLRACMainViewController.m */,
+				2B5AC517207C879800198E80 /* OLRACMainViewController.xib */,
+				2B5AC51A207C98A700198E80 /* OLLoginViewModel.h */,
+				2B5AC51B207C98A700198E80 /* OLLoginViewModel.m */,
+			);
+			path = RACProject;
+			sourceTree = "<group>";
+		};
 		2B6F39391FD02EFD0088F395 = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +463,7 @@
 				B675153C1FE807300095A2D5 /* lookupVC.m */,
 				2B8D3E99206B4A5200405656 /* VideoEditViewController.h */,
 				2B8D3E9A206B4A5200405656 /* VideoEditViewController.m */,
+				2B5AC50E207C84C300198E80 /* RACProject */,
 				2B8D3E9C206B648F00405656 /* VideoEdit */,
 				2BFA46F81FDE1C150049D7B6 /* TwoPicEditVC.xib */,
 				2B6F394B1FD02EFD0088F395 /* Main.storyboard */,
@@ -789,6 +815,7 @@
 				2BF3641D2047A08200F6266A /* Masks.plist in Resources */,
 				2BF3634120465B2D00F6266A /* 3_弹窗提示@2x.png in Resources */,
 				2BF3649B2047A08200F6266A /* shareImage.jpg in Resources */,
+				2B5AC519207C879800198E80 /* OLRACMainViewController.xib in Resources */,
 				2BF364082047A08200F6266A /* b4.png in Resources */,
 				2BF3634420465B2D00F6266A /* 4_闪光灯-关闭@3x.png in Resources */,
 			);
@@ -865,6 +892,7 @@
 				2BF363062046434B00F6266A /* EditViewController.m in Sources */,
 				2BF3635E2046798000F6266A /* TwoInputFilter.m in Sources */,
 				2B8D3EAE206B73C200405656 /* OLCameraViewController.m in Sources */,
+				2B5AC518207C879800198E80 /* OLRACMainViewController.m in Sources */,
 				2B89630C1FE79A4A0063BD19 /* LYImageFilterGroup.m in Sources */,
 				2BF36361204792E500F6266A /* LookUpViewController.m in Sources */,
 				2BEDA168206CE0680071906D /* OLTestMVVMViewController.m in Sources */,
@@ -894,6 +922,7 @@
 				2BF3634A20465B2D00F6266A /* ACPhotoAlbumCell.m in Sources */,
 				2BF3634C20465B2D00F6266A /* ACPhotoAsset.m in Sources */,
 				2BEDA16B206CE0980071906D /* OLViewModel.m in Sources */,
+				2B5AC511207C850800198E80 /* OLRACBaseViewController.m in Sources */,
 				2BF3635720465B2D00F6266A /* UIView+ACCameraFrame.m in Sources */,
 				B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */,
 				2B8D3E9B206B4A5200405656 /* VideoEditViewController.m in Sources */,
@@ -926,6 +955,7 @@
 				2BEDA165206CC8150071906D /* OLPhotoEditorToolView.m in Sources */,
 				2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */,
 				2BF3630F2046500900F6266A /* BottomBarViewController.m in Sources */,
+				2B5AC51C207C98A700198E80 /* OLLoginViewModel.m in Sources */,
 				2BF3634B20465B2D00F6266A /* ACPhotoAlbumController.m in Sources */,
 				2BF3634920465B2D00F6266A /* ACAlbumBtn.m in Sources */,
 				B61BA5811FD828D4004B2D01 /* MutipleFilterVC.m in Sources */,
@@ -1069,6 +1099,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1085,6 +1116,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
