@@ -31,7 +31,7 @@ typedef enum :NSInteger{
 /**
  选取了动态贴纸
  */
-- (void)bottomTooleViewSelectDynamicPaster:(OLBottomToolView*)bottomToolView;
+- (void)bottomToolViewSelectDynamicPaster:(OLBottomToolView*)bottomToolView;
 
 /**
  点击了记录按钮

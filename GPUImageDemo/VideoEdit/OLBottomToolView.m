@@ -100,8 +100,8 @@
 }
 
 - (void)dynamicPasterBtnClick:(UIButton*)btn {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(bottomTooleViewSelectDynamicPaster:)]) {
-        [self.delegate bottomTooleViewSelectDynamicPaster:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(bottomToolViewSelectDynamicPaster:)]) {
+        [self.delegate bottomToolViewSelectDynamicPaster:self];
     }
 }
 
