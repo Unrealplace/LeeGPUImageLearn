@@ -18,6 +18,8 @@
 		2B5AC518207C879800198E80 /* OLRACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC516207C879800198E80 /* OLRACMainViewController.m */; };
 		2B5AC519207C879800198E80 /* OLRACMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5AC517207C879800198E80 /* OLRACMainViewController.xib */; };
 		2B5AC51C207C98A700198E80 /* OLLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC51B207C98A700198E80 /* OLLoginViewModel.m */; };
+		2B5AC51F207DA06C00198E80 /* OLDataShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC51E207DA06C00198E80 /* OLDataShowViewController.m */; };
+		2B5AC522207DDA6800198E80 /* OLDataShowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AC521207DDA6800198E80 /* OLDataShowViewModel.m */; };
 		2B6F39471FD02EFD0088F395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F39461FD02EFD0088F395 /* AppDelegate.m */; };
 		2B6F394A1FD02EFD0088F395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F39491FD02EFD0088F395 /* ViewController.m */; };
 		2B6F394D1FD02EFD0088F395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6F394B1FD02EFD0088F395 /* Main.storyboard */; };
@@ -159,6 +161,10 @@
 		2B5AC517207C879800198E80 /* OLRACMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OLRACMainViewController.xib; sourceTree = "<group>"; };
 		2B5AC51A207C98A700198E80 /* OLLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLLoginViewModel.h; sourceTree = "<group>"; };
 		2B5AC51B207C98A700198E80 /* OLLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLLoginViewModel.m; sourceTree = "<group>"; };
+		2B5AC51D207DA06C00198E80 /* OLDataShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLDataShowViewController.h; sourceTree = "<group>"; };
+		2B5AC51E207DA06C00198E80 /* OLDataShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLDataShowViewController.m; sourceTree = "<group>"; };
+		2B5AC520207DDA6800198E80 /* OLDataShowViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLDataShowViewModel.h; sourceTree = "<group>"; };
+		2B5AC521207DDA6800198E80 /* OLDataShowViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLDataShowViewModel.m; sourceTree = "<group>"; };
 		2B6F39421FD02EFD0088F395 /* GPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6F39451FD02EFD0088F395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B6F39461FD02EFD0088F395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -374,9 +380,13 @@
 				2B5AC510207C850800198E80 /* OLRACBaseViewController.m */,
 				2B5AC515207C879800198E80 /* OLRACMainViewController.h */,
 				2B5AC516207C879800198E80 /* OLRACMainViewController.m */,
+				2B5AC51D207DA06C00198E80 /* OLDataShowViewController.h */,
+				2B5AC51E207DA06C00198E80 /* OLDataShowViewController.m */,
 				2B5AC517207C879800198E80 /* OLRACMainViewController.xib */,
 				2B5AC51A207C98A700198E80 /* OLLoginViewModel.h */,
 				2B5AC51B207C98A700198E80 /* OLLoginViewModel.m */,
+				2B5AC520207DDA6800198E80 /* OLDataShowViewModel.h */,
+				2B5AC521207DDA6800198E80 /* OLDataShowViewModel.m */,
 			);
 			path = RACProject;
 			sourceTree = "<group>";
@@ -478,6 +488,8 @@
 		2B8D3E9C206B648F00405656 /* VideoEdit */ = {
 			isa = PBXGroup;
 			children = (
+				2BEDA194206DD8660071906D /* OLRouter.h */,
+				2BEDA195206DD8660071906D /* OLRouter.m */,
 				2B8D3EAF206B76E600405656 /* OLBaseViewController.h */,
 				2B8D3EB0206B76E600405656 /* OLBaseViewController.m */,
 				2B8D3EAC206B73C200405656 /* OLCameraViewController.h */,
@@ -514,8 +526,6 @@
 				2BEDA192206DD4030071906D /* OLPasterElementView.m */,
 				B69B688F206BC4F3000651FB /* OLImageBeautyFilter.h */,
 				B69B6890206BC4F3000651FB /* OLImageBeautyFilter.m */,
-				2BEDA194206DD8660071906D /* OLRouter.h */,
-				2BEDA195206DD8660071906D /* OLRouter.m */,
 			);
 			path = VideoEdit;
 			sourceTree = "<group>";
@@ -922,8 +932,10 @@
 				2BF3634A20465B2D00F6266A /* ACPhotoAlbumCell.m in Sources */,
 				2BF3634C20465B2D00F6266A /* ACPhotoAsset.m in Sources */,
 				2BEDA16B206CE0980071906D /* OLViewModel.m in Sources */,
+				2B5AC522207DDA6800198E80 /* OLDataShowViewModel.m in Sources */,
 				2B5AC511207C850800198E80 /* OLRACBaseViewController.m in Sources */,
 				2BF3635720465B2D00F6266A /* UIView+ACCameraFrame.m in Sources */,
+				2B5AC51F207DA06C00198E80 /* OLDataShowViewController.m in Sources */,
 				B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */,
 				2B8D3E9B206B4A5200405656 /* VideoEditViewController.m in Sources */,
 				2BEDA153206B9F2A0071906D /* OLCameraManager.m in Sources */,
@@ -1099,7 +1111,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1116,7 +1128,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

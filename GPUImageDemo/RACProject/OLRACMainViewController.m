@@ -8,6 +8,7 @@
 
 #import "OLRACMainViewController.h"
 #import "OLLoginViewModel.h"
+#import "OLDataShowViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface OLRACMainViewController ()
@@ -49,38 +50,41 @@
         self.loginViewModel.passWord = x;
     }];
     
-    
-    // Creates a one-way binding so that self.createEnabled will be
-    // true whenever self.password and self.passwordConfirmation
-    // are equal.
-    //
-    // RAC() is a macro that makes the binding look nicer.
-    //
-    // +combineLatest:reduce: takes an array of signals, executes the block with the
-    // latest value from each signal whenever any of them changes, and returns a new
-    // RACSignal that sends the return value of that block as values.
-    // 这种写法有问题不知道为什么
-//    RAC(self.loginBtn,enabled) = self.loginViewModel.validateLoginInputs;
-
     //登陆按钮点击的操作步骤
     self.loginBtn.rac_command  = self.loginViewModel.loginRequestCommand;
-    //判断是否正在执行
+//    //判断是否正在执行
     [self.loginBtn.rac_command.executing subscribeNext:^(id x) {
         if ([x boolValue]) {
             NSLog(@"login......");
         } else {
             NSLog(@"end logining--%@",x);
+            [self.loginViewModel.wiriteToLocalCommand execute:@"hello i am happy to write to local"];
         }
     }];
     //执行结果
     [self.loginBtn.rac_command.executionSignals.flatten subscribeNext:^(id x) {
         NSLog(@"result:%@",x);
+        @strongify(self);
+        if (x) {
+         
+        }
     }];
     
     //错误处理
     [self.loginBtn.rac_command.errors subscribeNext:^(id x) {
         NSLog(@"error:%@",x);
     }];
+    
+    //写入本地的操作信号完成
+    [self.loginViewModel.wiriteToLocalCommand.executionSignals.flatten subscribeNext:^(id x) {
+        NSLog(@"%@写入本地完成",x);
+        OLDataShowViewController * vc = [OLDataShowViewController new];
+        [vc.subject subscribeNext:^(id x) {
+            
+        }];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    
     
 
 }

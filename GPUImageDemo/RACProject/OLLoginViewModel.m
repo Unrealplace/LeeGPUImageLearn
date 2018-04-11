@@ -58,8 +58,10 @@
 
 - (RACCommand*)loginRequestCommand {
     if (!_loginRequestCommand) {
-        _loginRequestCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            return  [self.checkUserRegisterSignal concat:self.loginSuccessSignal];
+        
+        _loginRequestCommand = [[RACCommand alloc] initWithEnabled:self.validateLoginInputs
+                                                       signalBlock:^RACSignal *(id input) {
+             return  [self.checkUserRegisterSignal concat:self.loginSuccessSignal];
         }];
         _loginRequestCommand.allowsConcurrentExecution = YES;
     }
@@ -70,8 +72,8 @@
     if (!_checkUserRegisterSignal) {
         _checkUserRegisterSignal = [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    if (arc4random()%2) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    if (1) {
                         [subscriber sendNext:@{@"user":self.userName,@"password":self.passWord}];
                     }else {
                         [subscriber sendError:[NSError errorWithDomain:NSNetServicesErrorDomain code:1009 userInfo:nil]];
@@ -90,8 +92,8 @@
     if (!_loginSuccessSignal) {
         _loginSuccessSignal = [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    if (arc4random()%2) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    if (1) {
                         [subscriber sendNext:@{@"login":@"successs"}];
                     }else {
                         [subscriber sendError:[NSError errorWithDomain:NSNetServicesErrorDomain code:1001 userInfo:nil]];
@@ -103,6 +105,23 @@
         }] publish]autoconnect]   ;
     }
     return _loginSuccessSignal;
+}
+
+- (RACCommand*)wiriteToLocalCommand {
+    if (!_wiriteToLocalCommand) {
+        _wiriteToLocalCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    NSLog(@"%@",input);
+                    [subscriber sendNext:@(YES)];
+                    [subscriber sendCompleted];
+                });
+                return nil;
+            }] skip:0];
+        }];
+    }
+    return _wiriteToLocalCommand;
 }
 
 @end

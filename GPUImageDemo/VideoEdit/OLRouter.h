@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum: NSInteger{
+    OLRouterAppearTypePush = 0,
+    OLRouterAppearTypePresent,
+    OLRouterAppearTypePresetWithNavigation,
+}OLRouterAppearType;
+
 @interface OLRouter : NSObject
+
++ (void)OpenURL:(NSString*)UrlString configureHandler:(void(^)(id))configureHandler appearType:(OLRouterAppearType)appearType;
 
 @end

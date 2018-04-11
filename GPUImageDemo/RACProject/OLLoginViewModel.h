@@ -18,5 +18,6 @@
 @property (nonatomic,strong)RACSignal  *checkUserRegisterSignal;
 @property (nonatomic,strong)RACSignal  *loginSuccessSignal;
 @property (nonatomic,strong)RACSignal  *validateLoginInputs;
+@property (nonatomic,strong)RACCommand *wiriteToLocalCommand;
 
 @end

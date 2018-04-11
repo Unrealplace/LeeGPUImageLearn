@@ -10,4 +10,8 @@
 
 @implementation OLRouter
 
++ (void)OpenURL:(NSString *)UrlString configureHandler:(void (^)(id))configureHandler appearType:(OLRouterAppearType)appearType {
+    
+    
+}
 @end
