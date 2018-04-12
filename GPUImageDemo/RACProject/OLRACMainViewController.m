@@ -89,6 +89,14 @@
 
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    OLDataShowViewController * vc = [OLDataShowViewController new];
+    [vc.subject subscribeNext:^(id x) {
+        
+    }];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (UIButton*)loginBtn {
     if (!_loginBtn) {
         _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];

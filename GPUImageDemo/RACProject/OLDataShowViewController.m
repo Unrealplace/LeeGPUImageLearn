@@ -13,6 +13,8 @@
 //@property (nonatomic,strong)UITableView *
 @property (nonatomic,strong)UIButton *getDataBtn;
 @property (nonatomic,strong)OLDataShowViewModel *dataShowModel;
+@property (nonatomic,strong)UIImageView *imgView;
+@property (nonatomic,strong)UIImageView *imgView2;
 
 @end
 
@@ -22,7 +24,9 @@
     [super viewDidLoad];
 
     [self.view addSubview:self.getDataBtn];
-    
+    [self.view addSubview:self.imgView];
+    [self.view addSubview:self.imgView2];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -91,7 +95,64 @@
             NSLog(@"combine--->%@----%@",A,B);
 
         }];
+        
+        [self.dataShowModel.combineReduceSignal subscribeNext:^(id x) {
+            NSLog(@"combineReduce---->%@",x);
+        }];
  
+        RAC(self.imgView,image) = self.dataShowModel.startEagerlyWithSchedulerSignal;
+
+        RAC(self.imgView2,image) = self.dataShowModel.startLazilyWithSchedulerSignal;
+
+        
+        [self.dataShowModel.retrySignal subscribeNext:^(id x) {
+            NSLog(@"retry--->%@",x);
+        }];
+        
+        [self.dataShowModel.conditionDependenceSignal subscribeNext:^(id x) {
+            NSLog(@"conditionDependence--->%@",x);
+        }];
+        
+        [self.dataShowModel.timerSignal subscribeNext:^(id x) {
+            NSLog(@"timer--->%@",x);
+        } error:^(NSError *error) {
+            NSLog(@"timer--->%@",error);
+        }];
+        
+        [self.dataShowModel.mapSignal subscribeNext:^(id x) {
+            NSLog(@"map--->%@",x);
+        }];
+        
+        [self.dataShowModel.flattenMapSignal subscribeNext:^(id x) {
+            NSLog(@"flattenmap--->%@",x);
+        }];
+        
+        [self.dataShowModel.mapReplaceSignal subscribeNext:^(id x) {
+            NSLog(@"mapreplace---%@",x);
+        }];
+        
+//        [[self.dataShowModel.flattenSignal flatten] subscribeNext:^(id x) {
+//            NSLog(@"flatten--->%@",x);
+//        }];
+        
+        [self.dataShowModel.filterSignal subscribeNext:^(id x) {
+            NSLog(@"filter--->%@",x);
+        }];
+        [self.dataShowModel.ignoreSignal subscribeNext:^(id x) {
+            NSLog(@"ingore--->%@",x);
+        }];
+        [self.dataShowModel.skipSignal subscribeNext:^(id x) {
+            NSLog(@"skip--->%@",x);
+        }];
+        [self.dataShowModel.takeSignal subscribeNext:^(id x) {
+            NSLog(@"take---->%@",x);
+        }];
+        [self.dataShowModel.takeUntilSignal subscribeNext:^(id x) {
+            NSLog(@"takeUntil--->%@",x);
+        }];
+        [self.dataShowModel.distinctUntilChangedSignal subscribeNext:^(id x) {
+            NSLog(@"distinct--->%@",(NSDictionary*)x);
+        }];
     });
     
     
@@ -113,6 +174,21 @@
     return _subject;
 }
 
+- (UIImageView*)imgView {
+    if (!_imgView) {
+        _imgView = [UIImageView new];
+        _imgView.frame = CGRectMake(10, 100, 100, 100);
+    }
+    return _imgView;
+}
+
+- (UIImageView*)imgView2 {
+    if (!_imgView2) {
+        _imgView2 = [UIImageView new];
+        _imgView2.frame = CGRectMake(10, 200, 100, 100);
+    }
+    return _imgView2;
+}
 - (UIButton*)getDataBtn {
     if (!_getDataBtn) {
         _getDataBtn = [UIButton buttonWithType:UIButtonTypeCustom];
