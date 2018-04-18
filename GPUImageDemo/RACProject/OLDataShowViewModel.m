@@ -285,6 +285,28 @@
     return _retrySignal;
 }
 
+- (RACSignal*)bindSignal {
+    if (!_bindSignal) {
+        
+       _bindSignal =  [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            
+            [subscriber sendNext:@1];
+            [subscriber sendNext:@2];
+            [subscriber sendNext:@3];
+            [subscriber sendCompleted];
+            return [RACDisposable disposableWithBlock:^{
+                NSLog(@"signal dispose");
+            }];
+        }] bind:^RACStreamBindBlock{
+            return ^RACSignal *(NSNumber *value, BOOL *stop){
+                value = @(value.integerValue * 2);
+                return [RACSignal return:value];
+            };
+        }] ;
+    }
+    return _bindSignal;
+}
+
 - (RACSignal*)conditionDependenceSignal {
     if (!_conditionDependenceSignal) {
         _conditionDependenceSignal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -305,6 +327,23 @@
     }
     return _conditionDependenceSignal;
 }
+//用于信号中的信号发送后转换到最新的信号
+- (RACSignal*)switchToLastestSignal {
+    if (!_switchToLastestSignal) {
+        _switchToLastestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            NSDictionary * paraDic = @{@"id":@"hello"};
+            [subscriber sendNext:[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                [subscriber sendNext:@{@"dic--":paraDic}];
+                [subscriber sendCompleted];
+                return nil;
+            }]];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }
+    return _switchToLastestSignal;
+}
+
 
 //1.FlatternMap中的Block返回信号。
 //2.Map中的Block返回对象。
@@ -471,16 +510,97 @@
     }
     return _distinctUntilChangedSignal;
 }
+//截流信号的使用
+- (RACSignal*)throttleSignal {
+    if (!_throttleSignal) {
+        _throttleSignal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                for (int i =5; i<14; i++) {
+                    sleep(1);
+                    [subscriber sendNext:@(i)];
+                }
+                [subscriber sendCompleted];
+            });
+           
+            return nil;
+        }] throttle:1] ; //节流，在一定时间（1秒）内，不接收任何信号内容，过了这个时间（1秒）获取最后发送的信号内容发出
+        
+        [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                for (int i =0; i<10; i++) {
+                    sleep(1);
+                    [subscriber sendNext:@(i)];
+                }
+                [subscriber sendCompleted];
+            });
+            return nil;
+        }]throttle:1 valuesPassingTest:^BOOL(id next) {// 测试当前值是否允许通过
+            
+            return [next intValue]>2;
+        }] subscribeNext:^(id x) {
+            NSLog(@"inner---throttle--->%@",x);
+        }]  ;
+    }
+    return _throttleSignal;
+}
 
-//- (RACSignal*)startWithSignal {
-//    if (!_startWithSignal) {
-//        _startWithSignal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+// 以某个为开始
+- (RACSignal*)startWithSignal {
+    if (!_startWithSignal) {
+        _startWithSignal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"world"];
+            [subscriber sendCompleted];
+            return nil;
+        }] startWith:@"hello"] ;
+        //把两个合并后再发出去
+        [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"i am happy to u"];
+            [subscriber sendCompleted];
+            return nil;
+        }] aggregateWithStart:@"nice to meet you" reduce:^id(id running, id next) {
+          
+            NSLog(@"%@---%@",running,next);
+            return [running stringByAppendingString:next];
+        }] subscribeNext:^(id x) {
+            
+            NSLog(@"%@",x);
+        }]  ;
+        
+        [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"end"];
+            [subscriber sendCompleted];
+            return nil;
+        }] aggregateWithStart:[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"start"];
+            [subscriber sendCompleted];
+            return nil;
+        }] reduce:^id(id running, id next) {
+            __block NSString * last;
+            [running subscribeNext:^(id x) {
+                last = [x stringByAppendingString:next];
+            }];
+            return last;
+        }] subscribeNext:^(id x) {
+            NSLog(@"%@",x);
+        }]  ;
+        
+    }
+    return _startWithSignal;
+}
+//
+//- (RACSignal*)reduceEachSignal {
+//    if (!_reduceEachSignal) {
+//        _reduceEachSignal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 //            
+//            [subscriber sendNext:@"hello reduce "];
+//            [subscriber sendCompleted];
 //            return nil;
-//        }] aggregateWithStart:nil reduceWithIndex:^id(id running, id next, NSUInteger index) {
+//        }] reduceEach:^id{
 //            
-//        }];
+//            return @"reduceSignal";
+//        }] ;
 //    }
+//    return _reduceEachSignal;
 //}
 
 @end

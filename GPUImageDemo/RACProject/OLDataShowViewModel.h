@@ -27,6 +27,8 @@
 @property (nonatomic,strong)RACSignal *timerSignal;
 @property (nonatomic,strong)RACSignal *retrySignal;
 @property (nonatomic,strong)RACSignal *conditionDependenceSignal;
+@property (nonatomic,strong)RACSignal *switchToLastestSignal;
+@property (nonatomic,strong)RACSignal *bindSignal;
 
 //2. RACStream(Operation)介绍
 //（a）flattenMap：在bind基础上封装的改变方法，用自己提供的block，改变当前流，变成block返回的流对象。
@@ -45,7 +47,6 @@
 
 //（i）distinctUntilChanged：在bind基础封装的改变方法，当流中后一次的值和前一次的值不同的时候，才会返回当前值的流，否则返回空流（第一次默认被忽略）
 
-
 //（n）scanWithStart：reduceWithIndex：在bind基础封装的改变方法，用同样的block执行每次流中的值，并将结果用于后一次执行当中，每次都把block执行后的值变成新的流中的对象。
 //（o）startWIth：在contact基础上封装的多流之间的顺序方法，在当前流的值流出之前，加入一个初始值
 //（q）reduceEach：将流中的RACTuple对象进行过滤，返回特定的衍生出的一个值对象
@@ -58,8 +59,10 @@
 @property (nonatomic,strong)RACSignal *ignoreSignal;
 @property (nonatomic,strong)RACSignal *skipSignal;
 @property (nonatomic,strong)RACSignal *takeSignal;
+@property (nonatomic,strong)RACSignal *throttleSignal;
 @property (nonatomic,strong)RACSignal *takeUntilSignal;
 @property (nonatomic,strong)RACSignal *distinctUntilChangedSignal;
 @property (nonatomic,strong)RACSignal *startWithSignal;
+@property (nonatomic,strong)RACSignal *reduceEachSignal;
 
 @end

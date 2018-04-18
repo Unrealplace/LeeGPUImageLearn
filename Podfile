@@ -6,6 +6,7 @@ target 'GPUImageDemo' do
   # use_frameworks!
      pod 'GPUImage', '~> 0.1.7'
      pod 'ReactiveCocoa', '~> 2.5'
+     pod 'HYBHelperKit', '~> 0.2.0'
 #     pod 'ReactiveCocoa', '~> 7.0.0-rc.1'
   # Pods for GPUImageDemo
 

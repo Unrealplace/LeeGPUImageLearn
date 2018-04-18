@@ -8,9 +8,11 @@
 
 #import "OLDataShowViewController.h"
 #import "OLDataShowViewModel.h"
+#import "OLDataViewController.h"
 
 @interface OLDataShowViewController ()
-//@property (nonatomic,strong)UITableView *
+
+
 @property (nonatomic,strong)UIButton *getDataBtn;
 @property (nonatomic,strong)OLDataShowViewModel *dataShowModel;
 @property (nonatomic,strong)UIImageView *imgView;
@@ -113,6 +115,9 @@
             NSLog(@"conditionDependence--->%@",x);
         }];
         
+        [self.dataShowModel.switchToLastestSignal.switchToLatest subscribeNext:^(id x) {
+            NSLog(@"switchTolastest---->%@",x);
+        } ];
         [self.dataShowModel.timerSignal subscribeNext:^(id x) {
             NSLog(@"timer--->%@",x);
         } error:^(NSError *error) {
@@ -153,12 +158,33 @@
         [self.dataShowModel.distinctUntilChangedSignal subscribeNext:^(id x) {
             NSLog(@"distinct--->%@",(NSDictionary*)x);
         }];
+        
+        [self.dataShowModel.throttleSignal subscribeNext:^(id x) {
+            NSLog(@"throttle----%@",x);
+        }];
+        
+        [self.dataShowModel.startWithSignal subscribeNext:^(id x) {
+            NSLog(@"start--->%@",x);
+        }];
+        
+//        [self.dataShowModel.reduceEachSignal subscribeNext:^(id x) {
+//            NSLog(@"reduce---%@",x);
+//        }];
+       
+        [self.dataShowModel.bindSignal subscribeNext:^(id x) {
+            NSLog(@"bind---%@",x);
+        }];
+        
     });
     
     
     
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    OLDataViewController *vc = [OLDataViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 - (OLDataShowViewModel*)dataShowModel {
     if (!_dataShowModel) {
@@ -197,7 +223,7 @@
         _getDataBtn.center = self.view.center;
         [[_getDataBtn rac_signalForControlEvents:UIControlEventAllEvents] subscribeNext:^(id x) {
            
-           
+          
         }];
     }
     return _getDataBtn;
