@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2B0025052080A05E00C4B167 /* OLObjcDataViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0025042080A05E00C4B167 /* OLObjcDataViewModel.m */; };
 		2B0025082080A52C00C4B167 /* OLDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0025072080A52C00C4B167 /* OLDataViewController.m */; };
+		2B0027362086F1F400C4B167 /* OLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0027352086F1F400C4B167 /* OLCollectionView.m */; };
+		2B0027392086F34200C4B167 /* OLCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0027382086F34200C4B167 /* OLCollectionViewLayout.m */; };
+		2B00273C2086F3D300C4B167 /* OLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B00273B2086F3D300C4B167 /* OLCollectionViewController.m */; };
+		2B00273F208722E100C4B167 /* OLViewLayoutOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B00273E208722E100C4B167 /* OLViewLayoutOne.m */; };
+		2B002742208726DD00C4B167 /* OLCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B002741208726DD00C4B167 /* OLCellOne.m */; };
+		2B002745208746AB00C4B167 /* OLCirleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B002744208746AB00C4B167 /* OLCirleLayout.m */; };
 		2B3156081FD526320014AD7D /* LiveVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3156071FD526320014AD7D /* LiveVideoVC.m */; };
 		2B31560B1FD52B450014AD7D /* TakePhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B31560A1FD52B450014AD7D /* TakePhotoVC.m */; };
 		2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B31560D1FD52E6F0014AD7D /* ManulFilterVC.m */; };
@@ -144,6 +150,18 @@
 		2B0025062080A52C00C4B167 /* OLDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLDataViewController.h; sourceTree = "<group>"; };
 		2B0025072080A52C00C4B167 /* OLDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLDataViewController.m; sourceTree = "<group>"; };
 		2B0027322080C03100C4B167 /* OLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLHeader.h; sourceTree = "<group>"; };
+		2B0027342086F1F400C4B167 /* OLCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCollectionView.h; sourceTree = "<group>"; };
+		2B0027352086F1F400C4B167 /* OLCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCollectionView.m; sourceTree = "<group>"; };
+		2B0027372086F34200C4B167 /* OLCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCollectionViewLayout.h; sourceTree = "<group>"; };
+		2B0027382086F34200C4B167 /* OLCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCollectionViewLayout.m; sourceTree = "<group>"; };
+		2B00273A2086F3D300C4B167 /* OLCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCollectionViewController.h; sourceTree = "<group>"; };
+		2B00273B2086F3D300C4B167 /* OLCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCollectionViewController.m; sourceTree = "<group>"; };
+		2B00273D208722E100C4B167 /* OLViewLayoutOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLViewLayoutOne.h; sourceTree = "<group>"; };
+		2B00273E208722E100C4B167 /* OLViewLayoutOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLViewLayoutOne.m; sourceTree = "<group>"; };
+		2B002740208726DD00C4B167 /* OLCellOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCellOne.h; sourceTree = "<group>"; };
+		2B002741208726DD00C4B167 /* OLCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCellOne.m; sourceTree = "<group>"; };
+		2B002743208746AB00C4B167 /* OLCirleLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCirleLayout.h; sourceTree = "<group>"; };
+		2B002744208746AB00C4B167 /* OLCirleLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCirleLayout.m; sourceTree = "<group>"; };
 		2B3156061FD526320014AD7D /* LiveVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveVideoVC.h; sourceTree = "<group>"; };
 		2B3156071FD526320014AD7D /* LiveVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveVideoVC.m; sourceTree = "<group>"; };
 		2B3156091FD52B450014AD7D /* TakePhotoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakePhotoVC.h; sourceTree = "<group>"; };
@@ -378,6 +396,25 @@
 			path = OLHelperKit;
 			sourceTree = "<group>";
 		};
+		2B0027332086F1CB00C4B167 /* OLCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2B0027342086F1F400C4B167 /* OLCollectionView.h */,
+				2B0027352086F1F400C4B167 /* OLCollectionView.m */,
+				2B0027372086F34200C4B167 /* OLCollectionViewLayout.h */,
+				2B0027382086F34200C4B167 /* OLCollectionViewLayout.m */,
+				2B002743208746AB00C4B167 /* OLCirleLayout.h */,
+				2B002744208746AB00C4B167 /* OLCirleLayout.m */,
+				2B00273D208722E100C4B167 /* OLViewLayoutOne.h */,
+				2B00273E208722E100C4B167 /* OLViewLayoutOne.m */,
+				2B00273A2086F3D300C4B167 /* OLCollectionViewController.h */,
+				2B00273B2086F3D300C4B167 /* OLCollectionViewController.m */,
+				2B002740208726DD00C4B167 /* OLCellOne.h */,
+				2B002741208726DD00C4B167 /* OLCellOne.m */,
+			);
+			path = OLCollectionView;
+			sourceTree = "<group>";
+		};
 		2B5AC50E207C84C300198E80 /* RACProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +514,7 @@
 				2B8D3E99206B4A5200405656 /* VideoEditViewController.h */,
 				2B8D3E9A206B4A5200405656 /* VideoEditViewController.m */,
 				2B0027322080C03100C4B167 /* OLHeader.h */,
+				2B0027332086F1CB00C4B167 /* OLCollectionView */,
 				2B00272F2080AC9700C4B167 /* OLHelperKit */,
 				2B5AC50E207C84C300198E80 /* RACProject */,
 				2B8D3E9C206B648F00405656 /* VideoEdit */,
@@ -930,6 +968,8 @@
 				B69B6891206BC4F3000651FB /* OLImageBeautyFilter.m in Sources */,
 				B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */,
 				2BF363092046435900F6266A /* PanelViewController.m in Sources */,
+				2B00273F208722E100C4B167 /* OLViewLayoutOne.m in Sources */,
+				2B0027362086F1F400C4B167 /* OLCollectionView.m in Sources */,
 				2BF3634E20465B2D00F6266A /* ACPhotoPickerCell.m in Sources */,
 				2BFA46F91FDE1C150049D7B6 /* TwoPicEditVC.m in Sources */,
 				2BF363642047969700F6266A /* LookUpCell.m in Sources */,
@@ -942,6 +982,7 @@
 				2BF3634C20465B2D00F6266A /* ACPhotoAsset.m in Sources */,
 				2B5AC522207DDA6800198E80 /* OLDataShowViewModel.m in Sources */,
 				2B5AC511207C850800198E80 /* OLRACBaseViewController.m in Sources */,
+				2B0027392086F34200C4B167 /* OLCollectionViewLayout.m in Sources */,
 				2BF3635720465B2D00F6266A /* UIView+ACCameraFrame.m in Sources */,
 				2B5AC51F207DA06C00198E80 /* OLDataShowViewController.m in Sources */,
 				B638B0CF1FD3F7410062DFAD /* Capturingfilteringstillphoto.m in Sources */,
@@ -959,11 +1000,13 @@
 				2BFA47131FE1011E0049D7B6 /* ACBlurView.m in Sources */,
 				2BEDA199206E1C0F0071906D /* OLLightProgressView.m in Sources */,
 				2B5AC4EF207B4D1C00198E80 /* OLCupView.m in Sources */,
+				2B002742208726DD00C4B167 /* OLCellOne.m in Sources */,
 				2BEDA162206CC68B0071906D /* OLPhotoEditorViewController.m in Sources */,
 				2B8D3EA5206B65E600405656 /* OLCameraView.m in Sources */,
 				2B89630F1FE7A4EF0063BD19 /* MutipleInputVC.m in Sources */,
 				2B31560B1FD52B450014AD7D /* TakePhotoVC.m in Sources */,
 				2B6F39551FD02EFD0088F395 /* main.m in Sources */,
+				2B00273C2086F3D300C4B167 /* OLCollectionViewController.m in Sources */,
 				2B6F39471FD02EFD0088F395 /* AppDelegate.m in Sources */,
 				2B8963181FE7D0FF0063BD19 /* DiyLightFilter.m in Sources */,
 				B638B0D21FD3FB780062DFAD /* ProcessingstillimageVC.m in Sources */,
@@ -979,6 +1022,7 @@
 				2BF3634B20465B2D00F6266A /* ACPhotoAlbumController.m in Sources */,
 				2BF3634920465B2D00F6266A /* ACAlbumBtn.m in Sources */,
 				B61BA5811FD828D4004B2D01 /* MutipleFilterVC.m in Sources */,
+				2B002745208746AB00C4B167 /* OLCirleLayout.m in Sources */,
 				2BF3635520465B2D00F6266A /* UICollectionView+Convenience.m in Sources */,
 				2BEDA15F206CB9D20071906D /* OLCameraRecordManager.m in Sources */,
 				2BFA47101FE0F9CA0049D7B6 /* ProsumerAsyncQueue.m in Sources */,
