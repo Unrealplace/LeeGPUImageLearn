@@ -15,6 +15,9 @@
 		2B00273F208722E100C4B167 /* OLViewLayoutOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B00273E208722E100C4B167 /* OLViewLayoutOne.m */; };
 		2B002742208726DD00C4B167 /* OLCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B002741208726DD00C4B167 /* OLCellOne.m */; };
 		2B002745208746AB00C4B167 /* OLCirleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B002744208746AB00C4B167 /* OLCirleLayout.m */; };
+		2B0027482088361800C4B167 /* OLReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0027472088361800C4B167 /* OLReusableHeaderView.m */; };
+		2B00274B2088362800C4B167 /* OLReusableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B00274A2088362800C4B167 /* OLReusableFooterView.m */; };
+		2B00274E208876E300C4B167 /* OLCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B00274D208876E300C4B167 /* OLCollectionModel.m */; };
 		2B3156081FD526320014AD7D /* LiveVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3156071FD526320014AD7D /* LiveVideoVC.m */; };
 		2B31560B1FD52B450014AD7D /* TakePhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B31560A1FD52B450014AD7D /* TakePhotoVC.m */; };
 		2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B31560D1FD52E6F0014AD7D /* ManulFilterVC.m */; };
@@ -162,6 +165,12 @@
 		2B002741208726DD00C4B167 /* OLCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCellOne.m; sourceTree = "<group>"; };
 		2B002743208746AB00C4B167 /* OLCirleLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCirleLayout.h; sourceTree = "<group>"; };
 		2B002744208746AB00C4B167 /* OLCirleLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCirleLayout.m; sourceTree = "<group>"; };
+		2B0027462088361800C4B167 /* OLReusableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLReusableHeaderView.h; sourceTree = "<group>"; };
+		2B0027472088361800C4B167 /* OLReusableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLReusableHeaderView.m; sourceTree = "<group>"; };
+		2B0027492088362800C4B167 /* OLReusableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLReusableFooterView.h; sourceTree = "<group>"; };
+		2B00274A2088362800C4B167 /* OLReusableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLReusableFooterView.m; sourceTree = "<group>"; };
+		2B00274C208876E300C4B167 /* OLCollectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLCollectionModel.h; sourceTree = "<group>"; };
+		2B00274D208876E300C4B167 /* OLCollectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLCollectionModel.m; sourceTree = "<group>"; };
 		2B3156061FD526320014AD7D /* LiveVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveVideoVC.h; sourceTree = "<group>"; };
 		2B3156071FD526320014AD7D /* LiveVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveVideoVC.m; sourceTree = "<group>"; };
 		2B3156091FD52B450014AD7D /* TakePhotoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakePhotoVC.h; sourceTree = "<group>"; };
@@ -409,8 +418,14 @@
 				2B00273E208722E100C4B167 /* OLViewLayoutOne.m */,
 				2B00273A2086F3D300C4B167 /* OLCollectionViewController.h */,
 				2B00273B2086F3D300C4B167 /* OLCollectionViewController.m */,
+				2B0027462088361800C4B167 /* OLReusableHeaderView.h */,
+				2B0027472088361800C4B167 /* OLReusableHeaderView.m */,
+				2B0027492088362800C4B167 /* OLReusableFooterView.h */,
+				2B00274A2088362800C4B167 /* OLReusableFooterView.m */,
 				2B002740208726DD00C4B167 /* OLCellOne.h */,
 				2B002741208726DD00C4B167 /* OLCellOne.m */,
+				2B00274C208876E300C4B167 /* OLCollectionModel.h */,
+				2B00274D208876E300C4B167 /* OLCollectionModel.m */,
 			);
 			path = OLCollectionView;
 			sourceTree = "<group>";
@@ -951,6 +966,7 @@
 				2B0025082080A52C00C4B167 /* OLDataViewController.m in Sources */,
 				2B8D3EAE206B73C200405656 /* OLCameraViewController.m in Sources */,
 				2B5AC518207C879800198E80 /* OLRACMainViewController.m in Sources */,
+				2B00274E208876E300C4B167 /* OLCollectionModel.m in Sources */,
 				2B89630C1FE79A4A0063BD19 /* LYImageFilterGroup.m in Sources */,
 				2BF36361204792E500F6266A /* LookUpViewController.m in Sources */,
 				2BF3635120465B2D00F6266A /* ALAssetsLibrary+AC.m in Sources */,
@@ -965,6 +981,7 @@
 				2B5AC4EC207B35AE00198E80 /* OLGlassesView.m in Sources */,
 				2B8D3EAB206B709B00405656 /* OLBottomToolView.m in Sources */,
 				2BEDA193206DD4030071906D /* OLPasterElementView.m in Sources */,
+				2B00274B2088362800C4B167 /* OLReusableFooterView.m in Sources */,
 				B69B6891206BC4F3000651FB /* OLImageBeautyFilter.m in Sources */,
 				B638B0D51FD402780062DFAD /* WritingcustomfilterVC.m in Sources */,
 				2BF363092046435900F6266A /* PanelViewController.m in Sources */,
@@ -1014,6 +1031,7 @@
 				2BF364A82047E9A600F6266A /* MaskViewController.m in Sources */,
 				B675153D1FE807300095A2D5 /* lookupVC.m in Sources */,
 				2B5AC4E9207B012500198E80 /* OLArcView.m in Sources */,
+				2B0027482088361800C4B167 /* OLReusableHeaderView.m in Sources */,
 				2BF3635020465B2D00F6266A /* ALAsset+AC.m in Sources */,
 				2BEDA165206CC8150071906D /* OLPhotoEditorToolView.m in Sources */,
 				2B31560E1FD52E6F0014AD7D /* ManulFilterVC.m in Sources */,
@@ -1163,7 +1181,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1180,7 +1198,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BQNL96S8U;
 				INFOPLIST_FILE = GPUImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GPUImageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

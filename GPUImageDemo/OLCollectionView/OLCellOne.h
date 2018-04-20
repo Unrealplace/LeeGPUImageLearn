@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OLCollectionModel.h"
+
+@class OLCellOne;
+
+typedef void (^OLLongPressBlock)(OLCellOne *cell,UILongPressGestureRecognizer *gesture);
 
 @interface OLCellOne : UICollectionViewCell
+
+@property (nonatomic,copy)OLLongPressBlock longPressBlock;
+
+@property (nonatomic,strong)UILongPressGestureRecognizer *longPressGesture;
+
+@property (nonatomic,strong)OLCollectionModel *model;
 
 @end
