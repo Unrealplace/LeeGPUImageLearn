@@ -11,9 +11,6 @@
 #import "OLBottomToolView.h"
 #import "OLCameraManager.h"
 #import "OLPhotoEditorViewController.h"
-#import "OLArcView.h"
-#import "OLGlassesView.h"
-#import "OLCupView.h"
 
 @interface OLCameraViewController ()<OLTopToolViewDelegate,OLBottomToolViewDelegate,OLCameraManagerDelegate>
 
@@ -33,41 +30,15 @@
 @property (nonatomic,strong)OLCameraManager  *cameraManager;
 
 
-@property (nonatomic,strong)OLArcView *arcView;
-@property (nonatomic,strong)OLGlassesView *glassView;
-@property (nonatomic,strong)OLCupView *cupView;
-
 @end
 
 @implementation OLCameraViewController
-
-- (OLArcView*)arcView {
-    if (!_arcView) {
-        _arcView = [[OLArcView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 120)];
-    }
-    return _arcView;
-}
-- (OLGlassesView*)glassView {
-    if (!_glassView) {
-        _glassView = [[OLGlassesView alloc] initWithFrame:CGRectMake(0, 120, self.view.bounds.size.width, 120)];
-    }
-    return _glassView;
-}
-- (OLCupView*)cupView {
-    if (!_cupView) {
-        _cupView = [[OLCupView alloc] initWithFrame:CGRectMake(0, 240, self.view.bounds.size.width,self.view.bounds.size.width)];
-    }
-    return _cupView;
-}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self initCameraAndToolBar];
-//    [self.view addSubview:self.arcView];
-//    [self.view addSubview:self.glassView];
-//    [self.view addSubview:self.cupView];
     
 }
 

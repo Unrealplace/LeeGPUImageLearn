@@ -401,6 +401,7 @@
 		2B00272F2080AC9700C4B167 /* OLHelperKit */ = {
 			isa = PBXGroup;
 			children = (
+				2B0027322080C03100C4B167 /* OLHeader.h */,
 			);
 			path = OLHelperKit;
 			sourceTree = "<group>";
@@ -528,7 +529,6 @@
 				B675153C1FE807300095A2D5 /* lookupVC.m */,
 				2B8D3E99206B4A5200405656 /* VideoEditViewController.h */,
 				2B8D3E9A206B4A5200405656 /* VideoEditViewController.m */,
-				2B0027322080C03100C4B167 /* OLHeader.h */,
 				2B0027332086F1CB00C4B167 /* OLCollectionView */,
 				2B00272F2080AC9700C4B167 /* OLHelperKit */,
 				2B5AC50E207C84C300198E80 /* RACProject */,
