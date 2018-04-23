@@ -11,6 +11,7 @@
 #import "OLBottomToolView.h"
 #import "OLCameraManager.h"
 #import "OLPhotoEditorViewController.h"
+#import <CoreImage/CoreImage.h>
 
 @interface OLCameraViewController ()<OLTopToolViewDelegate,OLBottomToolViewDelegate,OLCameraManagerDelegate>
 
